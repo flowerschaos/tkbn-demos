@@ -1,5 +1,3 @@
 res://game.tscn
-res://starting_stats.gd
-res://character.gd
 res://enemy.gd
 res://player.gd

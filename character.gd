@@ -12,5 +12,5 @@ class_name CombatCharacter
 # STATS: health, endurance, tech, power, speed 
 # each one goes to 10.
 # attack and damage are dependant on what you're wearing.
-# some calculations: ap = 5+(end/2)
+# some calculations: ap = 1+(end/2)
 # max hp = 10+hlt+(end*2), increases = (hlt/2)+2

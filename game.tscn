@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ckg3nkg314bco"]
+[gd_scene load_steps=19 format=3 uid="uid://ckg3nkg314bco"]
 
 [ext_resource type="Script" path="res://game_manager.gd" id="1_joldl"]
 [ext_resource type="Script" path="res://enemy.gd" id="2_ver8a"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://game mode state machine/explore_state.gd" id="5_i40qu"]
 [ext_resource type="Script" path="res://game mode state machine/combat_state.gd" id="6_ge1vo"]
 [ext_resource type="Script" path="res://game mode state machine/uncover_state.gd" id="7_qy7uj"]
+[ext_resource type="Script" path="res://statpanel.gd" id="9_x3y3n"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pbig4"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -113,7 +114,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Panel" type="Panel" parent="combat ui"]
+[node name="actions" type="Panel" parent="combat ui"]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -122,23 +123,44 @@ offset_top = -118.0
 offset_bottom = -118.0
 grow_vertical = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="combat ui/Panel"]
+[node name="actions" type="VBoxContainer" parent="combat ui/actions"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="attack" type="Button" parent="combat ui/Panel/VBoxContainer"]
+[node name="attack" type="Button" parent="combat ui/actions/actions"]
 layout_mode = 2
 text = "attack"
 
-[node name="item" type="Button" parent="combat ui/Panel/VBoxContainer"]
+[node name="item" type="Button" parent="combat ui/actions/actions"]
 layout_mode = 2
 text = "item"
 
-[node name="leave" type="Button" parent="combat ui/Panel/VBoxContainer"]
+[node name="leave" type="Button" parent="combat ui/actions/actions"]
 layout_mode = 2
 text = "leave
 "
+
+[node name="stats" type="Panel" parent="combat ui"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -118.0
+offset_bottom = -118.0
+grow_vertical = 0
+script = ExtResource("9_x3y3n")
+
+[node name="stats" type="HBoxContainer" parent="combat ui/stats"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="hp" type="Label" parent="combat ui/stats/stats"]
+layout_mode = 2
+
+[node name="ap" type="Label" parent="combat ui/stats/stats"]
+layout_mode = 2
 
 [node name="map" type="Node3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -1.18717, 0)
@@ -207,4 +229,8 @@ use_collision = true
 size = Vector3(26.7365, 10.8223, 1)
 material = SubResource("StandardMaterial3D_eow3j")
 
+[connection signal="died" from="enemy/hooligan" to="." method="_on_enemy_died"]
 [connection signal="player_touched" from="enemy/hooligan" to="." method="_on_enemy_touched"]
+[connection signal="ap_change" from="player/controller" to="combat ui/stats" method="_on_ap_change"]
+[connection signal="hp_change" from="player/controller" to="combat ui/stats" method="_on_hp_change"]
+[connection signal="pressed" from="combat ui/actions/actions/attack" to="." method="_on_attack_pressed"]

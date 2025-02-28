@@ -1,12 +1,13 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1740749671
+::res://::1740760813
+character.gd::GDScript::-1::1740759815::0::1::::CombatCharacter<>Resource<>::
 combat.tscn::PackedScene::8666221410162786143::1740747224::0::1::::<><>::uid://bkjj0ale6gd7s::::res://enemy.gd<>uid://oj61mrp8ikkh::::res://game_manager.gd<>uid://boj56qspfnxio::::res://player.gd
-enemy.gd::GDScript::-1::1740747224::0::1::::Enemy<>CharacterBody3D<>::
-game.tscn::PackedScene::5488839897219514846::1740749603::0::1::::<><>::res://game_manager.gd<>res://enemy.gd<>res://player.gd<>res://game mode state machine/game_mode_state_machine.gd<>res://game mode state machine/explore_state.gd<>res://game mode state machine/combat_state.gd<>res://game mode state machine/uncover_state.gd
-game_manager.gd::GDScript::-1::1740747224::0::1::::<>Node3D<>::
+enemy.gd::GDScript::-1::1740760677::0::1::::Enemy<>CharacterBody3D<>::
+game.tscn::PackedScene::5488839897219514846::1740760677::0::1::::<><>::res://game_manager.gd<>res://enemy.gd<>res://player.gd<>res://game mode state machine/game_mode_state_machine.gd<>uid://cnplarkkcmcol::::res://character_resources/mc.tres<>res://game mode state machine/explore_state.gd<>res://game mode state machine/combat_state.gd<>res://game mode state machine/uncover_state.gd<>res://statpanel.gd
+game_manager.gd::GDScript::-1::1740760677::0::1::::<>Node3D<>::
 icon.svg::CompressedTexture2D::8735237410284423683::1740747224::1740748923::1::::<><>::
-player.gd::GDScript::-1::1740747224::0::1::::<>CharacterBody3D<>::
-starting_stats.gd::GDScript::-1::1740749603::0::1::::CombatCharacter<>Resource<>::
+player.gd::GDScript::-1::1740760208::0::1::::<>CharacterBody3D<>::
+statpanel.gd::GDScript::-1::1740760677::0::1::::<>Panel<>::
 thewhitethingisback.blend::PackedScene::5048350271583347350::1740747224::1740748951::0::::<><>::
 ::res://addons/::1740747224
 ::res://addons/godot-git-plugin/::1740747223
@@ -207,6 +208,8 @@ texture_10.png::CompressedTexture2D::5434134780175199182::1740747224::1740748924
 texture_11.png::CompressedTexture2D::1370021696176858703::1740747224::1740748924::1::::<><>::
 texture_12.png::CompressedTexture2D::6047542439335718600::1740747224::1740748924::1::::<><>::
 texture_13.png::CompressedTexture2D::2495934140612614578::1740747224::1740748924::1::::<><>::
+::res://character_resources/::1740757098
+mc.tres::Resource/CombatCharacter::5716930796714448815::1740757098::0::1::::<><>::res://character.gd
 ::res://game mode state machine/::1740747224
 combat_state.gd::GDScript::-1::1740747224::0::1::::Combat<>State<>::
 explore_state.gd::GDScript::-1::1740747224::0::1::::Explore<>State<>::

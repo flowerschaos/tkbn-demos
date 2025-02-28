@@ -1,18 +1,27 @@
 extends CharacterBody3D
 
-@export var character_stuff: Resource
+@export var stats: Resource
 @export var is_controller: bool
 
+signal hp_change(value)
+signal ap_change(value)
+signal end_turn
+
+var max_hp = 10+stats.health+(stats.endurance*2)
+var hp = max_hp: set = set_hp
+var max_ap = 1+(stats.endurance/2)
+var ap = max_ap: set = set_ap
+
 const SPEED = 5.0
+
+func _ready() -> void:
+	pass
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if is_controller == true:
 		if not is_on_floor():
 			velocity += get_gravity() * delta
-
-		# Get the input direction and handle the movement/deceleration.
-		# As good practice, you should replace UI actions with custom gameplay actions.
 		var input_dir := Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
 		var direction := (get_viewport().get_camera_3d().transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		if direction:
@@ -21,4 +30,11 @@ func _physics_process(delta: float) -> void:
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			velocity.z = move_toward(velocity.z, 0, SPEED)
-		move_and_slide()
+	move_and_slide()
+
+func set_hp(value):
+	hp = min(value, max_hp)
+	emit_signal("hp_change", hp)
+func set_ap(value):
+	ap = min(value, max_ap)
+	emit_signal("ap_change", ap)

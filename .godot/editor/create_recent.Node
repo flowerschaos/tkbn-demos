@@ -1,9 +1,10 @@
+Label
+HBoxContainer
 Node3D
 Label3D
 Button
 VBoxContainer
 Panel
-Label
 Control
 TextureRect
 ColorRect
@@ -11,5 +12,3 @@ Uncover
 Combat
 Explore
 Node
-Container
-MeshInstance3D

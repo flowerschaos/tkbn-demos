@@ -19,3 +19,13 @@ func _on_enemy_touched() -> void:
 	explore_ui.hide()
 	get_tree().paused = true
 	print("time to kick some teeth in")
+
+func _on_attack_pressed() -> void:
+	if enemy != null:
+		enemy.hp -= 4
+
+func _on_enemy_died() -> void:
+	combat_ui.hide()
+	explore_ui.show()
+	get_tree().paused = false
+	enemy = null
