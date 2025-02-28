@@ -1,5 +1,6 @@
 extends CharacterBody3D
 class_name Enemy
+@export var character_stuff: Resource
 @onready var player: CharacterBody3D = $"../player/controller"
 
 signal player_touched

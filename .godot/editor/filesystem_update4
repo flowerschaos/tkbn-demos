@@ -1,5 +1,5 @@
 res://game.tscn
-res://game_manager.gd
 res://starting_stats.gd
 res://character.gd
 res://enemy.gd
+res://player.gd
