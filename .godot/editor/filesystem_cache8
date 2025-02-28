@@ -1,0 +1,14 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1740673570
+enemy.gd::GDScript::-1::1740673275::0::1::::<>Node3D<>::
+game.tscn::PackedScene::6530212993774379085::1740673310::0::1::::<><>::res://game_manager.gd<>res://enemy.gd<>res://player.gd<>res://game mode state machine/game_mode_state_machine.gd<>res://game mode state machine/explore_state.gd<>res://game mode state machine/combat_state.gd<>res://game mode state machine/uncover_state.gd
+game_manager.gd::GDScript::-1::1740673002::0::1::::<>Node3D<>::
+icon.svg::CompressedTexture2D::8735237410284423683::1739549830::1739549855::1::::<><>::
+player.gd::GDScript::-1::1740671978::0::1::::<>CharacterBody3D<>::
+starting_stats.gd::GDScript::-1::1740587169::0::1::::StartingStats<>Resource<>::
+::res://game mode state machine/::1740586324
+combat_state.gd::GDScript::-1::1740586324::0::1::::Combat<>State<>::
+explore_state.gd::GDScript::-1::1740586324::0::1::::Explore<>State<>::
+game_mode_state_machine.gd::GDScript::-1::1740584733::0::1::::<>Node<>::
+state.gd::GDScript::-1::1740584733::0::1::::State<>Node3D<>::
+uncover_state.gd::GDScript::-1::1740586324::0::1::::Uncover<>State<>::
