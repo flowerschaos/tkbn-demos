@@ -1,14 +1,18 @@
 extends CharacterBody3D
 class_name Enemy
-@export var stats: Resource
+@export var stats: Resource: 
+	set(value):
+		stats = value
+		max_hp = 10+stats.health+(stats.endurance*2)
+		max_ap = 1+(stats.endurance/2)
 @onready var controller: CharacterBody3D = $"../../player/controller"
 
 signal player_touched
 signal died
 
-var max_hp = 10+stats.health+(stats.endurance*2)
+var max_hp: float
+var max_ap: float
 var hp = max_hp: set = set_hp
-var max_ap = 1+(stats.endurance/2)
 var ap = max_ap: set = set_ap
 
 func set_hp(value):

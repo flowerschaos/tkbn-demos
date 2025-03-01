@@ -1,18 +1,22 @@
 extends CharacterBody3D
 
-@export var stats: Resource
+@export var stats: Resource: 
+	set(value):
+		stats = value
+		max_hp = 10+stats.health+(stats.endurance*2)
+		max_ap = 1+(stats.endurance/2)
 @export var is_controller: bool
 
 signal hp_change(value)
 signal ap_change(value)
 signal end_turn
 
-var max_hp = 10+stats.health+(stats.endurance*2)
+var max_hp: float
+var max_ap: float
 var hp = max_hp: set = set_hp
-var max_ap = 1+(stats.endurance/2)
 var ap = max_ap: set = set_ap
 
-const SPEED = 5.0
+const SPEED = 6.0
 
 func _ready() -> void:
 	pass
