@@ -11,12 +11,12 @@ signal hp_change(value)
 signal ap_change(value)
 signal end_turn
 
-var max_hp: float
-var max_ap: float
+var max_hp
+var max_ap
 var hp = max_hp: set = set_hp
 var ap = max_ap: set = set_ap
 
-const SPEED = 6.0
+const SPEED = 5.0
 
 func _ready() -> void:
 	pass
