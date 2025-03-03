@@ -1,31 +1,30 @@
-extends Node3D
-
-@onready var combat_ui: Control = $"combat ui"
-@onready var explore_ui: Control = $"explore ui"
+extends Node
 @onready var enemy: Node3D = $enemy
 @onready var player: Node3D = $player
+@onready var combat_ui: Control = $"combat ui"
+@onready var playeractions: VBoxContainer = $"combat ui/actions"
+@onready var playerstatpanel: PanelContainer = $"combat ui/playerstats"
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	combat_ui.hide()
-	explore_ui.show()
+	start_player_turn()
+	print("player turn initiated")
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass
+func start_enemy_turn():
+	playeractions.hide()
+	if enemy:
+		enemy.attack(player)
+		print("player attacked")
+		await enemy.end_turn
+	start_player_turn()
 
-func _on_enemy_touched() -> void:
-	combat_ui.show()
-	explore_ui.hide()
-	get_tree().paused = true
-	print("time to kick some teeth in")
+func start_player_turn():
+	playeractions.show()
+	playerstatpanel.show()
+	player.ap = player.max_ap
+	await player.end_turn
+	start_enemy_turn()
 
-func _on_attack_pressed() -> void:
-	if enemy != null:
-		enemy.hp -= 4
-
-func _on_enemy_died() -> void:
-	combat_ui.hide()
-	explore_ui.show()
-	get_tree().paused = false
+func _on_enemy_death() -> void:
 	enemy = null
+	print("enemy gone")
+	combat_ui.hide()

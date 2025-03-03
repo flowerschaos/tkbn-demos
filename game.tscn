@@ -1,15 +1,11 @@
-[gd_scene load_steps=21 format=3 uid="uid://ckg3nkg314bco"]
+[gd_scene load_steps=11 format=3 uid="uid://ckg3nkg314bco"]
 
-[ext_resource type="Script" uid="uid://oj61mrp8ikkh" path="res://game_manager.gd" id="1_joldl"]
-[ext_resource type="Script" uid="uid://bkjj0ale6gd7s" path="res://enemy.gd" id="2_ver8a"]
-[ext_resource type="Script" uid="uid://boj56qspfnxio" path="res://player.gd" id="3_02vrg"]
-[ext_resource type="Resource" uid="uid://dfybghxylvt6i" path="res://character_resources/hooligans.tres" id="3_hve3p"]
-[ext_resource type="Script" uid="uid://7ir1naketvdy" path="res://game mode state machine/game_mode_state_machine.gd" id="4_7q6ya"]
-[ext_resource type="Script" uid="uid://bsbdxp4vy102g" path="res://game mode state machine/explore_state.gd" id="5_i40qu"]
-[ext_resource type="Resource" uid="uid://cnplarkkcmcol" path="res://character_resources/mc.tres" id="5_mfdv2"]
-[ext_resource type="Script" uid="uid://d2bfroblpn806" path="res://game mode state machine/combat_state.gd" id="6_ge1vo"]
-[ext_resource type="Script" uid="uid://bj8pd7anpbcru" path="res://game mode state machine/uncover_state.gd" id="7_qy7uj"]
-[ext_resource type="Script" uid="uid://b44wi3t2eeuf1" path="res://statpanel.gd" id="9_x3y3n"]
+[ext_resource type="Script" uid="uid://wah2jmogvup8" path="res://game_manager.gd" id="1_joldl"]
+[ext_resource type="PackedScene" uid="uid://om8kbw8ov2qh" path="res://buttons/attackbutton.tscn" id="2_7jktm"]
+[ext_resource type="PackedScene" uid="uid://dwws7nyjahrqg" path="res://enemy.tscn" id="2_e2o6t"]
+[ext_resource type="Script" uid="uid://bdoob2nfo5qmx" path="res://playerstats.gd" id="2_fc0e3"]
+[ext_resource type="Script" uid="uid://cyim1le1kwvdp" path="res://player.gd" id="3_02vrg"]
+[ext_resource type="PackedScene" uid="uid://dmryhtjp4b47o" path="res://buttons/healaction.tscn" id="3_ryrav"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pbig4"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -22,22 +18,6 @@ sky_material = SubResource("ProceduralSkyMaterial_pbig4")
 background_mode = 2
 sky = SubResource("Sky_iy12i")
 tonemap_mode = 2
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jj500"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4bc61"]
-albedo_color = Color(1, 0, 0, 1)
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_dve6v"]
-material = SubResource("StandardMaterial3D_4bc61")
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ts4nl"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oqc1q"]
-albedo_color = Color(0.168627, 0.25098, 0.458824, 1)
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_pbcnl"]
-material = SubResource("StandardMaterial3D_oqc1q")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eow3j"]
 albedo_color = Color(1, 0, 0, 1)
@@ -52,55 +32,10 @@ environment = SubResource("Environment_1k5ql")
 transform = Transform3D(-0.866025, -0.497562, -0.0493126, 0, -0.0986251, 0.995125, -0.5, 0.861803, 0.0854118, -0.240571, 0.277787, 0.41668)
 shadow_enabled = true
 
-[node name="enemy" type="Node3D" parent="."]
-process_mode = 3
-
-[node name="hooligan" type="CharacterBody3D" parent="enemy"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.891, 0, -1.27712)
-collision_mask = 5
-script = ExtResource("2_ver8a")
-stats = ExtResource("3_hve3p")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="enemy/hooligan"]
-shape = SubResource("CapsuleShape3D_jj500")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="enemy/hooligan"]
-mesh = SubResource("CapsuleMesh_dve6v")
-
-[node name="Label3D" type="Label3D" parent="enemy/hooligan"]
-text = "hp: "
-
-[node name="player" type="Node3D" parent="."]
-process_mode = 3
-
-[node name="controller" type="CharacterBody3D" parent="player"]
-collision_layer = 5
-script = ExtResource("3_02vrg")
-stats = ExtResource("5_mfdv2")
-is_controller = true
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="player/controller"]
-shape = SubResource("CapsuleShape3D_ts4nl")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="player/controller"]
-mesh = SubResource("CapsuleMesh_pbcnl")
-
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.413071, 0.524279, -0.74465, 0, 0.817669, 0.575689, 0.910699, -0.2378, 0.337755, -8.38831, 9.17834, 5.00558)
 projection = 1
 size = 10.4312
-
-[node name="GameModeStateMachine" type="Node" parent="."]
-script = ExtResource("4_7q6ya")
-
-[node name="Explore" type="Node3D" parent="GameModeStateMachine"]
-script = ExtResource("5_i40qu")
-
-[node name="Combat" type="Node3D" parent="GameModeStateMachine"]
-script = ExtResource("6_ge1vo")
-
-[node name="Uncover" type="Node3D" parent="GameModeStateMachine"]
-script = ExtResource("7_qy7uj")
 
 [node name="explore ui" type="Control" parent="."]
 process_mode = 3
@@ -118,53 +53,38 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="actions" type="Panel" parent="combat ui"]
+[node name="actions" type="VBoxContainer" parent="combat ui"]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -118.0
-offset_bottom = -118.0
+offset_top = -136.0
+offset_right = 90.0
 grow_vertical = 0
 
-[node name="actions" type="VBoxContainer" parent="combat ui/actions"]
+[node name="attackbutton" parent="combat ui/actions" instance=ExtResource("2_7jktm")]
+layout_mode = 2
+
+[node name="healaction" parent="combat ui/actions" instance=ExtResource("3_ryrav")]
+layout_mode = 2
+
+[node name="playerstats" type="PanelContainer" parent="combat ui"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_top = 421.0
+offset_right = 88.0
+offset_bottom = 461.0
+script = ExtResource("2_fc0e3")
 
-[node name="attack" type="Button" parent="combat ui/actions/actions"]
-layout_mode = 2
-text = "attack"
-
-[node name="item" type="Button" parent="combat ui/actions/actions"]
-layout_mode = 2
-text = "item"
-
-[node name="leave" type="Button" parent="combat ui/actions/actions"]
-layout_mode = 2
-text = "leave
-"
-
-[node name="stats" type="Panel" parent="combat ui"]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -118.0
-offset_bottom = -118.0
-grow_vertical = 0
-script = ExtResource("9_x3y3n")
-
-[node name="stats" type="HBoxContainer" parent="combat ui/stats"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="hp" type="Label" parent="combat ui/stats/stats"]
+[node name="HBoxContainer" type="HBoxContainer" parent="combat ui/playerstats"]
 layout_mode = 2
 
-[node name="ap" type="Label" parent="combat ui/stats/stats"]
+[node name="hp" type="Label" parent="combat ui/playerstats/HBoxContainer"]
 layout_mode = 2
+text = "hp: 25"
+
+[node name="ap" type="Label" parent="combat ui/playerstats/HBoxContainer"]
+layout_mode = 2
+text = "ap: 3"
 
 [node name="map" type="Node3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -1.18717, 0)
@@ -233,8 +153,12 @@ use_collision = true
 size = Vector3(26.7365, 10.8223, 1)
 material = SubResource("StandardMaterial3D_eow3j")
 
-[connection signal="died" from="enemy/hooligan" to="." method="_on_enemy_died"]
-[connection signal="player_touched" from="enemy/hooligan" to="." method="_on_enemy_touched"]
-[connection signal="ap_change" from="player/controller" to="combat ui/stats" method="_on_ap_change"]
-[connection signal="hp_change" from="player/controller" to="combat ui/stats" method="_on_hp_change"]
-[connection signal="pressed" from="combat ui/actions/actions/attack" to="." method="_on_attack_pressed"]
+[node name="enemy" parent="." instance=ExtResource("2_e2o6t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6, 0, -0.94)
+
+[node name="player" type="Node3D" parent="."]
+script = ExtResource("3_02vrg")
+
+[connection signal="on_death" from="enemy" to="." method="_on_enemy_death"]
+[connection signal="ap_changed" from="player" to="combat ui/playerstats" method="_on_ap_changed"]
+[connection signal="hp_changed" from="player" to="combat ui/playerstats" method="_on_hp_changed"]

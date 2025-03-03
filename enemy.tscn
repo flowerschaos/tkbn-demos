@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwws7nyjahrqg"]
+
+[ext_resource type="Script" uid="uid://bn0ba0ldq4kho" path="res://enemy.gd" id="1_7k104"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mwb40"]
+albedo_color = Color(0.533333, 0, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_80nbo"]
+material = SubResource("StandardMaterial3D_mwb40")
+
+[node name="enemy" type="Node3D"]
+script = ExtResource("1_7k104")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_80nbo")
+
+[node name="hp label" type="Label3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1.63866, 0)
+pixel_size = 0.015
+text = "hp: 25"

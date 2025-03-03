@@ -8,6 +8,18 @@
 
 config_version=5
 
+[addons]
+
+resources_spreadsheet_view/array_color_tint=100.0
+resources_spreadsheet_view/color_rows=true
+resources_spreadsheet_view/array_min_width=128.0
+resources_spreadsheet_view/resource_preview_size=32.0
+resources_spreadsheet_view/clip_headers=false
+resources_spreadsheet_view/dupe_arrays=true
+resources_spreadsheet_view/context_menu_on_leftclick=false
+resources_spreadsheet_view/fold_docks=true
+resources_spreadsheet_view/resource_cell_label_mode=1
+
 [application]
 
 config/name="stereobleedingedge"
@@ -24,7 +36,7 @@ version_control/autoload_on_startup=true
 
 [editor_plugins]
 
-enabled=PackedStringArray()
+enabled=PackedStringArray("res://addons/csg_toolkit/plugin.cfg", "res://addons/resources_spreadsheet_view/plugin.cfg", "res://addons/runtime_debug_tools/plugin.cfg", "res://addons/splash_screen_wizard/plugin.cfg", "res://addons/worldmap_builder/plugin.cfg")
 
 [input]
 
@@ -87,7 +99,3 @@ sprint={
 [physics]
 
 3d/physics_engine="Jolt Physics"
-
-[rendering]
-
-renderer/rendering_method="gl_compatibility"
