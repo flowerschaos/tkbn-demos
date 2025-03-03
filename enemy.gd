@@ -1,23 +1,36 @@
-extends Node3D
+extends CharacterBody3D
+class_name Enemy
+@export var stats: Resource: 
+	set(value):
+		stats = value
+		max_hp = 10+stats.health+(stats.endurance*2)
+		max_ap = 1+(stats.endurance/2)
+@onready var controller: CharacterBody3D = $"../../player/controller"
 
-var hp = 25: set = set_hp
-@onready var hp_label: Label3D = $"hp label"
-@onready var player: Node3D = $"../player"
+signal player_touched
+signal died
 
-signal on_death
-signal end_turn
+var max_hp: float
+var max_ap: float
+var hp = max_hp: set = set_hp
+var ap = max_ap: set = set_ap
 
-func set_hp(new_hp):
-	hp = new_hp
-	hp_label.text = "hp: "+str(hp)
-
-func attack(target):
-	await get_tree().create_timer(0.4).timeout
-	target.hp -= 4
-	emit_signal("end_turn")
-
-func take_damage(amount):
-	self.hp -= amount
+func set_hp(value):
+	hp = min(value, max_hp)
 	if hp <= 0:
+		emit_signal("died")
 		queue_free()
-		emit_signal("on_death")
+	else:
+		controller.hp -= 4
+func set_ap(value):
+	ap = min(value, max_ap)
+
+func _ready() -> void:
+	pass
+
+func _process(_delta: float) -> void:
+	pass
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("stop"):
+		player_touched.emit()

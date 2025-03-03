@@ -159,6 +159,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6, 0, -0.94)
 [node name="player" type="Node3D" parent="."]
 script = ExtResource("3_02vrg")
 
-[connection signal="on_death" from="enemy" to="." method="_on_enemy_death"]
 [connection signal="ap_changed" from="player" to="combat ui/playerstats" method="_on_ap_changed"]
 [connection signal="hp_changed" from="player" to="combat ui/playerstats" method="_on_hp_changed"]
