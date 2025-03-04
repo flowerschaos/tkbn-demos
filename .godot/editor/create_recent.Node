@@ -1,3 +1,7 @@
+RayCast3D
+CombatState
+CharacterBody3D
+CollisionShape3D
 ChaseState
 WanderState
 Node
@@ -9,7 +13,3 @@ HBoxContainer
 Panel
 Node3D
 VBoxContainer
-Label3D
-MeshInstance3D
-CollisionShape3D
-Control

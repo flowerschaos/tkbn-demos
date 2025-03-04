@@ -5,7 +5,6 @@ extends Node
 @onready var playeractions: VBoxContainer = $"combat ui/actions"
 @onready var playerstatpanel: PanelContainer = $"combat ui/playerstats"
 
-
 func _ready() -> void:
 	start_player_turn()
 	print("player turn initiated")

@@ -8,6 +8,7 @@ var hp = 25: set = set_hp
 signal on_death
 signal end_turn
 
+#region turn based stuff
 func set_hp(new_hp):
 	hp = new_hp
 	hp_label.text = "hp: "+str(hp)
@@ -23,3 +24,10 @@ func take_damage(amount):
 	if hp <= 0:
 		queue_free()
 		emit_signal("on_death")
+#endregion
+
+func _ready() -> void:
+	pass
+
+func _physics_process(delta:float):
+	var space_state = get_world_3d().direct_space_state
