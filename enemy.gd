@@ -1,4 +1,5 @@
 extends Node3D
+class_name Enemy
 
 var hp = 25: set = set_hp
 @onready var hp_label: Label3D = $"hp label"
@@ -14,6 +15,7 @@ func set_hp(new_hp):
 func attack(target):
 	await get_tree().create_timer(0.4).timeout
 	target.hp -= 4
+	print("target attacked")
 	emit_signal("end_turn")
 
 func take_damage(amount):

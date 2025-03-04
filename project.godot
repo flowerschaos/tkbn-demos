@@ -29,6 +29,11 @@ boot_splash/bg_color=Color(0.00820202, 0.00820203, 0.00820202, 1)
 boot_splash/show_image=false
 config/icon="res://icon.svg"
 
+[autoload]
+
+CsgToolkitAutoload="*res://addons/csg_toolkit/scripts/csg_toolkit_config.gd"
+RuntimeDebugTools="*res://addons/runtime_debug_tools/scenes/remote_inspector.tscn"
+
 [editor]
 
 version_control/plugin_name="GitPlugin"

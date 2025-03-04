@@ -1,17 +1,13 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1740969593
-actionbutton.gd::GDScript/GDScript::2753390912474526773::1740964104::0::1::::<>Button<><>0<>0<><>::
-actionbutton.tscn::PackedScene::247811837465061253::1740969890::0::1::::<><><>0<>0<><>::uid://bfh07fvwxts4l::::res://actionbutton.gd
-attackbutton.gd::GDScript::4557086246768841187::1740969354::0::1::::<>Button<><>0<>0<><>::
-attackbutton.tscn::PackedScene::1009437950709495099::1740969890::0::1::::<><><>0<>0<><>::uid://dsbopawpow10::::res://actionbutton.tscn<>uid://b56qsrwlbo788::::res://attackbutton.gd
-enemy.gd::GDScript/GDScript::3350547142067224364::1740963394::0::1::::<>Node3D<><>0<>0<><>::
-enemy.tscn::PackedScene/PackedScene::8749983693268155714::1740948172::0::1::::<><><>0<>0<><>::uid://bn0ba0ldq4kho::::res://enemy.gd
-game.tscn::PackedScene::5488839897219514846::1740969890::0::1::::<><><>0<>0<><>::uid://wah2jmogvup8::::res://game_manager.gd<>uid://om8kbw8ov2qh::::res://attackbutton.tscn<>uid://dwws7nyjahrqg::::res://enemy.tscn<>uid://bdoob2nfo5qmx::::res://playerstats.gd<>uid://cyim1le1kwvdp::::res://player.gd
-game_manager.gd::GDScript/GDScript::1544628287314277175::1740969121::0::1::::<>Node<><>0<>0<><>::
+::res://::1741054412
+enemy.gd::GDScript::3350547142067224364::1741033884::0::1::::<>Node3D<><>0<>0<><>::
+enemy.tscn::PackedScene::8749983693268155714::1741034366::0::1::::<><><>0<>0<><>::uid://bn0ba0ldq4kho::::res://enemy.gd
+game.tscn::PackedScene::5488839897219514846::1741053975::0::1::::<><><>0<>0<><>::uid://wah2jmogvup8::::res://game_manager.gd<>uid://om8kbw8ov2qh::::res://buttons/attackbutton.tscn<>uid://dwws7nyjahrqg::::res://enemy.tscn<>uid://bdoob2nfo5qmx::::res://playerstats.gd<>uid://dmryhtjp4b47o::::res://buttons/healaction.tscn<>uid://m71devpglg7h::::res://player.tscn<>uid://7ir1naketvdy::::res://enemy state machine/state_machine.gd<>uid://dqmyldx5i7w1s::::res://enemy state machine/enemy_wander.gd<>uid://bl4rf5md5m788::::res://enemy state machine/enemy_chase.gd
+game_manager.gd::GDScript/GDScript::1544628287314277175::1740978866::0::1::::<>Node<><>0<>0<><>::
 icon.svg::CompressedTexture2D/CompressedTexture2D::8735237410284423683::1740844587::1740844753::1::::<><><>0<>0<>027255e5fb41ad8af207ac108ddde425<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-player.gd::GDScript/GDScript::6474664256417825113::1740961752::0::1::::<>Node3D<><>0<>0<><>::
-playerstats.gd::GDScript/GDScript::2626741765316665631::1740952268::0::1::::<>PanelContainer<><>0<>0<><>::
-healaction.tscn::PackedScene::8038093317505688890::1740969890::0::1::::<><><>0<>0<><>::uid://dsbopawpow10::::res://actionbutton.tscn
+player.gd::GDScript/GDScript::6474664256417825113::1740978909::0::1::::Player<>Node3D<><>0<>0<><>::
+player.tscn::PackedScene::909910454204227255::1741034366::0::1::::<><><>0<>0<><>::uid://cyim1le1kwvdp::::res://player.gd
+playerstats.gd::GDScript::2626741765316665631::1741034364::0::1::::<>PanelContainer<><>0<>0<><>::
 thewhitethingisback.blend::PackedScene/PackedScene::5048350271583347350::1740844587::1740844753::1::::<><><>0<>0<>a7939648f5a4be49f513668537ca38da<>res://.godot/imported/thewhitethingisback.blend-aa680c2fdd84197d2f80699910df77ba.scn::
 ::res://addons/::1740938730
 ::res://addons/anthonyec.camera_preview/::1740938637
@@ -70,7 +66,7 @@ plugin.cfg::TextFile/TextFile::-1::1740844586::0::1::::<><><>0<>0<><>::
 THIRDPARTY.md::TextFile/TextFile::-1::1740844586::0::1::::<><><>0<>0<><>::
 ::res://addons/godot-git-plugin/linux/::1740844586
 ::res://addons/godot-git-plugin/macos/::1740844586
-::res://addons/godot-git-plugin/win64/::1740888309
+::res://addons/godot-git-plugin/win64/::1741054407
 ::res://addons/resources_spreadsheet_view/::1740844916
 editor_color_setter.gd::GDScript/GDScript::4285144788387481075::1740844586::0::1::::<>Control<><>0<>1<><>::
 editor_icon_button.gd::GDScript/GDScript::3776393569004878078::1740844586::0::1::::<>Button<><>0<>1<><>::
@@ -158,9 +154,9 @@ plugin.gd::GDScript/GDScript::1390210695720119128::1740938615::0::1::::<>EditorP
 ::res://addons/splash_screen_wizard/::1740844587
 editor_ui.gd::GDScript/GDScript::3103605875157595942::1740844587::0::1::::<>EditorInspectorPlugin<><>0<>0<><>::
 plugin.cfg::TextFile/TextFile::-1::1740844587::0::1::::<><><>0<>0<><>::
-slide_transition.gd::GDScript/GDScript::7993046456504758769::1740844587::0::1::::SlideTransition<>Resource<><>0<>0<><>::
-splash_screen.gd::GDScript/GDScript::4307342143223363671::1740844587::0::1::::SplashScreen<>Control<><>0<>0<><>::
-splash_screen_slide.gd::GDScript/GDScript::7386396717175854757::1740844587::0::1::::SplashScreenSlide<>Control<><>0<>0<><>::
+slide_transition.gd::GDScript/GDScript::7993046456504758769::1740844587::0::1::::SlideTransition<>Resource<>res://addons/splash_screen_wizard/icons/SlideTransition.svg<>0<>0<><>::
+splash_screen.gd::GDScript/GDScript::4307342143223363671::1740844587::0::1::::SplashScreen<>Control<>res://addons/splash_screen_wizard/icons/SplashScreen.svg<>0<>0<><>::
+splash_screen_slide.gd::GDScript/GDScript::7386396717175854757::1740844587::0::1::::SplashScreenSlide<>Control<>res://addons/splash_screen_wizard/icons/SplashScreenSlide.svg<>0<>0<><>::
 splash_screen_wizard.gd::GDScript/GDScript::889021712407173356::1740844587::0::1::::<>EditorPlugin<><>0<>1<><>::
 ::res://addons/splash_screen_wizard/icons/::1740844754
 IconAddSlide.svg::CompressedTexture2D/CompressedTexture2D::8522584886210958018::1740844587::1740844754::1::::<><><>0<>0<>d7e1c6e1b84345f79908ca5c30719d3c<>res://.godot/imported/IconAddSlide.svg-08d08033bed1e3ea38de2069fe075a48.ctex::
@@ -171,7 +167,7 @@ SlideTransitionFade.svg::CompressedTexture2D/CompressedTexture2D::11629992862869
 SplashScreen.svg::CompressedTexture2D/CompressedTexture2D::3552350115565663319::1740844587::1740844753::1::::<><><>0<>0<>f71077cd8ce30a386c209baa908a0f41<>res://.godot/imported/SplashScreen.svg-404d1dc458fe8570ffe08dcf4d04792b.ctex::
 SplashScreenSlide.svg::CompressedTexture2D/CompressedTexture2D::6132361251143529799::1740844587::1740844753::1::::<><><>0<>0<>369555456df64f8257d020dd091410a0<>res://.godot/imported/SplashScreenSlide.svg-19af43d86edb340dce29525d9d66e430.ctex::
 ::res://addons/splash_screen_wizard/transitions/::1740844587
-slide_transition_fade.gd::GDScript/GDScript::2687634520837663775::1740844587::0::1::::SlideTransitionFade<>SlideTransition<><>0<>0<><>::
+slide_transition_fade.gd::GDScript/GDScript::2687634520837663775::1740844587::0::1::::SlideTransitionFade<>SlideTransition<>res://addons/splash_screen_wizard/icons/SlideTransitionFade.svg<>0<>0<><>::
 ::res://addons/worldmap_builder/::1740844587
 LICENSE.md::TextFile/TextFile::-1::1740844587::0::1::::<><><>0<>0<><>::
 plugin.cfg::TextFile/TextFile::-1::1740844587::0::1::::<><><>0<>0<><>::
@@ -278,10 +274,15 @@ texture_10.png::CompressedTexture2D/CompressedTexture2D::5434134780175199182::17
 texture_11.png::CompressedTexture2D/CompressedTexture2D::1370021696176858703::1740844587::1740844753::1::::<><><>0<>0<>7cd09094b1976e295fedd1edeac15036<>res://.godot/imported/texture_11.png-d26604346fed135ed12c725ec97c70a0.ctex::
 texture_12.png::CompressedTexture2D/CompressedTexture2D::6047542439335718600::1740844587::1740844753::1::::<><><>0<>0<>19ca79330c8d23a0c515d4077ca3a75a<>res://.godot/imported/texture_12.png-1886e9571fed092330a55527f470e32b.ctex::
 texture_13.png::CompressedTexture2D/CompressedTexture2D::2495934140612614578::1740844587::1740844753::1::::<><><>0<>0<>72ff654ec005a224e91c2e9b6875baf3<>res://.godot/imported/texture_13.png-b129774d8e005c508492e1b60b74b09a.ctex::
-::res://buttons/::0
-::res://game mode state machine/::1740844587
-combat_state.gd::GDScript/GDScript::9056759887912543981::1740844587::0::1::::Combat<>State<><>0<>0<><>::
-explore_state.gd::GDScript/GDScript::3652108304806703664::1740844587::0::1::::Explore<>State<><>0<>0<><>::
-game_mode_state_machine.gd::GDScript/GDScript::2263637321232094314::1740844587::0::1::::<>Node<><>0<>0<><>::
+::res://buttons/::1740978925
+actionbutton.gd::GDScript/GDScript::2753390912474526773::1740978925::0::1::::ActionButton<>Button<><>0<>0<><>::
+actionbutton.tscn::PackedScene/PackedScene::247811837465061253::1740970079::0::1::::<><><>0<>0<><>::uid://bfh07fvwxts4l::::res://buttons/actionbutton.gd
+attackbutton.gd::GDScript/GDScript::4557086246768841187::1740978922::0::1::::<>ActionButton<><>0<>0<><>::
+attackbutton.tscn::PackedScene/PackedScene::1009437950709495099::1740970078::0::1::::<><><>0<>0<><>::uid://dsbopawpow10::::res://buttons/actionbutton.tscn<>uid://b56qsrwlbo788::::res://buttons/attackbutton.gd
+healaction.gd::GDScript/GDScript::6867330007205770148::1740971348::0::1::::<>ActionButton<><>0<>0<><>::
+healaction.tscn::PackedScene/PackedScene::8038093317505688890::1740974596::0::1::::<><><>0<>0<><>::uid://dsbopawpow10::::res://buttons/actionbutton.tscn<>uid://c43t6lx60cb77::::res://buttons/healaction.gd
+::res://enemy state machine/::1741053975
+enemy_chase.gd::GDScript::3219407630840808611::1741035983::0::1::::ChaseState<>State<><>0<>0<><>::
+enemy_wander.gd::GDScript::8308533128371477086::1741053975::0::1::::WanderState<>State<><>0<>0<><>::
 state.gd::GDScript/GDScript::2359104455708812109::1740844587::0::1::::State<>Node3D<><>0<>0<><>::
-uncover_state.gd::GDScript/GDScript::3087162535950529142::1740844587::0::1::::Uncover<>State<><>0<>0<><>::
+state_machine.gd::GDScript::2263637321232094314::1740844587::0::1::::<>Node<><>0<>0<><>::

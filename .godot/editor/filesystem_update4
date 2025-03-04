@@ -1,21 +1,6 @@
 res://game.tscn
 res://enemy.gd
-res://player.gd
-res://game_manager.gd
-res://statpanel.gd
+res://enemy state machine/enemy_chase.gd
+res://enemy state machine/state_machine.gd
 res://enemy.tscn
-res://playerstats.gd
-res://actionbutton.gd
-res://actionbutton.tscn
-res://attackbutton.tscn
-res://attackbutton.gd
-res://combat stuff/attackbutton.tscn
-res://combat stuff/actionbutton.tscn
-res://healaction.tscn
-res://buttons/attackbutton.gd
-res://buttons/attackbutton.tscn
-res://buttons/actionbutton.tscn
-res://buttons/healaction.tscn
-res://buttons/actionbutton.gd
-res://buttons/healaction.gd
-res://battle_units.gd
+res://player.tscn

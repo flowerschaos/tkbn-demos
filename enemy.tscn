@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://bn0ba0ldq4kho" path="res://enemy.gd" id="1_7k104"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mwb40"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7k104"]
 albedo_color = Color(0.533333, 0, 0, 1)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_80nbo"]
-material = SubResource("StandardMaterial3D_mwb40")
+material = SubResource("StandardMaterial3D_7k104")
 
 [node name="enemy" type="Node3D"]
 script = ExtResource("1_7k104")
