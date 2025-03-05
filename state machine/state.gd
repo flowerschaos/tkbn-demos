@@ -3,8 +3,14 @@ class_name State
 
 signal changed
 
+var player: Player
+
 func enter():
-	pass
+	bind_player()
+
+func bind_player():
+	player = get_parent().get_parent()
+
 func exit():
 	pass
 func update(_delta: float):

@@ -42,7 +42,7 @@ version_control/autoload_on_startup=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/csg_toolkit/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/resources_spreadsheet_view/plugin.cfg", "res://addons/runtime_debug_tools/plugin.cfg", "res://addons/splash_screen_wizard/plugin.cfg", "res://addons/worldmap_builder/plugin.cfg")
+enabled=PackedStringArray("res://addons/csg_toolkit/plugin.cfg", "res://addons/resources_spreadsheet_view/plugin.cfg", "res://addons/runtime_debug_tools/plugin.cfg", "res://addons/splash_screen_wizard/plugin.cfg", "res://addons/worldmap_builder/plugin.cfg")
 
 [input]
 
@@ -105,3 +105,7 @@ sprint={
 [physics]
 
 3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"

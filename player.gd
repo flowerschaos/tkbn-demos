@@ -40,9 +40,7 @@ func get_max_ap():
 #endregion
 
 func _physics_process(delta: float) -> void:
-	if is_player == true:
-		ambush_area.get_overlapping_bodies()
-		
+	if is_player == true:		
 		if not is_on_floor():
 			velocity += get_gravity() * delta
 		var input_dir := Input.get_vector("left", "right", "forward", "backward")

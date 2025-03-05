@@ -1,2 +1,2 @@
-extends PlayerState
+extends State
 class_name CombatState

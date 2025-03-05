@@ -1,28 +1,33 @@
 extends Node
-class_name FSM
-#credit Bitlytic for FSM implementation
 
-var states = {}
-var initial_state: State
-var state_cur: State
+@export var initial_state: State
+var states: Dictionary = {}
+var current_state: State
 
-func ChangeState(next_state_str: String):
-	if state_cur:
-		state_cur.Exit()
-	var next_state = states.get(next_state_str)
-	state_cur = next_state
-	if state_cur:
-		state_cur.Enter()
+func _ready() -> void:
+	for child in get_children():
+		if child is State:
+			states[child.name] = child
+			child.changed.connect(on_state_changed)
+		if initial_state:
+			initial_state.enter()
+			current_state = initial_state
 
-func _ready():
-	if get_children().size() < 1:
-		printerr("Found no children in FSM")
-	for state:State in get_children():
-		states[state.name] = state
-		state.changed.connect(ChangeState)
-	if initial_state:
-		ChangeState(initial_state.name)
+func _process(delta: float) -> void:
+	if current_state:
+		current_state.update(delta)
 
-func _process(delta):
-	if state_cur:
-		state_cur.Update(delta)
+func _physics_process(delta: float) -> void:
+	if current_state:
+		current_state.physics_update(delta)
+
+func on_state_changed(state, new_state_name):
+	var new_state = states.get(new_state_name)
+	if state != current_state:
+		return
+	if !new_state:
+		return
+	if current_state:
+		current_state.exit()
+	new_state.enter()
+	current_state = new_state
