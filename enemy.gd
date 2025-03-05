@@ -2,8 +2,7 @@ extends Node3D
 class_name Enemy
 
 var hp = 25: set = set_hp
-@onready var hp_label: Label3D = $"hp label"
-@onready var player: Node3D = $"../player"
+@onready var hp_label: Label3D = $"HPLabel"
 
 signal on_death
 signal end_turn

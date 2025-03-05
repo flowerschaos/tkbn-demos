@@ -1,4 +1,21 @@
-res://enemy.tscn
+res://combat.tscn
+res://combat_manager.gd
+res://enemy.gd
+res://enemy state machine/enemy_chase.gd
+res://global.gd
 res://player.tscn
+res://main.tscn
+res://ov_player.gd
+res://playerstats.gd
 res://player.gd
-res://game.tscn
+res://state machine/state_machine.gd
+res://state machine/state.gd
+res://explore_state.gd
+res://combat/combat.tscn
+res://state machine/explore_state.gd
+res://combat_state.gd
+res://enemy.tscn
+res://playerdetection.gd
+res://player_state.gd
+res://player_state_machine.gd
+res://state machine/player_state_machine.gd

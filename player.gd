@@ -14,7 +14,9 @@ var max_hp: get = get_max_hp
 @onready var hp = max_hp: set = set_hp
 var max_ap: get = get_max_ap
 @onready var ap = max_ap: set = set_ap
-const SPEED = 5.0
+@export var is_player: bool
+@onready var ambush_area: Area3D = $AmbushArea
+const SPEED = 5
 
 signal hp_changed(value)
 signal ap_changed(value)
@@ -27,7 +29,6 @@ func set_hp(value):
 func get_max_hp():
 	return(10+health+(endurance*2))
 #endregion
-
 #region ap
 func set_ap(value):
 	ap = clamp(value, 0, max_ap)
@@ -37,3 +38,19 @@ func set_ap(value):
 func get_max_ap():
 	return(round(1+(endurance/2)))
 #endregion
+
+func _physics_process(delta: float) -> void:
+	if is_player == true:
+		ambush_area.get_overlapping_bodies()
+		
+		if not is_on_floor():
+			velocity += get_gravity() * delta
+		var input_dir := Input.get_vector("left", "right", "forward", "backward")
+		var direction := (get_viewport().get_camera_3d().transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+		if direction:
+			velocity.x = direction.x * SPEED
+			velocity.z = direction.z * SPEED
+		else:
+			velocity.x = move_toward(velocity.x, 0, SPEED)
+			velocity.z = move_toward(velocity.z, 0, SPEED)
+		move_and_slide()

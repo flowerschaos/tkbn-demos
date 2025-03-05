@@ -1,6 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://m71devpglg7h"]
+[gd_scene load_steps=9 format=3 uid="uid://m71devpglg7h"]
 
 [ext_resource type="Script" uid="uid://cyim1le1kwvdp" path="res://player.gd" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://kjwxvq1tshle" path="res://state machine/player_state_machine.gd" id="2_hqtel"]
+[ext_resource type="Script" uid="uid://b65myym8fts3w" path="res://state machine/explore_state.gd" id="2_onrkg"]
+[ext_resource type="Script" uid="uid://dt3gauv3o5xve" path="res://state machine/combat_state.gd" id="3_i3pqv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4flbx"]
 albedo_color = Color(0.168627, 0.25098, 0.458824, 1)
@@ -10,11 +13,34 @@ material = SubResource("StandardMaterial3D_4flbx")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4flbx"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_i3pqv"]
+size = Vector3(5.78918, 1, 5.30688)
+
 [node name="player" type="CharacterBody3D"]
 script = ExtResource("1_4flbx")
+is_player = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_onrkg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_4flbx")
+
+[node name="AmbushArea" type="Area3D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AmbushArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.282776, 0, -0.666626)
+shape = SubResource("BoxShape3D_i3pqv")
+
+[node name="PlayerStateMachine" type="Node" parent="."]
+script = ExtResource("2_hqtel")
+metadata/_custom_type_script = "uid://kjwxvq1tshle"
+
+[node name="CombatState" type="Node3D" parent="PlayerStateMachine"]
+script = ExtResource("3_i3pqv")
+metadata/_custom_type_script = "uid://dt3gauv3o5xve"
+
+[node name="ExploreState" type="Node3D" parent="PlayerStateMachine"]
+script = ExtResource("2_onrkg")
+metadata/_custom_type_script = "uid://b65myym8fts3w"

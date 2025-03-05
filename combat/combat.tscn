@@ -1,0 +1,92 @@
+[gd_scene load_steps=11 format=3 uid="uid://ckg3nkg314bco"]
+
+[ext_resource type="Script" uid="uid://wah2jmogvup8" path="res://combat/combat_manager.gd" id="1_fvoc2"]
+[ext_resource type="Script" uid="uid://bs8ab14v7gs6h" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="2_ilamk"]
+[ext_resource type="PackedScene" uid="uid://om8kbw8ov2qh" path="res://combat/buttons/attackbutton.tscn" id="2_v7dqf"]
+[ext_resource type="PackedScene" uid="uid://dmryhtjp4b47o" path="res://combat/buttons/healaction.tscn" id="3_syqip"]
+[ext_resource type="Script" uid="uid://bdoob2nfo5qmx" path="res://combat/playerstats.gd" id="4_ilamk"]
+[ext_resource type="PackedScene" uid="uid://dwws7nyjahrqg" path="res://enemy.tscn" id="5_px7ba"]
+[ext_resource type="PackedScene" uid="uid://m71devpglg7h" path="res://player.tscn" id="6_tt5c4"]
+[ext_resource type="Script" uid="uid://bwf6duljbep0c" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="8_px7ba"]
+[ext_resource type="Script" uid="uid://wvq7f4rs13wy" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="9_tt5c4"]
+
+[sub_resource type="Resource" id="Resource_ilamk"]
+script = ExtResource("9_tt5c4")
+duration = 1.0
+transition = 0
+ease = 2
+
+[node name="combat" type="Node3D"]
+script = ExtResource("1_fvoc2")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.379818, 0.644521, -0.663574, 0.0156564, 0.712749, 0.701245, 0.924929, -0.276735, 0.260624, -1.32904, 4.97694, 1.22298)
+visible = false
+size = 10.4312
+
+[node name="PhantomCameraHost" type="Node" parent="Camera3D"]
+process_priority = 300
+process_physics_priority = 300
+script = ExtResource("2_ilamk")
+
+[node name="combat ui" type="Control" parent="."]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="actions" type="VBoxContainer" parent="combat ui"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -136.0
+offset_right = 90.0
+grow_vertical = 0
+
+[node name="attackbutton" parent="combat ui/actions" instance=ExtResource("2_v7dqf")]
+layout_mode = 2
+
+[node name="healaction" parent="combat ui/actions" instance=ExtResource("3_syqip")]
+layout_mode = 2
+
+[node name="playerstats" type="PanelContainer" parent="combat ui"]
+layout_mode = 0
+offset_top = 421.0
+offset_right = 88.0
+offset_bottom = 461.0
+script = ExtResource("4_ilamk")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="combat ui/playerstats"]
+layout_mode = 2
+
+[node name="hp" type="Label" parent="combat ui/playerstats/HBoxContainer"]
+layout_mode = 2
+text = "hp: 25"
+
+[node name="ap" type="Label" parent="combat ui/playerstats/HBoxContainer"]
+layout_mode = 2
+text = "ap: 3"
+
+[node name="enemy" parent="." instance=ExtResource("5_px7ba")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6, 0, -0.768014)
+
+[node name="player" parent="." instance=ExtResource("6_tt5c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.172253, -0.768)
+
+[node name="playercam" type="Node3D" parent="."]
+transform = Transform3D(0.379818, 0.644521, -0.663574, 0.0156564, 0.712749, 0.701245, 0.924928, -0.276735, 0.260624, -1.32904, 4.97694, 1.22298)
+script = ExtResource("8_px7ba")
+tween_resource = SubResource("Resource_ilamk")
+
+[node name="enemycam" type="Node3D" parent="."]
+transform = Transform3D(-0.442928, -0.62382, 0.643943, 0.0156564, 0.712749, 0.701245, -0.89642, 0.320683, -0.30593, 7.24487, 4.977, -2.54117)
+script = ExtResource("8_px7ba")
+tween_resource = SubResource("Resource_ilamk")
+
+[connection signal="on_death" from="enemy" to="." method="_on_enemy_death"]
+[connection signal="ap_changed" from="player" to="combat ui/playerstats" method="_on_ap_changed"]
+[connection signal="hp_changed" from="player" to="combat ui/playerstats" method="_on_hp_changed"]

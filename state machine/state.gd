@@ -1,9 +1,7 @@
-extends Node3D
+extends Node
 class_name State
 
-var change_state
-
-signal state_changed
+signal changed
 
 func enter():
 	pass
