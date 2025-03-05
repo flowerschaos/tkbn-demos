@@ -15,6 +15,7 @@ material = SubResource("StandardMaterial3D_7k104")
 script = ExtResource("1_7k104")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("CapsuleMesh_80nbo")
 
 [node name="HPLabel" type="Label3D" parent="."]
@@ -23,7 +24,7 @@ pixel_size = 0.015
 text = "hp: 25"
 
 [node name="PlayerDetection" type="RayCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.402556, 0)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.402556, 0)
 target_position = Vector3(0, 0, -2)
 script = ExtResource("2_4gyqm")
 
