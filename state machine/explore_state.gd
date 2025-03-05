@@ -12,5 +12,5 @@ func physics_update(_delta: float):
 	for body in ambush_area.get_overlapping_bodies():
 		if body.name == "enemy":
 			attack_prompt.visible = true
-			if Input.is_action_pressed("ambush"):
+			if Input.is_action_pressed("ui_accept"):
 				changed.emit(self, "CombatState")
