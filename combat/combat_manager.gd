@@ -8,7 +8,14 @@ extends Node
 @onready var enemycam: PhantomCamera3D = $enemycam
 
 func _ready() -> void:
-	start_player_turn()
+	signals.connect("enter_combat", _on_combat_enter)
+
+func _on_combat_enter():
+	print("combat begin!")
+	turnorder()
+
+func turnorder():
+	pass
 
 func start_enemy_turn():
 	enemycam.priority = 1

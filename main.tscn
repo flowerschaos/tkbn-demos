@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://ceghl8vfsvkhn"]
+[gd_scene load_steps=8 format=3 uid="uid://ceghl8vfsvkhn"]
 
 [ext_resource type="PackedScene" uid="uid://m71devpglg7h" path="res://player.tscn" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://dwws7nyjahrqg" path="res://enemy.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://ckg3nkg314bco" path="res://combat/combat.tscn" id="3_h2yge"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xm2m"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -95,3 +96,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.28111, 0, 0.60756)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.282309, 0.595854, -0.751837, 0, 0.783716, 0.621119, 0.959324, -0.175348, 0.22125, -5.36059, 4.97627, 1.64946)
+
+[node name="combat" parent="." instance=ExtResource("3_h2yge")]
