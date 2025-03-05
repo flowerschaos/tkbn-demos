@@ -10,4 +10,4 @@ func enter():
 func physics_update(_delta: float):
 	for body in ambush_area.get_overlapping_bodies():
 		if body.name == "enemy":
-			pass
+			print("notorious scoundrel detected")

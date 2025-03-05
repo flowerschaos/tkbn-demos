@@ -7,4 +7,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	var collider = get_collider()
+	if is_colliding():
+		print(collider.name)
+	#if collider.name == "player":
+		#print("rapscallion detected")

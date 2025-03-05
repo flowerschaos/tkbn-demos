@@ -7,3 +7,4 @@ res://state machine/player_state_machine.gd
 res://state machine/state_machine.gd
 res://state machine/state.gd
 res://state machine/combat_state.gd
+res://playerdetection.gd
