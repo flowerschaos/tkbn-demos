@@ -9,6 +9,5 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	var collider = get_collider()
 	if is_colliding():
-		print(collider.name)
-	#if collider.name == "player":
-		#print("rapscallion detected")
+		if collider.name == "player":
+			print("rapscallion detected")

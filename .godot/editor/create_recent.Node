@@ -1,6 +1,7 @@
+CombatState
+Label
 ExploreState
 Node
-CombatState
 PlayerStateMachine
 CharacterBody3D
 CollisionShape3D
@@ -10,5 +11,4 @@ RayCast3D
 AnimationPlayer
 Button
 PanelContainer
-Label
 HBoxContainer

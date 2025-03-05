@@ -1,12 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1741186807
+::res://::1741191740
 enemy.gd::GDScript/GDScript::3350547142067224364::1741180225::0::1::::Enemy<>Node3D<><>0<>0<><>::
-enemy.tscn::PackedScene::8749983693268155714::1741186774::0::1::::<><><>0<>0<><>::uid://bn0ba0ldq4kho::::res://enemy.gd<>uid://1ykh4d2vy2hd::::res://playerdetection.gd
+enemy.tscn::PackedScene::8749983693268155714::1741191686::0::1::::<><><>0<>0<><>::uid://bn0ba0ldq4kho::::res://enemy.gd<>uid://1ykh4d2vy2hd::::res://playerdetection.gd
 icon.svg::CompressedTexture2D/CompressedTexture2D::8735237410284423683::1740747224::1740748923::1::::<><><>0<>0<>027255e5fb41ad8af207ac108ddde425<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-main.tscn::PackedScene::5066429437108525259::1741186774::0::1::::<><><>0<>0<><>::uid://m71devpglg7h::::res://player.tscn<>uid://dwws7nyjahrqg::::res://enemy.tscn
+main.tscn::PackedScene::5066429437108525259::1741191618::0::1::::<><><>0<>0<><>::uid://m71devpglg7h::::res://player.tscn<>uid://dwws7nyjahrqg::::res://enemy.tscn
 player.gd::GDScript/GDScript::6474664256417825113::1741180785::0::1::::Player<>CharacterBody3D<><>0<>0<><>::
-player.tscn::PackedScene::909910454204227255::1741186774::0::1::::<><><>0<>0<><>::uid://cyim1le1kwvdp::::res://player.gd<>uid://7ir1naketvdy::::res://state machine/state_machine.gd<>uid://b65myym8fts3w::::res://state machine/explore_state.gd
-playerdetection.gd::GDScript/GDScript::1875076200238637197::1741186588::0::1::::<>RayCast3D<><>0<>0<><>::
+player.tscn::PackedScene::909910454204227255::1741191619::0::1::::<><><>0<>0<><>::uid://cyim1le1kwvdp::::res://player.gd<>uid://7ir1naketvdy::::res://state machine/state_machine.gd<>uid://b65myym8fts3w::::res://state machine/explore_state.gd<>uid://dt3gauv3o5xve::::res://state machine/combat_state.gd
+playerdetection.gd::GDScript::1875076200238637197::1741191686::0::1::::<>RayCast3D<><>0<>0<><>::
 thewhitethingisback.blend::PackedScene/PackedScene::5048350271583347350::1740747224::1741094913::1::::<><><>0<>0<>a7939648f5a4be49f513668537ca38da<>res://.godot/imported/thewhitethingisback.blend-aa680c2fdd84197d2f80699910df77ba.scn::
 ::res://addons/::1741180554
 ::res://addons/anthonyec.camera_preview/::1741094913
@@ -435,9 +435,9 @@ attackbutton.gd::GDScript/GDScript::4557086246768841187::1741180225::0::1::::<>A
 attackbutton.tscn::PackedScene/PackedScene::1009437950709495099::1741180225::0::1::::<><><>0<>0<><>::uid://dsbopawpow10::::res://combat/buttons/actionbutton.tscn<>uid://b56qsrwlbo788::::res://combat/buttons/attackbutton.gd
 healaction.gd::GDScript/GDScript::6867330007205770148::1741180225::0::1::::<>ActionButton<><>0<>0<><>::
 healaction.tscn::PackedScene/PackedScene::8038093317505688890::1741180225::0::1::::<><><>0<>0<><>::uid://dsbopawpow10::::res://combat/buttons/actionbutton.tscn<>uid://c43t6lx60cb77::::res://combat/buttons/healaction.gd
-::res://state machine/::1741186386
-combat_state.gd::GDScript/GDScript::8551018043472193594::1741184836::0::1::::CombatState<>State<><>0<>0<><>::
-explore_state.gd::GDScript/GDScript::4624978912665688990::1741186386::0::1::::ExploreState<>State<><>0<>0<><>::
+::res://state machine/::1741191618
+combat_state.gd::GDScript::8551018043472193594::1741191618::0::1::::CombatState<>State<><>0<>0<><>::
+explore_state.gd::GDScript::4624978912665688990::1741191567::0::1::::ExploreState<>State<><>0<>0<><>::
 player_state.gd::GDScript/GDScript::2108133107942934990::1741180225::0::1::::PlayerState<>State<><>0<>0<><>::
 player_state_machine.gd::GDScript/GDScript::721845812182187670::1741184638::0::1::::PlayerStateMachine<>FSM<><>0<>0<><>::
 state.gd::GDScript/GDScript::2359104455708812109::1741184829::0::1::::State<>Node<><>0<>0<><>::
