@@ -36,6 +36,7 @@ func set_ap(value):
 	if ap == 0:
 		emit_signal("end_turn")
 func get_max_ap():
+	@warning_ignore("integer_division")
 	return(round(1+(endurance/2)))
 #endregion
 
