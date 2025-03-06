@@ -1,6 +1,7 @@
 extends Node3D
-@onready var combat_loc = preload("uid://ckg3nkg314bco")
-var combat = combat_loc.instantiate()
+const combat_path = preload("uid://ckg3nkg314bco")
+var combat = combat_path.instantiate()
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	combat.visible = false
