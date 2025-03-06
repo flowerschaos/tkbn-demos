@@ -1,6 +1,6 @@
 extends Node3D
-@onready var combat: Node3D = $combat
-
+@onready var combat_loc = preload("uid://ckg3nkg314bco")
+var combat = combat_loc.instantiate()
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	combat.visible = false
