@@ -1,6 +1,5 @@
 extends Node3D
-@onready var combat: Node3D = $combat
-const main = preload("res://main.tscn")
+@onready var combat = $combat
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
