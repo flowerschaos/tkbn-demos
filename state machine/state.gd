@@ -3,7 +3,7 @@ class_name State
 
 signal changed
 
-var player: Player
+@export var player: Player
 
 func enter():
 	bind_player()

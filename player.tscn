@@ -37,12 +37,14 @@ shape = SubResource("BoxShape3D_i3pqv")
 script = ExtResource("2_onrkg")
 initial_state = NodePath("ExploreState")
 
-[node name="ExploreState" type="Node" parent="PlayerStateMachine"]
+[node name="ExploreState" type="Node" parent="PlayerStateMachine" node_paths=PackedStringArray("player")]
 script = ExtResource("3_i3pqv")
+player = NodePath("../..")
 metadata/_custom_type_script = "uid://b65myym8fts3w"
 
-[node name="CombatState" type="Node" parent="PlayerStateMachine"]
+[node name="CombatState" type="Node" parent="PlayerStateMachine" node_paths=PackedStringArray("player")]
 script = ExtResource("4_hqtel")
+player = NodePath("../..")
 metadata/_custom_type_script = "uid://dt3gauv3o5xve"
 
 [node name="attack_prompt" type="Label" parent="."]

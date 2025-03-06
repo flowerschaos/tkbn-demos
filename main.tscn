@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://ceghl8vfsvkhn"]
+[gd_scene load_steps=9 format=3 uid="uid://ceghl8vfsvkhn"]
 
 [ext_resource type="PackedScene" uid="uid://m71devpglg7h" path="res://player.tscn" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://dt2b5o5nulv1e" path="res://game_manager.gd" id="1_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://dwws7nyjahrqg" path="res://enemy.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://ckg3nkg314bco" path="res://combat/combat.tscn" id="3_h2yge"]
 
@@ -20,6 +21,7 @@ tonemap_mode = 2
 albedo_color = Color(1, 0, 0, 1)
 
 [node name="main" type="Node3D"]
+script = ExtResource("1_1bvp3")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
