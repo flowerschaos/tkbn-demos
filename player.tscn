@@ -14,9 +14,11 @@ material = SubResource("StandardMaterial3D_4flbx")
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4flbx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_i3pqv"]
-size = Vector3(5.78918, 1, 5.30688)
+size = Vector3(5.78918, 0.666504, 5.30688)
 
 [node name="player" type="CharacterBody3D"]
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_4flbx")
 is_player = true
 
@@ -28,9 +30,10 @@ shape = SubResource("CapsuleShape3D_4flbx")
 
 [node name="AmbushArea" type="Area3D" parent="."]
 collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="AmbushArea"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.282776, 0, -0.666626)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.282776, -0.166748, -0.666626)
 shape = SubResource("BoxShape3D_i3pqv")
 
 [node name="PlayerStateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]

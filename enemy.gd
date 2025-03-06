@@ -28,5 +28,5 @@ func take_damage(amount):
 func _ready() -> void:
 	pass
 
-func _physics_process(delta:float):
+func _physics_process(_delta:float):
 	var space_state = get_world_3d().direct_space_state
