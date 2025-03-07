@@ -17,10 +17,6 @@ func _ready() -> void:
 func _on_combat_enter():
 	enemy.connect("on_death", _on_enemy_death)
 	print("combat begin!")
-	turnorder()
-
-func turnorder():
-	start_player_turn()
 
 func start_enemy_turn():
 	enemycam.priority = 1

@@ -29,6 +29,7 @@ func set_hp(value):
 func get_max_hp():
 	return(10+health+(endurance*2))
 #endregion
+
 #region ap
 func set_ap(value):
 	ap = clamp(value, 0, max_ap)

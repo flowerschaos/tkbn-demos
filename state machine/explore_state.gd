@@ -13,6 +13,7 @@ func physics_update(_delta: float):
 		if body.collision_layer == 2:
 			attack_prompt.visible = true
 			body.add_to_group("actor")
+			player.add_to_group("actor")
 			if Input.is_action_pressed("ui_accept"):
 				changed.emit(self, "CombatState")
 		else:
