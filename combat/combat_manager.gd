@@ -1,6 +1,6 @@
 extends Node
 @onready var player: Player = $player
-@onready var enemy: Node3D = $enemy
+@onready var enemy: Enemy = $enemy
 @onready var combat_ui: Control = $"combat ui"
 @onready var playeractions: VBoxContainer = $"combat ui/actions"
 @onready var playerstatpanel: PanelContainer = $"combat ui/playerstats"
@@ -9,8 +9,11 @@ extends Node
 
 func _ready() -> void:
 	signals.connect("enter_combat", _on_combat_enter)
+	player.connect("ap_changed", playerstatpanel._on_ap_changed)
+	player.connect("hp_changed", playerstatpanel._on_hp_changed)
 
 func _on_combat_enter():
+	enemy.connect("on_death", _on_enemy_death)
 	print("combat begin!")
 	turnorder()
 

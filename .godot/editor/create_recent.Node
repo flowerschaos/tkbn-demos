@@ -1,3 +1,4 @@
+VisionCone3D
 ShapeCast3D
 CombatState
 Label
@@ -11,4 +12,3 @@ RayCast3D
 AnimationPlayer
 Button
 PanelContainer
-HBoxContainer

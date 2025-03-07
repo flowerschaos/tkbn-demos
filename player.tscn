@@ -33,7 +33,6 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="AmbushArea"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.282776, -0.166748, -0.666626)
 shape = SubResource("BoxShape3D_i3pqv")
 
 [node name="PlayerStateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]

@@ -26,7 +26,8 @@ func take_damage(amount):
 #endregion
 
 func _ready() -> void:
-	pass
+	hp_label.visible = false
+	signals.connect("enter_combat", _on_combat_enter)
 
-func _physics_process(_delta:float):
-	var space_state = get_world_3d().direct_space_state
+func _on_combat_enter():
+	hp_label.visible = true

@@ -14,3 +14,5 @@ func physics_update(_delta: float):
 			attack_prompt.visible = true
 			if Input.is_action_pressed("ui_accept"):
 				changed.emit(self, "CombatState")
+		else:
+			attack_prompt.visible = false
