@@ -43,6 +43,11 @@ version_control/autoload_on_startup=true
 
 enabled=PackedStringArray("res://addons/phantom_camera/plugin.cfg", "res://addons/resources_spreadsheet_view/plugin.cfg", "res://addons/splash_screen_wizard/plugin.cfg", "res://addons/tattomoosa.vision_cone_3d/plugin.cfg", "res://addons/worldmap_builder/plugin.cfg")
 
+[global_group]
+
+player="playable characters"
+enemy="combatants"
+
 [input]
 
 left_click={
