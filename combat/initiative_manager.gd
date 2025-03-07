@@ -2,11 +2,8 @@ extends Node
 class_name InitiativeManager
 
 @onready var active_character
-
-func get_actors() -> Array:
-	var actors
-	actors = get_children()
-	return actors
+@onready var players = get_tree().get_first_node_in_group("player")
+@onready var enemies = get_tree().get_first_node_in_group("player")
 
 static func speed_sort(a, b):
 	return a.speed > b.speed

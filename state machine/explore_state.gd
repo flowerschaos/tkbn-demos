@@ -10,9 +10,11 @@ func enter():
 
 func physics_update(_delta: float):
 	for body in ambush_area.get_overlapping_bodies():
-		if body.name == "enemy":
+		if body.collision_layer == 2:
 			attack_prompt.visible = true
+			body.add_to_group("actor")
 			if Input.is_action_pressed("ui_accept"):
 				changed.emit(self, "CombatState")
 		else:
 			attack_prompt.visible = false
+			body.remove_from_group("actor")

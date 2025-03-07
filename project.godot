@@ -47,6 +47,7 @@ enabled=PackedStringArray("res://addons/phantom_camera/plugin.cfg", "res://addon
 
 player="playable characters"
 enemy="combatants"
+actor="character participating in combat"
 
 [input]
 
