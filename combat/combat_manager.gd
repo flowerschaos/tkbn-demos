@@ -20,7 +20,7 @@ func _on_combat_enter():
 	turnorder()
 
 func turnorder():
-	pass
+	start_player_turn()
 
 func start_enemy_turn():
 	enemycam.priority = 1

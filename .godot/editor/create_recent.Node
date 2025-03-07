@@ -1,9 +1,9 @@
+Node
 VisionCone3D
 ShapeCast3D
 CombatState
 Label
 ExploreState
-Node
 CharacterBody3D
 CollisionShape3D
 Camera3D

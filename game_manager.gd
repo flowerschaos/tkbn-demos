@@ -7,8 +7,10 @@ func _ready() -> void:
 
 func _on_combat_enter():
 	add_child(combat)
-	combat.add_child($enemy)
-	combat.add_child($player)
+	var player = get_tree().get_first_node_in_group("player")
+	var enemy = get_tree().get_first_node_in_group("enemy")
+	player.reparent(combat)
+	enemy.reparent(combat)
 	print("combat started")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
