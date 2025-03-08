@@ -90,13 +90,12 @@ use_collision = true
 size = Vector3(26.7365, 10.8223, 1)
 material = SubResource("StandardMaterial3D_7dm0k")
 
-[node name="player" parent="." instance=ExtResource("1_0xm2m")]
+[node name="player" parent="." groups=["actor"] instance=ExtResource("1_0xm2m")]
 
-[node name="enemy" parent="." instance=ExtResource("2_0xm2m")]
+[node name="enemy" parent="." groups=["actor"] instance=ExtResource("2_0xm2m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.28111, 0, 0.60756)
 collision_layer = 2
 collision_mask = 2
-power = 8
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.282309, 0.595854, -0.751837, 0, 0.783716, 0.621119, 0.959324, -0.175348, 0.22125, -5.36059, 4.97627, 1.64946)

@@ -1,7 +1,6 @@
 extends Node
 class_name InitiativeManager
 
-@onready var active_character
 @onready var actors: Array = get_tree().get_nodes_in_group("actor")
 
 func speed_sort(a, b):

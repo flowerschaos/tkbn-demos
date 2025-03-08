@@ -1,6 +1,6 @@
 extends Node
-@onready var player = get_tree().get_first_node_in_group("player")
-@onready var enemy = get_tree().get_first_node_in_group("enemy")
+@onready var player = get_tree().get_nodes_in_group("player")
+@onready var enemy = get_tree().get_nodes_in_group("enemy")
 @onready var combat_ui: Control = $"combat ui"
 @onready var playeractions: VBoxContainer = $"combat ui/actions"
 @onready var playerstatpanel: PanelContainer = $"combat ui/playerstats"
