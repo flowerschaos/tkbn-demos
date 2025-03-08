@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dwws7nyjahrqg"]
 
 [ext_resource type="Script" uid="uid://bn0ba0ldq4kho" path="res://enemy.gd" id="1_7k104"]
-[ext_resource type="Script" uid="uid://ffyxg5wsi3w5" path="res://addons/tattomoosa.vision_cone_3d/src/VisionCone3D.gd" id="2_4gyqm"]
+[ext_resource type="Script" uid="uid://cbkx0bnjn7amt" path="res://addons/tattomoosa.vision_cone_3d/src/VisionCone3D.gd" id="2_4gyqm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7k104"]
 albedo_color = Color(0.533333, 0, 0, 1)
@@ -14,6 +14,7 @@ material = SubResource("StandardMaterial3D_7k104")
 [node name="enemy" type="CharacterBody3D" groups=["enemy"]]
 collision_layer = 3
 script = ExtResource("1_7k104")
+speed = 8
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
