@@ -1,13 +1,22 @@
-[gd_scene load_steps=10 format=3 uid="uid://ckg3nkg314bco"]
+[gd_scene load_steps=13 format=3 uid="uid://ckg3nkg314bco"]
 
 [ext_resource type="Script" uid="uid://wah2jmogvup8" path="res://combat/combat_manager.gd" id="1_fvoc2"]
 [ext_resource type="Script" uid="uid://bs8ab14v7gs6h" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="2_ilamk"]
 [ext_resource type="PackedScene" uid="uid://om8kbw8ov2qh" path="res://combat/buttons/attackbutton.tscn" id="2_v7dqf"]
 [ext_resource type="PackedScene" uid="uid://dmryhtjp4b47o" path="res://combat/buttons/healaction.tscn" id="3_syqip"]
 [ext_resource type="Script" uid="uid://bdoob2nfo5qmx" path="res://combat/playerstats.gd" id="4_ilamk"]
+[ext_resource type="Shader" path="res://skew.tres" id="6_iga5g"]
 [ext_resource type="Script" uid="uid://bd36ywt5hq64s" path="res://combat/initiative_manager.gd" id="8_6cnl0"]
 [ext_resource type="Script" uid="uid://bwf6duljbep0c" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="8_px7ba"]
 [ext_resource type="Script" uid="uid://wvq7f4rs13wy" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="9_tt5c4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4h14y"]
+shader = ExtResource("6_iga5g")
+shader_parameter/strength = -0.2
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q6cuf"]
+shader = ExtResource("6_iga5g")
+shader_parameter/strength = -0.2
 
 [sub_resource type="Resource" id="Resource_ilamk"]
 script = ExtResource("9_tt5c4")
@@ -28,17 +37,10 @@ process_priority = 300
 process_physics_priority = 300
 script = ExtResource("2_ilamk")
 
-[node name="combat ui" type="Control" parent="."]
+[node name="combat ui" type="CanvasLayer" parent="."]
 process_mode = 3
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="actions" type="VBoxContainer" parent="combat ui"]
-layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -53,7 +55,6 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="playerstats" type="PanelContainer" parent="combat ui"]
-layout_mode = 0
 offset_top = 421.0
 offset_right = 88.0
 offset_bottom = 461.0
@@ -69,6 +70,121 @@ text = "hp: 25"
 [node name="ap" type="Label" parent="combat ui/playerstats/HBoxContainer"]
 layout_mode = 2
 text = "ap: 3"
+
+[node name="timeline" type="HBoxContainer" parent="combat ui"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -467.0
+offset_top = 36.0
+offset_right = 467.0
+offset_bottom = 166.0
+grow_horizontal = 2
+
+[node name="timelineslot1" type="Panel" parent="combat ui/timeline"]
+material = SubResource("ShaderMaterial_4h14y")
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="combat ui/timeline/timelineslot1"]
+material = SubResource("ShaderMaterial_q6cuf")
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 0
+offset_left = -12.0
+offset_right = 142.0
+offset_bottom = 130.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="timelineslot2" type="Panel" parent="combat ui/timeline"]
+material = SubResource("ShaderMaterial_4h14y")
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="combat ui/timeline/timelineslot2"]
+material = SubResource("ShaderMaterial_q6cuf")
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 0
+offset_left = -12.0
+offset_right = 142.0
+offset_bottom = 130.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="timelineslot3" type="Panel" parent="combat ui/timeline"]
+material = SubResource("ShaderMaterial_4h14y")
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="combat ui/timeline/timelineslot3"]
+material = SubResource("ShaderMaterial_q6cuf")
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 0
+offset_left = -12.0
+offset_right = 142.0
+offset_bottom = 130.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="timelineslot4" type="Panel" parent="combat ui/timeline"]
+material = SubResource("ShaderMaterial_4h14y")
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="combat ui/timeline/timelineslot4"]
+material = SubResource("ShaderMaterial_q6cuf")
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 0
+offset_left = -12.0
+offset_right = 142.0
+offset_bottom = 130.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="timelineslot5" type="Panel" parent="combat ui/timeline"]
+material = SubResource("ShaderMaterial_4h14y")
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="combat ui/timeline/timelineslot5"]
+material = SubResource("ShaderMaterial_q6cuf")
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 0
+offset_left = -12.0
+offset_right = 142.0
+offset_bottom = 130.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="timelineslot6" type="Panel" parent="combat ui/timeline"]
+material = SubResource("ShaderMaterial_4h14y")
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="combat ui/timeline/timelineslot6"]
+material = SubResource("ShaderMaterial_q6cuf")
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 0
+offset_left = -12.0
+offset_right = 142.0
+offset_bottom = 130.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="timelineslot7" type="Panel" parent="combat ui/timeline"]
+material = SubResource("ShaderMaterial_4h14y")
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="combat ui/timeline/timelineslot7"]
+material = SubResource("ShaderMaterial_q6cuf")
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 0
+offset_left = -12.0
+offset_right = 142.0
+offset_bottom = 130.0
+expand_mode = 1
+stretch_mode = 5
 
 [node name="playercam" type="Node3D" parent="."]
 transform = Transform3D(0.379818, 0.644521, -0.663574, 0.0156564, 0.712749, 0.701245, 0.924928, -0.276735, 0.260624, -1.32904, 4.97694, 1.22298)

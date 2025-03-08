@@ -1,14 +1,15 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1741397645
-enemy.gd::GDScript/GDScript::3350547142067224364::1741381140::0::1::::Enemy<>Node3D<><>0<>0<><>::
-enemy.tscn::PackedScene::8749983693268155714::1741397639::0::1::::<><><>0<>0<><>::uid://bn0ba0ldq4kho::::res://enemy.gd<>uid://cbkx0bnjn7amt::::res://addons/tattomoosa.vision_cone_3d/src/VisionCone3D.gd
+::res://::1741469938
+enemy.gd::GDScript/GDScript::3350547142067224364::1741459983::0::1::::Enemy<>Node3D<><>0<>0<><>::
+enemy.tscn::PackedScene/PackedScene::8749983693268155714::1741460023::0::1::::<><><>0<>0<><>::uid://bn0ba0ldq4kho::::res://enemy.gd<>uid://cbkx0bnjn7amt::::res://addons/tattomoosa.vision_cone_3d/src/VisionCone3D.gd
 game_manager.gd::GDScript/GDScript::8548703352660324996::1741381140::0::1::::<>Node3D<><>0<>0<><>::
 icon.svg::CompressedTexture2D/CompressedTexture2D::8735237410284423683::1740844587::1740844753::1::::<><><>0<>0<>027255e5fb41ad8af207ac108ddde425<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-main.tscn::PackedScene::5066429437108525259::1741397639::0::1::::<><><>0<>0<><>::uid://m71devpglg7h::::res://player.tscn<>uid://dt2b5o5nulv1e::::res://game_manager.gd<>uid://dwws7nyjahrqg::::res://enemy.tscn
-player.gd::GDScript/GDScript::6474664256417825113::1741381140::0::1::::Player<>CharacterBody3D<><>0<>0<><>::
-player.tscn::PackedScene::909910454204227255::1741397639::0::1::::<><><>0<>0<><>::uid://cyim1le1kwvdp::::res://player.gd<>uid://7ir1naketvdy::::res://state machine/state_machine.gd<>uid://b65myym8fts3w::::res://state machine/explore_state.gd<>uid://dt3gauv3o5xve::::res://state machine/combat_state.gd
+main.tscn::PackedScene::5066429437108525259::1741468467::0::1::::<><><>0<>0<><>::uid://m71devpglg7h::::res://player.tscn<>uid://dt2b5o5nulv1e::::res://game_manager.gd<>uid://dwws7nyjahrqg::::res://enemy.tscn<>uid://dwpoc4aejbhy6::::res://icon.svg
+player.gd::GDScript/GDScript::6474664256417825113::1741460462::0::1::::Player<>CharacterBody3D<><>0<>0<><>::
+player.tscn::PackedScene/PackedScene::909910454204227255::1741460023::0::1::::<><><>0<>0<><>::uid://cyim1le1kwvdp::::res://player.gd<>uid://7ir1naketvdy::::res://state machine/state_machine.gd<>uid://b65myym8fts3w::::res://state machine/explore_state.gd<>uid://dt3gauv3o5xve::::res://state machine/combat_state.gd
 playerdetection.gd::GDScript/GDScript::1875076200238637197::1741302214::0::1::::<>Area3D<><>0<>0<><>::
 signalarity.gd::GDScript/GDScript::8708315198325428838::1741323548::0::1::::<>Node<><>0<>0<><>::
+skew.tres::Shader/Shader::-1::1740516151::0::1::::<><><>0<>0<><>::
 thewhitethingisback.blend::PackedScene/PackedScene::5048350271583347350::1740844587::1740844753::1::::<><><>0<>0<>a7939648f5a4be49f513668537ca38da<>res://.godot/imported/thewhitethingisback.blend-aa680c2fdd84197d2f80699910df77ba.scn::
 ::res://addons/::1741302054
 ::res://addons/godot-git-plugin/::1740844586
@@ -17,7 +18,7 @@ plugin.cfg::TextFile/TextFile::-1::1740844586::0::1::::<><><>0<>0<><>::
 THIRDPARTY.md::TextFile/TextFile::-1::1740844586::0::1::::<><><>0<>0<><>::
 ::res://addons/godot-git-plugin/linux/::1740844586
 ::res://addons/godot-git-plugin/macos/::1740844586
-::res://addons/godot-git-plugin/win64/::1741397640
+::res://addons/godot-git-plugin/win64/::1741469931
 ::res://addons/phantom_camera/::1741129411
 plugin.cfg::TextFile/TextFile::-1::1741129410::0::1::::<><><>0<>0<><>::
 plugin.gd::GDScript/GDScript::2730327398989394823::1741129410::0::1::::<>EditorPlugin<><>0<>1<><>::
@@ -391,10 +392,10 @@ texture_10.png::CompressedTexture2D/CompressedTexture2D::5434134780175199182::17
 texture_11.png::CompressedTexture2D/CompressedTexture2D::1370021696176858703::1740844587::1740844753::1::::<><><>0<>0<>7cd09094b1976e295fedd1edeac15036<>res://.godot/imported/texture_11.png-d26604346fed135ed12c725ec97c70a0.ctex::
 texture_12.png::CompressedTexture2D/CompressedTexture2D::6047542439335718600::1740844587::1740844753::1::::<><><>0<>0<>19ca79330c8d23a0c515d4077ca3a75a<>res://.godot/imported/texture_12.png-1886e9571fed092330a55527f470e32b.ctex::
 texture_13.png::CompressedTexture2D/CompressedTexture2D::2495934140612614578::1740844587::1740844753::1::::<><><>0<>0<>72ff654ec005a224e91c2e9b6875baf3<>res://.godot/imported/texture_13.png-b129774d8e005c508492e1b60b74b09a.ctex::
-::res://combat/::1741397639
-combat.tscn::PackedScene::5488839897219514846::1741397639::0::1::::<><><>0<>0<><>::uid://wah2jmogvup8::::res://combat/combat_manager.gd<>uid://bs8ab14v7gs6h::::res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>uid://om8kbw8ov2qh::::res://combat/buttons/attackbutton.tscn<>uid://dmryhtjp4b47o::::res://combat/buttons/healaction.tscn<>uid://bdoob2nfo5qmx::::res://combat/playerstats.gd<>uid://bd36ywt5hq64s::::res://combat/initiative_manager.gd<>uid://bwf6duljbep0c::::res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd<>uid://wvq7f4rs13wy::::res://addons/phantom_camera/scripts/resources/tween_resource.gd
-combat_manager.gd::GDScript/GDScript::1544628287314277175::1741381140::0::1::::<>Node<><>0<>0<><>::
-initiative_manager.gd::GDScript/GDScript::2656716063788419672::1741388699::0::1::::InitiativeManager<>Node<><>0<>0<><>::
+::res://combat/::1741464825
+combat.tscn::PackedScene/PackedScene::5488839897219514846::1741460023::0::1::::<><><>0<>0<><>::uid://wah2jmogvup8::::res://combat/combat_manager.gd<>uid://bs8ab14v7gs6h::::res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>uid://om8kbw8ov2qh::::res://combat/buttons/attackbutton.tscn<>uid://dmryhtjp4b47o::::res://combat/buttons/healaction.tscn<>uid://bdoob2nfo5qmx::::res://combat/playerstats.gd<>res://skew.tres<>uid://bd36ywt5hq64s::::res://combat/initiative_manager.gd<>uid://bwf6duljbep0c::::res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd<>uid://wvq7f4rs13wy::::res://addons/phantom_camera/scripts/resources/tween_resource.gd
+combat_manager.gd::GDScript/GDScript::1544628287314277175::1741464825::0::1::::<>Node<><>0<>0<><>::
+initiative_manager.gd::GDScript/GDScript::2656716063788419672::1741460451::0::1::::InitiativeManager<>Node<><>0<>0<><>::
 playerstats.gd::GDScript/GDScript::2626741765316665631::1741321796::0::1::::<>PanelContainer<><>0<>0<><>::
 ::res://combat/buttons/::1741331619
 actionbutton.gd::GDScript/GDScript::2753390912474526773::1741331619::0::1::::ActionButton<>Button<><>0<>0<><>::

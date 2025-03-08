@@ -1,3 +1,7 @@
+TextureRect
+Panel
+CanvasLayer
+HBoxContainer
 Node
 VisionCone3D
 ShapeCast3D
@@ -8,7 +12,3 @@ CharacterBody3D
 CollisionShape3D
 Camera3D
 Area3D
-RayCast3D
-AnimationPlayer
-Button
-PanelContainer

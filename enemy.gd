@@ -1,6 +1,9 @@
 extends Node3D
 class_name Enemy
 
+@export var actor_name: String
+@export var battle_icon: Texture
+
 #region stat setup
 @export_range(1,10) var health: int = 5
 @export_range(1,10) var speed: int = 5

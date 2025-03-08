@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://ceghl8vfsvkhn"]
+[gd_scene load_steps=9 format=3 uid="uid://ceghl8vfsvkhn"]
 
 [ext_resource type="PackedScene" uid="uid://m71devpglg7h" path="res://player.tscn" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://dt2b5o5nulv1e" path="res://game_manager.gd" id="1_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://dwws7nyjahrqg" path="res://enemy.tscn" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://dwpoc4aejbhy6" path="res://icon.svg" id="3_1bvp3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xm2m"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -91,11 +92,16 @@ size = Vector3(26.7365, 10.8223, 1)
 material = SubResource("StandardMaterial3D_7dm0k")
 
 [node name="player" parent="." groups=["actor"] instance=ExtResource("1_0xm2m")]
+actor_name = "Test"
+battle_icon = ExtResource("3_1bvp3")
 
 [node name="enemy" parent="." groups=["actor"] instance=ExtResource("2_0xm2m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.28111, 0, 0.60756)
 collision_layer = 2
 collision_mask = 2
+actor_name = "Hooligan"
+battle_icon = ExtResource("3_1bvp3")
+speed = 6
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.282309, 0.595854, -0.751837, 0, 0.783716, 0.621119, 0.959324, -0.175348, 0.22125, -5.36059, 4.97627, 1.64946)

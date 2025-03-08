@@ -1,6 +1,9 @@
 extends CharacterBody3D
 class_name Player
 
+@export var actor_name: String
+@export var battle_icon: Texture
+
 #region stat setup
 @export_range(1,10) var health: int = 5
 @export_range(1,10) var speed: int = 5
@@ -16,7 +19,7 @@ var max_ap: get = get_max_ap
 @onready var ap = max_ap: set = set_ap
 @export var is_player: bool
 @onready var ambush_area: Area3D = $AmbushArea
-const SPEED = 5
+const move_speed = 5
 
 signal hp_changed(value)
 signal ap_changed(value)
@@ -29,7 +32,6 @@ func set_hp(value):
 func get_max_hp():
 	return(10+health+(endurance*2))
 #endregion
-
 #region ap
 func set_ap(value):
 	ap = clamp(value, 0, max_ap)
@@ -48,9 +50,9 @@ func _physics_process(delta: float) -> void:
 		var input_dir := Input.get_vector("left", "right", "forward", "backward")
 		var direction := (get_viewport().get_camera_3d().transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		if direction:
-			velocity.x = direction.x * SPEED
-			velocity.z = direction.z * SPEED
+			velocity.x = direction.x * move_speed
+			velocity.z = direction.z * move_speed
 		else:
-			velocity.x = move_toward(velocity.x, 0, SPEED)
-			velocity.z = move_toward(velocity.z, 0, SPEED)
+			velocity.x = move_toward(velocity.x, 0, move_speed)
+			velocity.z = move_toward(velocity.z, 0, move_speed)
 		move_and_slide()
