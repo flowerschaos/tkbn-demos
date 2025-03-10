@@ -10,7 +10,7 @@ func speed_sort(a, b):
 	return a.speed > b.speed
 
 func _ready() -> void:
-	end_turn.connect(_on_turn_end())
+	end_turn.connect(_on_turn_end)
 	actors.sort_custom(speed_sort)
 	turn_order = actors.duplicate()
 

@@ -1,3 +1,4 @@
+PhantomCamera3D
 Control
 TextureRect
 Panel
@@ -12,4 +13,3 @@ ExploreState
 CharacterBody3D
 CollisionShape3D
 Camera3D
-Area3D

@@ -101,6 +101,7 @@ collision_layer = 2
 collision_mask = 2
 actor_name = "Hooligan"
 battle_icon = ExtResource("3_1bvp3")
+health = 4
 speed = 6
 
 [node name="Camera3D" type="Camera3D" parent="."]
