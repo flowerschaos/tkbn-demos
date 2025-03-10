@@ -37,56 +37,71 @@ process_priority = 300
 process_physics_priority = 300
 script = ExtResource("2_ilamk")
 
-[node name="combat ui" type="CanvasLayer" parent="."]
+[node name="ui container" type="CanvasLayer" parent="."]
 process_mode = 3
 
-[node name="actions" type="VBoxContainer" parent="combat ui"]
+[node name="combat ui" type="Control" parent="ui container"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="actions" type="VBoxContainer" parent="ui container/combat ui"]
+layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -136.0
-offset_right = 90.0
+offset_top = 472.0
+offset_right = 100.0
+offset_bottom = 608.0
 grow_vertical = 0
 
-[node name="attackbutton" parent="combat ui/actions" instance=ExtResource("2_v7dqf")]
+[node name="attackbutton" parent="ui container/combat ui/actions" instance=ExtResource("2_v7dqf")]
 layout_mode = 2
 
-[node name="healaction" parent="combat ui/actions" instance=ExtResource("3_syqip")]
+[node name="healaction" parent="ui container/combat ui/actions" instance=ExtResource("3_syqip")]
 layout_mode = 2
 
-[node name="playerstats" type="PanelContainer" parent="combat ui"]
+[node name="playerstats" type="PanelContainer" parent="ui container/combat ui"]
 offset_top = 421.0
 offset_right = 88.0
 offset_bottom = 461.0
 script = ExtResource("4_ilamk")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="combat ui/playerstats"]
+[node name="HBoxContainer" type="HBoxContainer" parent="ui container/combat ui/playerstats"]
 layout_mode = 2
 
-[node name="hp" type="Label" parent="combat ui/playerstats/HBoxContainer"]
+[node name="hp" type="Label" parent="ui container/combat ui/playerstats/HBoxContainer"]
 layout_mode = 2
 text = "hp: 25"
 
-[node name="ap" type="Label" parent="combat ui/playerstats/HBoxContainer"]
+[node name="ap" type="Label" parent="ui container/combat ui/playerstats/HBoxContainer"]
 layout_mode = 2
 text = "ap: 3"
 
-[node name="timeline" type="HBoxContainer" parent="combat ui"]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -467.0
-offset_top = 36.0
-offset_right = 467.0
-offset_bottom = 166.0
+[node name="timeline" type="HBoxContainer" parent="ui container/combat ui"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -4.9
+anchor_top = -0.675
+anchor_right = 33.795
+anchor_bottom = 3.85
+offset_left = 447.0
+offset_top = 45.0
+offset_right = -166.8
+offset_bottom = -6.0
 grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+metadata/_edit_group_ = true
+metadata/_edit_use_anchors_ = true
 
-[node name="timelineslot1" type="Panel" parent="combat ui/timeline"]
+[node name="timelineslot1" type="Panel" parent="ui container/combat ui/timeline"]
 material = SubResource("ShaderMaterial_4h14y")
 custom_minimum_size = Vector2(130, 130)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="combat ui/timeline/timelineslot1"]
+[node name="TextureRect" type="TextureRect" parent="ui container/combat ui/timeline/timelineslot1"]
 material = SubResource("ShaderMaterial_q6cuf")
 custom_minimum_size = Vector2(130, 130)
 layout_mode = 0
@@ -96,12 +111,12 @@ offset_bottom = 130.0
 expand_mode = 1
 stretch_mode = 5
 
-[node name="timelineslot2" type="Panel" parent="combat ui/timeline"]
+[node name="timelineslot2" type="Panel" parent="ui container/combat ui/timeline"]
 material = SubResource("ShaderMaterial_4h14y")
 custom_minimum_size = Vector2(130, 130)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="combat ui/timeline/timelineslot2"]
+[node name="TextureRect" type="TextureRect" parent="ui container/combat ui/timeline/timelineslot2"]
 material = SubResource("ShaderMaterial_q6cuf")
 custom_minimum_size = Vector2(130, 130)
 layout_mode = 0
@@ -111,12 +126,12 @@ offset_bottom = 130.0
 expand_mode = 1
 stretch_mode = 5
 
-[node name="timelineslot3" type="Panel" parent="combat ui/timeline"]
+[node name="timelineslot3" type="Panel" parent="ui container/combat ui/timeline"]
 material = SubResource("ShaderMaterial_4h14y")
 custom_minimum_size = Vector2(130, 130)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="combat ui/timeline/timelineslot3"]
+[node name="TextureRect" type="TextureRect" parent="ui container/combat ui/timeline/timelineslot3"]
 material = SubResource("ShaderMaterial_q6cuf")
 custom_minimum_size = Vector2(130, 130)
 layout_mode = 0
@@ -126,12 +141,12 @@ offset_bottom = 130.0
 expand_mode = 1
 stretch_mode = 5
 
-[node name="timelineslot4" type="Panel" parent="combat ui/timeline"]
+[node name="timelineslot4" type="Panel" parent="ui container/combat ui/timeline"]
 material = SubResource("ShaderMaterial_4h14y")
 custom_minimum_size = Vector2(130, 130)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="combat ui/timeline/timelineslot4"]
+[node name="TextureRect" type="TextureRect" parent="ui container/combat ui/timeline/timelineslot4"]
 material = SubResource("ShaderMaterial_q6cuf")
 custom_minimum_size = Vector2(130, 130)
 layout_mode = 0
@@ -141,12 +156,12 @@ offset_bottom = 130.0
 expand_mode = 1
 stretch_mode = 5
 
-[node name="timelineslot5" type="Panel" parent="combat ui/timeline"]
+[node name="timelineslot5" type="Panel" parent="ui container/combat ui/timeline"]
 material = SubResource("ShaderMaterial_4h14y")
 custom_minimum_size = Vector2(130, 130)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="combat ui/timeline/timelineslot5"]
+[node name="TextureRect" type="TextureRect" parent="ui container/combat ui/timeline/timelineslot5"]
 material = SubResource("ShaderMaterial_q6cuf")
 custom_minimum_size = Vector2(130, 130)
 layout_mode = 0
@@ -156,12 +171,12 @@ offset_bottom = 130.0
 expand_mode = 1
 stretch_mode = 5
 
-[node name="timelineslot6" type="Panel" parent="combat ui/timeline"]
+[node name="timelineslot6" type="Panel" parent="ui container/combat ui/timeline"]
 material = SubResource("ShaderMaterial_4h14y")
 custom_minimum_size = Vector2(130, 130)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="combat ui/timeline/timelineslot6"]
+[node name="TextureRect" type="TextureRect" parent="ui container/combat ui/timeline/timelineslot6"]
 material = SubResource("ShaderMaterial_q6cuf")
 custom_minimum_size = Vector2(130, 130)
 layout_mode = 0
@@ -171,12 +186,12 @@ offset_bottom = 130.0
 expand_mode = 1
 stretch_mode = 5
 
-[node name="timelineslot7" type="Panel" parent="combat ui/timeline"]
+[node name="timelineslot7" type="Panel" parent="ui container/combat ui/timeline"]
 material = SubResource("ShaderMaterial_4h14y")
 custom_minimum_size = Vector2(130, 130)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="combat ui/timeline/timelineslot7"]
+[node name="TextureRect" type="TextureRect" parent="ui container/combat ui/timeline/timelineslot7"]
 material = SubResource("ShaderMaterial_q6cuf")
 custom_minimum_size = Vector2(130, 130)
 layout_mode = 0
