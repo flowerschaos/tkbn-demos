@@ -23,7 +23,6 @@ const move_speed = 5
 
 signal hp_changed(value)
 signal ap_changed(value)
-signal end_turn
 
 #region hp
 func set_hp(value):
