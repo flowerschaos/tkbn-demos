@@ -5,6 +5,7 @@ var turn_order: Array = []
 @onready var timeline: HBoxContainer = $"../ui container/combat ui/timeline"
 
 signal end_turn
+signal next_turn(character)
 
 func speed_sort(a, b):
 	return a.speed > b.speed
@@ -21,9 +22,4 @@ func _on_turn_end():
 	var current_actor = turn_order.pop_front()
 	turn_order.append(current_actor)
 	var current_character = turn_order[0]
-	if current_character is Player:
-		pass
-# next character to go is a Player
-	elif current_character is Enemy:
-		pass
-# next character to go is an Enemy
+	emit_signal("next_turn", current_character)
