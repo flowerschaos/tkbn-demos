@@ -1,6 +1,8 @@
 extends Node
 
 @onready var actors = get_tree().get_nodes_in_group("actor")
+var enemyscript = Enemy
+var playerscript = Player
 @onready var combat_ui: Control = $"ui container/combat ui"
 @onready var playeractions: VBoxContainer = $"combat ui/actions"
 @onready var playerstatpanel: PanelContainer = $"combat ui/playerstats"
@@ -20,7 +22,10 @@ func _on_turn_switch(character):
 	if character.is_in_group("player"):
 		playercam.priority = 1
 		enemycam.priority = 0
+		playeractions.show()
+		playerscript.ap = playerscript.max_ap
 	elif character.is_in_group("enemy"):
 		playercam.priority = 0
 		enemycam.priority = 1
 		playeractions.hide()
+		#enemyscript.attack()
