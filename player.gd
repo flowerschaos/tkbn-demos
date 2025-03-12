@@ -23,11 +23,13 @@ const move_speed = 5
 
 signal hp_changed(value)
 signal ap_changed(value)
+signal end_turn
 
 #region hp
 func set_hp(value):
 	hp = clamp(value, 0, max_hp)
 	emit_signal("hp_changed", hp)
+	print("hp changed")
 func get_max_hp():
 	return(10+health+(endurance*2))
 #endregion
@@ -35,6 +37,7 @@ func get_max_hp():
 func set_ap(value):
 	ap = clamp(value, 0, max_ap)
 	emit_signal("ap_changed", ap)
+	print("ap changed")
 	if ap == 0:
 		emit_signal("end_turn")
 func get_max_ap():

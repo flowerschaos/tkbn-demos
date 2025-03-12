@@ -1,7 +1,7 @@
-extends PanelContainer
+extends HBoxContainer
 
-@onready var hp_label: Label = $HBoxContainer/hp
-@onready var ap_label: Label = $HBoxContainer/ap
+@onready var hp_label: Label = $hp
+@onready var ap_label: Label = $ap
 
 func _on_ap_changed(value: Variant) -> void:
 	ap_label.text = "ap: "+str(value)

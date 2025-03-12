@@ -1,0 +1,131 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwj8ohbhfsfq7"]
+
+[ext_resource type="Shader" path="res://skew.tres" id="1_3127u"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4h14y"]
+shader = ExtResource("1_3127u")
+shader_parameter/strength = -0.2
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q6cuf"]
+shader = ExtResource("1_3127u")
+shader_parameter/strength = -0.2
+
+[node name="timeline" type="HBoxContainer"]
+anchors_preset = -1
+anchor_left = -4.9
+anchor_top = -0.675
+anchor_right = 33.795
+anchor_bottom = 3.85
+offset_left = 447.0
+offset_top = 45.0
+offset_right = -166.8
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+metadata/_edit_use_anchors_ = true
+
+[node name="timelineslot1" type="Panel" parent="."]
+material = SubResource("ShaderMaterial_4h14y")
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="timelineslot1"]
+material = SubResource("ShaderMaterial_q6cuf")
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 0
+offset_left = -12.0
+offset_right = 142.0
+offset_bottom = 130.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="timelineslot2" type="Panel" parent="."]
+material = SubResource("ShaderMaterial_4h14y")
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="timelineslot2"]
+material = SubResource("ShaderMaterial_q6cuf")
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 0
+offset_left = -12.0
+offset_right = 142.0
+offset_bottom = 130.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="timelineslot3" type="Panel" parent="."]
+material = SubResource("ShaderMaterial_4h14y")
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="timelineslot3"]
+material = SubResource("ShaderMaterial_q6cuf")
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 0
+offset_left = -12.0
+offset_right = 142.0
+offset_bottom = 130.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="timelineslot4" type="Panel" parent="."]
+material = SubResource("ShaderMaterial_4h14y")
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="timelineslot4"]
+material = SubResource("ShaderMaterial_q6cuf")
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 0
+offset_left = -12.0
+offset_right = 142.0
+offset_bottom = 130.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="timelineslot5" type="Panel" parent="."]
+material = SubResource("ShaderMaterial_4h14y")
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="timelineslot5"]
+material = SubResource("ShaderMaterial_q6cuf")
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 0
+offset_left = -12.0
+offset_right = 142.0
+offset_bottom = 130.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="timelineslot6" type="Panel" parent="."]
+material = SubResource("ShaderMaterial_4h14y")
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="timelineslot6"]
+material = SubResource("ShaderMaterial_q6cuf")
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 0
+offset_left = -12.0
+offset_right = 142.0
+offset_bottom = 130.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="timelineslot7" type="Panel" parent="."]
+material = SubResource("ShaderMaterial_4h14y")
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="timelineslot7"]
+material = SubResource("ShaderMaterial_q6cuf")
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 0
+offset_left = -12.0
+offset_right = 142.0
+offset_bottom = 130.0
+expand_mode = 1
+stretch_mode = 5

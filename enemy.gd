@@ -20,6 +20,8 @@ var max_hp: get = get_max_hp
 signal on_death
 signal end_turn
 
+var last_attacked_by
+
 #region turn based stuff
 func set_hp(value):
 	hp = clamp(value, 0, max_hp)

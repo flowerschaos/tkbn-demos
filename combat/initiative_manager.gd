@@ -2,7 +2,7 @@ extends Node
 
 @onready var actors: Array = get_tree().get_nodes_in_group("actor")
 var turn_order: Array = []
-@onready var timeline: HBoxContainer = $"../ui container/combat ui/timeline"
+
 
 signal end_turn
 signal next_turn(character)
