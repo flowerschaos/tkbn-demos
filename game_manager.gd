@@ -1,6 +1,7 @@
 extends Node3D
-var combat_scene = preload("res://combat/combat.tscn")
+const combat_scene = preload("res://combat/combat.tscn")
 var combat = combat_scene.instantiate()
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	signals.connect("enter_combat", _on_combat_enter)
@@ -8,6 +9,8 @@ func _ready() -> void:
 
 func _on_combat_enter():
 	add_child(combat)
+	$player.queue_free()
+	$enemy.queue_free()
 	print("combat started")
 
 func _on_combat_exit():

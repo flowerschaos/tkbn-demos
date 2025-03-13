@@ -14,7 +14,9 @@ func _ready() -> void:
 	signals.connect("enter_combat", _on_combat_enter)
 	InitiativeManager.next_turn.connect(_on_turn_switch)
 
-func _on_combat_enter():	
+func _on_combat_enter():
+	for actor in get_tree().get_nodes_in_group("actor"):
+		add_child(actor)
 	print("combat begin!")
 
 func _on_turn_switch(character):
