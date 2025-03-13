@@ -1,6 +1,7 @@
 extends Node
 
 @onready var actors = get_tree().get_nodes_in_group("actor")
+const main = preload("res://main.tscn")
 var enemyscript = load("uid://bn0ba0ldq4kho")
 var playerscript = load("uid://cyim1le1kwvdp")
 @onready var combat_ui: Control = $"ui container/combat ui"
@@ -15,8 +16,6 @@ func _ready() -> void:
 	InitiativeManager.next_turn.connect(_on_turn_switch)
 
 func _on_combat_enter():
-	for actor in get_tree().get_nodes_in_group("actor"):
-		add_child(actor)
 	print("combat begin!")
 
 func _on_turn_switch(character):

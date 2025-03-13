@@ -3,7 +3,6 @@ extends Node
 @onready var actors: Array = get_tree().get_nodes_in_group("actor")
 var turn_order: Array = []
 
-
 signal end_turn
 signal next_turn(character)
 

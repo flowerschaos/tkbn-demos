@@ -9,8 +9,8 @@ func _ready() -> void:
 
 func _on_combat_enter():
 	add_child(combat)
-	$player.queue_free()
-	$enemy.queue_free()
+	for actor in get_tree().get_nodes_in_group("actor"):
+		actor.reparent(combat)
 	print("combat started")
 
 func _on_combat_exit():

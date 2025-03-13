@@ -2,6 +2,7 @@ extends CharacterBody3D
 class_name Player
 
 @export var actor_name: String
+@export var mesh: MeshInstance3D
 @export var battle_icon: Texture
 
 #region stat setup
@@ -28,7 +29,7 @@ signal end_turn
 #region hp
 func set_hp(value):
 	hp = clamp(value, 0, max_hp)
-	emit_signal("hp_changed", hp)
+	emit_signal("hp_changed")
 	print("hp changed")
 func get_max_hp():
 	return(10+health+(endurance*2))
@@ -36,7 +37,7 @@ func get_max_hp():
 #region ap
 func set_ap(value):
 	ap = clamp(value, 0, max_ap)
-	emit_signal("ap_changed", ap)
+	emit_signal("ap_changed")
 	print("ap changed")
 	if ap == 0:
 		emit_signal("end_turn")

@@ -1,15 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://m71devpglg7h"]
+[gd_scene load_steps=7 format=3 uid="uid://m71devpglg7h"]
 
 [ext_resource type="Script" uid="uid://cyim1le1kwvdp" path="res://player.gd" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://7ir1naketvdy" path="res://state machine/state_machine.gd" id="2_onrkg"]
 [ext_resource type="Script" uid="uid://b65myym8fts3w" path="res://state machine/explore_state.gd" id="3_i3pqv"]
 [ext_resource type="Script" uid="uid://dt3gauv3o5xve" path="res://state machine/combat_state.gd" id="4_hqtel"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4flbx"]
-albedo_color = Color(0.168627, 0.25098, 0.458824, 1)
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_onrkg"]
-material = SubResource("StandardMaterial3D_4flbx")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4flbx"]
 
@@ -23,7 +17,6 @@ script = ExtResource("1_4flbx")
 is_player = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("CapsuleMesh_onrkg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_4flbx")
