@@ -14,6 +14,7 @@ var playerscript = load("uid://cyim1le1kwvdp")
 func _ready() -> void:
 	signals.connect("enter_combat", _on_combat_enter)
 	InitiativeManager.next_turn.connect(_on_turn_switch)
+	InitiativeManager.turn_switch.connect(_on_turn_end)
 
 func _on_combat_enter():
 	print("combat begin!")
@@ -24,9 +25,14 @@ func _on_turn_switch(character):
 		enemycam.priority = 0
 		playeractions.show()
 		playerscript.ap = playerscript.max_ap
+		await InitiativeManager.end_turn
 	elif character.is_in_group("enemy"):
 		playercam.priority = 0
 		enemycam.priority = 1
 		playeractions.hide()
 		if enemyscript.last_attacked_by == Player:
 			enemyscript.attack(enemyscript.last_attacked_by)
+		await InitiativeManager.end_turn
+
+func _on_turn_end():
+	pass

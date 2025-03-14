@@ -2,15 +2,16 @@ extends Node
 
 @onready var actors: Array = get_tree().get_nodes_in_group("actor")
 var turn_order: Array = []
+var current_player
 
-signal end_turn
+signal turn_switch
 signal next_turn(character)
 
 func speed_sort(a, b):
 	return a.speed > b.speed
 
 func _ready() -> void:
-	end_turn.connect(_on_turn_end)
+	turn_switch.connect(_on_turn_end)
 	actors.sort_custom(speed_sort)
 	turn_order = actors.duplicate()
 

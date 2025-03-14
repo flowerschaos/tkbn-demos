@@ -2,6 +2,7 @@ extends Node3D
 class_name Enemy
 
 @export var actor_name: String
+@export var mesh: MeshInstance3D
 @export var battle_icon: Texture
 
 #region stat setup
