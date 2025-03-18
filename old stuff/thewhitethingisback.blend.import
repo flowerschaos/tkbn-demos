@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cd6pudwm2n5w1"
-path="res://.godot/imported/thewhitethingisback.blend-aa680c2fdd84197d2f80699910df77ba.scn"
+valid=false
 
 [deps]
 
-source_file="res://thewhitethingisback.blend"
-dest_files=["res://.godot/imported/thewhitethingisback.blend-aa680c2fdd84197d2f80699910df77ba.scn"]
+source_file="res://old stuff/thewhitethingisback.blend"
 
 [params]
 

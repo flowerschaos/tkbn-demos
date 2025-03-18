@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dsbopawpow10"]
 
-[ext_resource type="Script" uid="uid://bfh07fvwxts4l" path="res://combat/buttons/actionbutton.gd" id="1_htcy2"]
+[ext_resource type="Script" uid="uid://bfh07fvwxts4l" path="res://old stuff/combat/buttons/actionbutton.gd" id="1_htcy2"]
 
 [node name="baseattack" type="Button"]
 offset_right = 33.0

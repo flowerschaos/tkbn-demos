@@ -23,7 +23,7 @@ resources_spreadsheet_view/resource_cell_label_mode=1
 [application]
 
 config/name="stereobleedingedge"
-run/main_scene="uid://ceghl8vfsvkhn"
+run/main_scene="uid://jyt6sodbakhs"
 config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/bg_color=Color(0.00820202, 0.00820203, 0.00820202, 1)
 boot_splash/show_image=false
@@ -32,8 +32,9 @@ config/icon="res://icon.svg"
 [autoload]
 
 PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
-signals="*res://signalarity.gd"
-InitiativeManager="*res://combat/initiative_manager.gd"
+signals="*res://old stuff/signalarity.gd"
+InitiativeManager="*res://old stuff/combat/initiative_manager.gd"
+Dice="*res://addons/dice_engine/dice_engine.gd"
 
 [editor]
 
@@ -42,7 +43,7 @@ version_control/autoload_on_startup=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/phantom_camera/plugin.cfg", "res://addons/resources_spreadsheet_view/plugin.cfg", "res://addons/splash_screen_wizard/plugin.cfg", "res://addons/worldmap_builder/plugin.cfg")
+enabled=PackedStringArray("res://addons/dice_engine/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/resources_spreadsheet_view/plugin.cfg", "res://addons/splash_screen_wizard/plugin.cfg", "res://addons/worldmap_builder/plugin.cfg")
 
 [global_group]
 
