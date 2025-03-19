@@ -40,6 +40,7 @@ signals="*res://old stuff/signalarity.gd"
 InitiativeManager="*res://old stuff/combat/initiative_manager.gd"
 Dice="*res://addons/dice_engine/dice_engine.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+Dicecheck="*res://dicecheck.gd"
 
 [dialogic]
 
@@ -53,13 +54,12 @@ version_control/autoload_on_startup=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/dice_engine/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/resources_spreadsheet_view/plugin.cfg", "res://addons/splash_screen_wizard/plugin.cfg", "res://addons/worldmap_builder/plugin.cfg")
+enabled=PackedStringArray("res://addons/auto_class_name/plugin.cfg", "res://addons/dialogic/plugin.cfg", "res://addons/dice_engine/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/resources_spreadsheet_view/plugin.cfg", "res://addons/splash_screen_wizard/plugin.cfg", "res://addons/untrue/plugin.cfg", "res://addons/worldmap_builder/plugin.cfg")
 
 [global_group]
 
 player="playable characters"
 enemy="combatants"
-actor="character participating in combat"
 
 [input]
 
