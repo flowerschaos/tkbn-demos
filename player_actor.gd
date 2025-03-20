@@ -21,6 +21,7 @@ enum ActorType {PLAYER, ENEMY}
 @export_range(1,10) var power: int = 5
 var max_hp = 40+(strength*4)
 var current_hp: int
+var init_value = dicecheck.standard()+round(endurance/2)+round(agility/2)
 
 signal downed(downed_actor: Node3D)
 signal turn_end
