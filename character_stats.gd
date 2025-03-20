@@ -16,7 +16,7 @@ enum ActorType {PLAYER, ENEMY}
 @export_category("Ability")
 @export_range(1,10) var tech: int = 5
 @export_range(1,10) var power: int = 5
-var max_hp = 10+strength
+var max_hp = 40+(strength*4)
 var init_value
 
 

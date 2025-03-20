@@ -1,6 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://bhus3c6sno45o"]
+[gd_scene load_steps=4 format=3 uid="uid://bhus3c6sno45o"]
 
 [ext_resource type="Script" uid="uid://bb7smm2dpv00c" path="res://player_actor.gd" id="1_6v4pj"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nhysg"]
+albedo_color = Color(0.168627, 0.270588, 0.439216, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_xntev"]
+material = SubResource("StandardMaterial3D_nhysg")
+
 [node name="PlayerActor" type="Node3D" groups=["player"]]
 script = ExtResource("1_6v4pj")
+character_name = "test"
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+offset_right = 4.0
+offset_bottom = 27.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_xntev")

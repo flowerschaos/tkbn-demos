@@ -1,10 +1,123 @@
-[gd_scene load_steps=3 format=3 uid="uid://jyt6sodbakhs"]
+[gd_scene load_steps=6 format=3 uid="uid://jyt6sodbakhs"]
 
 [ext_resource type="Script" uid="uid://bxscqnjg5aff7" path="res://combat_manager.gd" id="1_kx3u1"]
 [ext_resource type="Script" uid="uid://bwl71so6br15q" path="res://init_manager.gd" id="1_raif2"]
+[ext_resource type="PackedScene" uid="uid://sav0hqtavsud" path="res://enemy_actor.tscn" id="3_ga4lu"]
+[ext_resource type="PackedScene" uid="uid://bhus3c6sno45o" path="res://player_actor.tscn" id="4_u30h6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s0t75"]
+albedo_color = Color(1, 0, 0, 1)
 
 [node name="Combat" type="Node3D"]
 script = ExtResource("1_kx3u1")
 
 [node name="InitManager" type="Node" parent="."]
 script = ExtResource("1_raif2")
+
+[node name="map" type="Node3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.252306, 0)
+metadata/_edit_group_ = true
+
+[node name="ground" type="CSGBox3D" parent="map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.418, 0, -0.0039444)
+use_collision = true
+size = Vector3(56.952, 1, 36.075)
+
+[node name="building1pt1" type="CSGBox3D" parent="map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5789, 6.92523, -13.0167)
+use_collision = true
+size = Vector3(13.0206, 14.8505, 10.0826)
+
+[node name="building1pt2" type="CSGBox3D" parent="map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6883, 6.92523, -13.1691)
+use_collision = true
+size = Vector3(6.56545, 14.8505, 10.275)
+
+[node name="building1pt3" type="CSGBox3D" parent="map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.885872, 6.92523, -12.1598)
+use_collision = true
+size = Vector3(14.0345, 14.8505, 12.2935)
+
+[node name="building2pt1" type="CSGBox3D" parent="map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.077, 6.92523, 13.0085)
+use_collision = true
+size = Vector3(11.9825, 14.8505, 9.99351)
+
+[node name="building2pt2" type="CSGBox3D" parent="map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.0067, 6.92523, 12.9979)
+use_collision = true
+size = Vector3(11.869, 14.8505, 9.94999)
+
+[node name="building2pt3" type="CSGBox3D" parent="map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.855225, 6.92523, 13.905)
+use_collision = true
+size = Vector3(14.1623, 14.8505, 7.70928)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.4008, 4.81869, -0.203033)
+use_collision = true
+size = Vector3(9.60266, 9.94348, 36.4493)
+
+[node name="barrier1" type="CSGBox3D" parent="map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.2832, -0.620912, 17.5018)
+use_collision = true
+size = Vector3(21.5396, 10.8223, 1)
+material = SubResource("StandardMaterial3D_s0t75")
+
+[node name="barrier2" type="CSGBox3D" parent="map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.6848, 2.38985, -18.4411)
+use_collision = true
+size = Vector3(26.7365, 10.8223, 1)
+material = SubResource("StandardMaterial3D_s0t75")
+
+[node name="barrier3" type="CSGBox3D" parent="map"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.7598, 2.62174, -0.312811)
+use_collision = true
+size = Vector3(26.7365, 10.8223, 1)
+material = SubResource("StandardMaterial3D_s0t75")
+
+[node name="EnemyActor" parent="." instance=ExtResource("3_ga4lu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.52727, 0.873587, -0.440634)
+
+[node name="EnemyActor2" parent="." instance=ExtResource("3_ga4lu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.61652, 0.873587, 1.17477)
+
+[node name="EnemyActor3" parent="." instance=ExtResource("3_ga4lu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.78082, 0.873587, -1.45125)
+
+[node name="PlayerActor" parent="." instance=ExtResource("4_u30h6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.91795, 0.873587, 1.53801)
+
+[node name="PlayerActor2" parent="." instance=ExtResource("4_u30h6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11864, 0.873587, 2.54686)
+
+[node name="PlayerActor3" parent="." instance=ExtResource("4_u30h6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.87819, 0.873587, 0.250602)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.328786, 0.245574, -0.911917, 0.0839404, 0.95418, 0.287219, 0.940667, -0.17098, 0.293107, -4.20524, 2.89113, 4.34067)
+fov = 58.4471
+
+[node name="player ui" type="CanvasLayer" parent="."]
+
+[node name="player actions" type="HBoxContainer" parent="player ui"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="attack" type="Button" parent="player ui/player actions"]
+layout_mode = 2
+text = "attack"
+
+[node name="turn_skip" type="Button" parent="player ui/player actions"]
+layout_mode = 2
+text = "skip turn"
+
+[node name="battle_end" type="Panel" parent="player ui"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="battle_end_text" type="RichTextLabel" parent="player ui/battle_end"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+text = "battle done"
