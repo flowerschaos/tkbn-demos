@@ -1,9 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://jyt6sodbakhs"]
+[gd_scene load_steps=9 format=3 uid="uid://jyt6sodbakhs"]
 
 [ext_resource type="Script" uid="uid://bxscqnjg5aff7" path="res://combat_manager.gd" id="1_kx3u1"]
 [ext_resource type="Script" uid="uid://bwl71so6br15q" path="res://init_manager.gd" id="1_raif2"]
 [ext_resource type="PackedScene" uid="uid://sav0hqtavsud" path="res://enemy_actor.tscn" id="3_ga4lu"]
-[ext_resource type="Script" uid="uid://dl7kwv4d4usam" path="res://character_stats.gd" id="4_fvoc2"]
 [ext_resource type="PackedScene" uid="uid://bhus3c6sno45o" path="res://player_actor.tscn" id="4_u30h6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_u30h6"]
@@ -18,84 +17,6 @@ sky_material = SubResource("ProceduralSkyMaterial_u30h6")
 background_mode = 2
 sky = SubResource("Sky_fvoc2")
 tonemap_mode = 2
-
-[sub_resource type="Resource" id="Resource_v7dqf"]
-script = ExtResource("4_fvoc2")
-alignment = 1
-strength = 4
-endurance = 4
-agility = 7
-knowledge = 5
-insight = 5
-chatter = 5
-tech = 5
-power = 5
-metadata/_custom_type_script = "uid://dl7kwv4d4usam"
-
-[sub_resource type="Resource" id="Resource_u30h6"]
-script = ExtResource("4_fvoc2")
-alignment = 1
-strength = 8
-endurance = 3
-agility = 3
-knowledge = 5
-insight = 5
-chatter = 5
-tech = 5
-power = 5
-metadata/_custom_type_script = "uid://dl7kwv4d4usam"
-
-[sub_resource type="Resource" id="Resource_fvoc2"]
-script = ExtResource("4_fvoc2")
-alignment = 1
-strength = 2
-endurance = 7
-agility = 7
-knowledge = 5
-insight = 5
-chatter = 5
-tech = 5
-power = 5
-metadata/_custom_type_script = "uid://dl7kwv4d4usam"
-
-[sub_resource type="Resource" id="Resource_syqip"]
-script = ExtResource("4_fvoc2")
-alignment = 0
-strength = 5
-endurance = 5
-agility = 5
-knowledge = 5
-insight = 5
-chatter = 5
-tech = 5
-power = 5
-metadata/_custom_type_script = "uid://dl7kwv4d4usam"
-
-[sub_resource type="Resource" id="Resource_ilamk"]
-script = ExtResource("4_fvoc2")
-alignment = 0
-strength = 8
-endurance = 3
-agility = 4
-knowledge = 5
-insight = 5
-chatter = 5
-tech = 5
-power = 5
-metadata/_custom_type_script = "uid://dl7kwv4d4usam"
-
-[sub_resource type="Resource" id="Resource_px7ba"]
-script = ExtResource("4_fvoc2")
-alignment = 0
-strength = 2
-endurance = 7
-agility = 8
-knowledge = 5
-insight = 5
-chatter = 5
-tech = 5
-power = 5
-metadata/_custom_type_script = "uid://dl7kwv4d4usam"
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s0t75"]
 albedo_color = Color(1, 0, 0, 1)
@@ -116,32 +37,26 @@ script = ExtResource("1_raif2")
 [node name="EnemyActor" parent="InitManager" instance=ExtResource("3_ga4lu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.52727, 0.873587, -0.440634)
 character_name = "enemy1"
-stats = SubResource("Resource_v7dqf")
 
 [node name="EnemyActor2" parent="InitManager" instance=ExtResource("3_ga4lu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.61652, 0.873587, 1.17477)
 character_name = "enemy2"
-stats = SubResource("Resource_u30h6")
 
 [node name="EnemyActor3" parent="InitManager" instance=ExtResource("3_ga4lu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.78082, 0.873587, -1.45125)
 character_name = "enemy3"
-stats = SubResource("Resource_fvoc2")
 
 [node name="PlayerActor" parent="InitManager" instance=ExtResource("4_u30h6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.91795, 0.873587, 1.53801)
 character_name = "player1"
-stats = SubResource("Resource_syqip")
 
 [node name="PlayerActor2" parent="InitManager" instance=ExtResource("4_u30h6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11864, 0.873587, 2.54686)
 character_name = "player2"
-stats = SubResource("Resource_ilamk")
 
 [node name="PlayerActor3" parent="InitManager" instance=ExtResource("4_u30h6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.87819, 0.873587, 0.250602)
 character_name = "player3"
-stats = SubResource("Resource_px7ba")
 
 [node name="map" type="Node3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.252306, 0)

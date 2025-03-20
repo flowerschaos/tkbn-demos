@@ -16,12 +16,3 @@ enum ActorType {PLAYER, ENEMY}
 @export_range(1,10) var tech: int = 5
 @export_range(1,10) var power: int = 5
 var max_hp = 40+(strength*4)
-var init_value
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	init_value = dicecheck.standard()+round(endurance/2)+round(agility/2)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass

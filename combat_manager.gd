@@ -7,7 +7,7 @@ class_name CombatOverseer
 @onready var battle_end: Panel = $"player ui/battle_end"
 @onready var battle_end_text: RichTextLabel = $"player ui/battle_end/battle_end_text"
 
-@onready var actors = InitManager.sorted_actors
+@onready var actors = InitManager.actors
 
 func _ready() -> void:
 	turn_skip.pressed.connect(_next_turn)

@@ -1,19 +1,20 @@
 extends Node
 
+@onready var players = get_tree().get_nodes_in_group("player")
+@onready var enemies = get_tree().get_nodes_in_group("enemy")
 var actors = []
-var sorted_actors = []
 
-# Called when the node enters the scene tree for the first time.
+func summon_actors():
+	actors.assign(players)
+	actors.assign(enemies)
+	print(actors)
+
+func _sort_initiative(a, b):
+	return a.init_value > b.init_value
+
 func _ready() -> void:
-	actors = get_children()
-	actors.sort_custom(_initiative_sort)
-	actors = sorted_actors
+	summon_actors()
+	#actors.sort_custom(_sort_initiative)
 
-func _initiative_sort(a,b):
-	if a.stats.init_value < b.stats.init_value:
-		return true
-	return false
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
