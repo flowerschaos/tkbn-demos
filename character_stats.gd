@@ -18,10 +18,9 @@ enum ActorType {PLAYER, ENEMY}
 var max_hp = 40+(strength*4)
 var init_value
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	init_value = dicecheck.standard()+round(endurance/2)+round(agility/2)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

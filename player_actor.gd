@@ -13,7 +13,6 @@ signal downed(downed_actor: Node3D)
 signal turn_end
 
 func _ready() -> void:
-	stats.init_value = dicecheck.standard()+round(stats.endurance/2)+round(stats.agility/2)
 	current_hp = stats.max_hp
 	_update_health_bar()
 

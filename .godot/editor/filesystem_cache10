@@ -1,13 +1,15 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1742472720
-character_stats.gd::GDScript::7998047024586692580::1742409370::0::1::::CharacterStats<>Resource<><>0<>0<><>::
-combat.tscn::PackedScene::682454608498559512::1742405326::0::1::::<><><>0<>0<><>::uid://bxscqnjg5aff7::::res://combat_manager.gd<>uid://bwl71so6br15q::::res://init_manager.gd
-combat_manager.gd::GDScript::4038073590648433342::1742405384::0::1::::CombatOverseer<>Node3D<><>0<>0<><>::
-dicecheck.gd::GDScript::2249422775823973074::1742409222::0::1::::dicecheck<>Node<><>0<>0<><>::
+::res://::1742485290
+character_stats.gd::GDScript::7998047024586692580::1742485200::0::1::::CharacterStats<>Resource<><>0<>0<><>::
+combat.tscn::PackedScene::682454608498559512::1742485262::0::1::::<><><>0<>0<><>::uid://bxscqnjg5aff7::::res://combat_manager.gd<>uid://bwl71so6br15q::::res://init_manager.gd<>uid://sav0hqtavsud::::res://enemy_actor.tscn<>uid://dl7kwv4d4usam::::res://character_stats.gd<>uid://bhus3c6sno45o::::res://player_actor.tscn
+combat_manager.gd::GDScript::4038073590648433342::1742485114::0::1::::CombatOverseer<>Node3D<><>0<>0<><>::
+dicecheck.gd::GDScript/GDScript::2249422775823973074::1742409222::0::1::::dicecheck<>Node<><>0<>0<><>::
+enemy_actor.gd::GDScript::4467204142509441313::1742485200::0::1::::EnemyActor<>Node3D<><>0<>0<><>::
+enemy_actor.tscn::PackedScene/PackedScene::1264719280424742651::1742479422::0::1::::<><><>0<>0<><>::uid://b4v7g1xr2ctm4::::res://enemy_actor.gd
 icon.svg::CompressedTexture2D/CompressedTexture2D::8735237410284423683::1740747224::1740748923::1::::<><><>0<>0<>027255e5fb41ad8af207ac108ddde425<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-init_manager.gd::GDScript::3955273741892623340::1742405385::0::1::::InitManager<>Node<><>0<>0<><>::
-player_actor.gd::GDScript::2523784623004828784::1742409370::0::1::::PlayerActor<>Node<><>0<>0<><>::
-player_actor.tscn::PackedScene::2920173206111088702::1742409370::0::1::::<><><>0<>0<><>::uid://bb7smm2dpv00c::::res://player_actor.gd
+init_manager.gd::GDScript/GDScript::3955273741892623340::1742484974::0::1::::<>Node<><>0<>0<><>::
+player_actor.gd::GDScript::2523784623004828784::1742485200::0::1::::PlayerActor<>Node<><>0<>0<><>::
+player_actor.tscn::PackedScene/PackedScene::2920173206111088702::1742479418::0::1::::<><><>0<>0<><>::uid://bb7smm2dpv00c::::res://player_actor.gd
 skew.tres::Shader/Shader::-1::1741608400::0::1::::<><><>0<>0<><>::
 ::res://addons/::1742408852
 ::res://addons/AutoSizeText/::1742388794
@@ -19,8 +21,8 @@ auto_size_sample_richtextlabel.tscn::PackedScene/PackedScene::237926878760993289
 AutoSizeLabel.gd::GDScript/GDScript::265837124979281259::1742388794::0::1::::AutoSizeLabel<>Label<><>0<>1<><>::
 AutoSizeRichTextLabel.gd::GDScript/GDScript::780590823092175930::1742388795::0::1::::AutoSizeRichTextLabel<>RichTextLabel<><>0<>1<><>::
 ::res://addons/auto_class_name/::1742398565
-auto_class_name.gd::GDScript::4333393622588782758::1742398565::0::1::::<>EditorPlugin<><>0<>1<><>::
-plugin.cfg::TextFile::1977994971471465438::1742398565::0::1::::<><><>0<>0<><>::
+auto_class_name.gd::GDScript/GDScript::4333393622588782758::1742398565::0::1::::<>EditorPlugin<><>0<>1<><>::
+plugin.cfg::TextFile/TextFile::1977994971471465438::1742398565::0::1::::<><><>0<>0<><>::
 ::res://addons/dialogic/::1742392219
 plugin.cfg::TextFile/TextFile::-1::1730044563::0::1::::<><><>0<>0<><>::
 plugin.gd::GDScript/GDScript::1723182337775945982::1730044563::0::1::::<>EditorPlugin<><>0<>1<><>::
@@ -934,8 +936,7 @@ worldmap_view_item.gd::GDScript/GDScript::8362048042259402235::1740747224::0::1:
 wordmap_style.gd::GDScript/GDScript::4309440438080387820::1740747224::0::1::::WorldmapStyle<>Resource<><>0<>1<><>::
 worldmap_node_data.gd::GDScript/GDScript::1897822930640395294::1740747224::0::1::::WorldmapNodeData<>Resource<><>0<>1<><>::
 ::res://assets/::1740747224
-::res://assets/models/::1741013692
-player.glb::PackedScene/PackedScene::7671534358335063823::1740747224::1741013692::1::::<><><>0<>0<>5c703a0fdf86a58c25194b2e681b2a3f<>res://.godot/imported/player.glb-ae1edf01baaba8d1685741a4f60c906f.scn::
+::res://assets/models/::1742478734
 ::res://assets/shaders/::1740747224
 forground_shader.gdshader::Shader/Shader::7443788504111443914::1740747224::0::1::::<><><>0<>0<><>::
 forground_shader_2.gdshader::Shader/Shader::2390860892487517124::1740747224::0::1::::<><><>0<>0<><>::
@@ -1024,13 +1025,14 @@ texture_10.png::CompressedTexture2D/CompressedTexture2D::5434134780175199182::17
 texture_11.png::CompressedTexture2D/CompressedTexture2D::1370021696176858703::1740747224::1740748924::1::::<><><>0<>0<>7cd09094b1976e295fedd1edeac15036<>res://.godot/imported/texture_11.png-d26604346fed135ed12c725ec97c70a0.ctex::
 texture_12.png::CompressedTexture2D/CompressedTexture2D::6047542439335718600::1740747224::1740748924::1::::<><><>0<>0<>19ca79330c8d23a0c515d4077ca3a75a<>res://.godot/imported/texture_12.png-1886e9571fed092330a55527f470e32b.ctex::
 texture_13.png::CompressedTexture2D/CompressedTexture2D::2495934140612614578::1740747224::1740748924::1::::<><><>0<>0<>72ff654ec005a224e91c2e9b6875baf3<>res://.godot/imported/texture_13.png-b129774d8e005c508492e1b60b74b09a.ctex::
-::res://character_resources/::1742405473
+::res://character_resources/::1742476359
 test.tres::Resource/CharacterStats::7823937891773648511::1742405473::0::1::::<><><>0<>0<><>::uid://dl7kwv4d4usam::::res://character_stats.gd
+testenemy.tres::Resource/CharacterStats::4969342789584318967::1742476359::0::1::::<><><>0<>0<><>::uid://dl7kwv4d4usam::::res://character_stats.gd
 ::res://old stuff/::1742405671
 enemy.gd::GDScript/GDScript::3350547142067224364::1741958117::0::1::::Enemy<>Node3D<><>0<>0<><>::
 enemy.tscn::PackedScene/PackedScene::8749983693268155714::1742300182::0::1::::<><><>0<>0<><>::uid://bn0ba0ldq4kho::::res://old stuff/enemy.gd<>uid://ffyxg5wsi3w5::::res://addons/tattomoosa.vision_cone_3d/src/VisionCone3D.gd
 game_manager.gd::GDScript/GDScript::8548703352660324996::1742300363::0::1::::<>Node3D<><>0<>0<><>::
-main.tscn::PackedScene::5066429437108525259::1742405671::0::1::::<><><>0<>0<><>::uid://m71devpglg7h::::res://old stuff/player.tscn<>uid://dt2b5o5nulv1e::::res://old stuff/game_manager.gd<>uid://dwws7nyjahrqg::::res://old stuff/enemy.tscn<>uid://dwpoc4aejbhy6::::res://icon.svg
+main.tscn::PackedScene/PackedScene::5066429437108525259::1742405671::0::1::::<><><>0<>0<><>::uid://m71devpglg7h::::res://old stuff/player.tscn<>uid://dt2b5o5nulv1e::::res://old stuff/game_manager.gd<>uid://dwws7nyjahrqg::::res://old stuff/enemy.tscn<>uid://dwpoc4aejbhy6::::res://icon.svg
 player.gd::GDScript/GDScript::6474664256417825113::1741958117::0::1::::Player<>CharacterBody3D<><>0<>0<><>::
 player.tscn::PackedScene/PackedScene::909910454204227255::1742301067::0::1::::<><><>0<>0<><>::uid://cyim1le1kwvdp::::res://old stuff/player.gd<>uid://7ir1naketvdy::::res://old stuff/state machine/state_machine.gd<>uid://b65myym8fts3w::::res://old stuff/state machine/explore_state.gd<>uid://dt3gauv3o5xve::::res://old stuff/state machine/combat_state.gd
 playerdetection.gd::GDScript/GDScript::1875076200238637197::1741355015::0::1::::<>Area3D<><>0<>0<><>::

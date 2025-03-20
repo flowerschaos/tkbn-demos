@@ -15,7 +15,6 @@ signal downed(downed_actor: Node3D)
 signal deal_damage(amount: int)
 
 func _ready() -> void:
-	stats.init_value = dicecheck.standard()+round(stats.endurance/2)+round(stats.agility/2)
 	targetbutton.hide()
 	current_hp = stats.max_hp
 	targetbutton.pressed.connect(_on_target_button_pressed)

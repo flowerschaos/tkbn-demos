@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://jyt6sodbakhs"]
+[gd_scene load_steps=16 format=3 uid="uid://jyt6sodbakhs"]
 
 [ext_resource type="Script" uid="uid://bxscqnjg5aff7" path="res://combat_manager.gd" id="1_kx3u1"]
 [ext_resource type="Script" uid="uid://bwl71so6br15q" path="res://init_manager.gd" id="1_raif2"]
@@ -6,8 +6,18 @@
 [ext_resource type="Script" uid="uid://dl7kwv4d4usam" path="res://character_stats.gd" id="4_fvoc2"]
 [ext_resource type="PackedScene" uid="uid://bhus3c6sno45o" path="res://player_actor.tscn" id="4_u30h6"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s0t75"]
-albedo_color = Color(1, 0, 0, 1)
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_u30h6"]
+sky_horizon_color = Color(0.468098, 0.485348, 0.509348, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0.468098, 0.485348, 0.509348, 1)
+
+[sub_resource type="Sky" id="Sky_fvoc2"]
+sky_material = SubResource("ProceduralSkyMaterial_u30h6")
+
+[sub_resource type="Environment" id="Environment_v7dqf"]
+background_mode = 2
+sky = SubResource("Sky_fvoc2")
+tonemap_mode = 2
 
 [sub_resource type="Resource" id="Resource_v7dqf"]
 script = ExtResource("4_fvoc2")
@@ -87,11 +97,51 @@ tech = 5
 power = 5
 metadata/_custom_type_script = "uid://dl7kwv4d4usam"
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s0t75"]
+albedo_color = Color(1, 0, 0, 1)
+
 [node name="Combat" type="Node3D"]
 script = ExtResource("1_kx3u1")
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_v7dqf")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
 [node name="InitManager" type="Node" parent="."]
 script = ExtResource("1_raif2")
+
+[node name="EnemyActor" parent="InitManager" instance=ExtResource("3_ga4lu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.52727, 0.873587, -0.440634)
+character_name = "enemy1"
+stats = SubResource("Resource_v7dqf")
+
+[node name="EnemyActor2" parent="InitManager" instance=ExtResource("3_ga4lu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.61652, 0.873587, 1.17477)
+character_name = "enemy2"
+stats = SubResource("Resource_u30h6")
+
+[node name="EnemyActor3" parent="InitManager" instance=ExtResource("3_ga4lu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.78082, 0.873587, -1.45125)
+character_name = "enemy3"
+stats = SubResource("Resource_fvoc2")
+
+[node name="PlayerActor" parent="InitManager" instance=ExtResource("4_u30h6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.91795, 0.873587, 1.53801)
+character_name = "player1"
+stats = SubResource("Resource_syqip")
+
+[node name="PlayerActor2" parent="InitManager" instance=ExtResource("4_u30h6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11864, 0.873587, 2.54686)
+character_name = "player2"
+stats = SubResource("Resource_ilamk")
+
+[node name="PlayerActor3" parent="InitManager" instance=ExtResource("4_u30h6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.87819, 0.873587, 0.250602)
+character_name = "player3"
+stats = SubResource("Resource_px7ba")
 
 [node name="map" type="Node3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.252306, 0)
@@ -154,36 +204,6 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.759
 use_collision = true
 size = Vector3(26.7365, 10.8223, 1)
 material = SubResource("StandardMaterial3D_s0t75")
-
-[node name="EnemyActor" parent="." instance=ExtResource("3_ga4lu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.52727, 0.873587, -0.440634)
-character_name = "enemy1"
-stats = SubResource("Resource_v7dqf")
-
-[node name="EnemyActor2" parent="." instance=ExtResource("3_ga4lu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.61652, 0.873587, 1.17477)
-character_name = "enemy2"
-stats = SubResource("Resource_u30h6")
-
-[node name="EnemyActor3" parent="." instance=ExtResource("3_ga4lu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.78082, 0.873587, -1.45125)
-character_name = "enemy3"
-stats = SubResource("Resource_fvoc2")
-
-[node name="PlayerActor" parent="." instance=ExtResource("4_u30h6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.91795, 0.873587, 1.53801)
-character_name = "player1"
-stats = SubResource("Resource_syqip")
-
-[node name="PlayerActor2" parent="." instance=ExtResource("4_u30h6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11864, 0.873587, 2.54686)
-character_name = "player2"
-stats = SubResource("Resource_ilamk")
-
-[node name="PlayerActor3" parent="." instance=ExtResource("4_u30h6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.87819, 0.873587, 0.250602)
-character_name = "player3"
-stats = SubResource("Resource_px7ba")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.328786, 0.245574, -0.911917, 0.0839404, 0.95418, 0.287219, 0.940667, -0.17098, 0.293107, -4.20524, 2.89113, 4.34067)
