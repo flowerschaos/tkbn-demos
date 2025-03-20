@@ -36,9 +36,6 @@ buses/default_bus_layout=""
 [autoload]
 
 PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
-signals="*res://old stuff/signalarity.gd"
-InitiativeManager="*res://old stuff/combat/initiative_manager.gd"
-Dice="*res://addons/dice_engine/dice_engine.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 Dicecheck="*res://dicecheck.gd"
 

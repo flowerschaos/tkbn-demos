@@ -3,7 +3,6 @@ class_name CharacterStats
 
 enum ActorType {PLAYER, ENEMY}
 
-@export var InternalName: String
 @export var alignment: ActorType
 @export_category("Physical")
 @export_range(1,10) var strength: int = 5

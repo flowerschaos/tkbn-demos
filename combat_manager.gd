@@ -8,7 +8,7 @@ class_name CombatOverseer
 @onready var battle_end_text: RichTextLabel = $"player ui/battle_end/battle_end_text"
 @onready var init_manager: InitManager = $InitManager
 
-var actors = init_manager.sorted_actors
+@onready var actors = init_manager.sorted_actors
 
 func _ready() -> void:
 	print(actors)
