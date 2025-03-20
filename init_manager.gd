@@ -7,14 +7,13 @@ var actors = []
 func summon_actors():
 	actors.assign(players)
 	actors.assign(enemies)
-	print(actors)
 
 func _sort_initiative(a, b):
 	return a.init_value > b.init_value
 
 func _ready() -> void:
 	summon_actors()
-	#actors.sort_custom(_sort_initiative)
+	actors.sort_custom(_sort_initiative)
 
 func _process(delta: float) -> void:
 	pass
