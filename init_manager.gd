@@ -14,7 +14,3 @@ func _sort_initiative(a, b):
 func _ready() -> void:
 	summon_actors()
 	actors.sort_custom(_sort_initiative)
-	print(actors)
-
-func _process(delta: float) -> void:
-	pass
