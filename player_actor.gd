@@ -23,7 +23,7 @@ func _update_health_bar():
 
 func attack(target: Node3D):
 	await get_tree().create_timer(0.6).timeout
-	target.change_health(get_attack_damage())
+	target.take_damage(get_attack_damage())
 	await get_tree().create_timer(0.1).timeout
 	turn_end.emit()
 
@@ -31,7 +31,7 @@ func get_attack_damage():
 	if is_holding_weapon == false:
 		return stats.strength*2
 
-func change_health(amount:int):
+func take_damage(amount:int):
 	current_hp -= amount
 	_update_health_bar()
 	if current_hp <= 0:

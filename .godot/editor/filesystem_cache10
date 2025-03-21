@@ -1,14 +1,14 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1742500220
+::res://::1742573137
 character_stats.gd::GDScript/GDScript::7998047024586692580::1742487562::0::1::::CharacterStats<>Resource<><>0<>0<><>::
-combat.tscn::PackedScene::682454608498559512::1742491888::0::1::::<><><>0<>0<><>::uid://bxscqnjg5aff7::::res://combat_manager.gd<>uid://bwl71so6br15q::::res://init_manager.gd<>uid://sav0hqtavsud::::res://enemy_actor.tscn<>uid://bhus3c6sno45o::::res://player_actor.tscn
-combat_manager.gd::GDScript::4038073590648433342::1742491831::0::1::::CombatOverseer<>Node3D<><>0<>0<><>::
-dicecheck.gd::GDScript::2249422775823973074::1742491853::0::1::::dicecheck<>Node<><>0<>0<><>::
-enemy_actor.gd::GDScript::4467204142509441313::1742491831::0::1::::EnemyActor<>Node<><>0<>0<><>::
+combat.tscn::PackedScene::682454608498559512::1742564075::0::1::::<><><>0<>0<><>::uid://bxscqnjg5aff7::::res://combat_manager.gd<>uid://bwl71so6br15q::::res://init_manager.gd<>uid://sav0hqtavsud::::res://enemy_actor.tscn<>uid://bhus3c6sno45o::::res://player_actor.tscn<>uid://usuuw2euo1o3::::res://character_resources/testenemy1.tres<>uid://b6rnicobk5g7m::::res://character_resources/testenemy2.tres<>uid://dl7kwv4d4usam::::res://character_stats.gd
+combat_manager.gd::GDScript::4038073590648433342::1742563410::0::1::::CombatOverseer<>Node3D<><>0<>0<><>::
+dicecheck.gd::GDScript/GDScript::2249422775823973074::1742491853::0::1::::dicecheck<>Node<><>0<>0<><>::
+enemy_actor.gd::GDScript::4467204142509441313::1742563448::0::1::::EnemyActor<>Node<><>0<>0<><>::
 enemy_actor.tscn::PackedScene/PackedScene::1264719280424742651::1742479422::0::1::::<><><>0<>0<><>::uid://b4v7g1xr2ctm4::::res://enemy_actor.gd
 icon.svg::CompressedTexture2D/CompressedTexture2D::8735237410284423683::1740747224::1740748923::1::::<><><>0<>0<>027255e5fb41ad8af207ac108ddde425<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-init_manager.gd::GDScript::3955273741892623340::1742491831::0::1::::<>Node<><>0<>0<><>::
-player_actor.gd::GDScript::2523784623004828784::1742491888::0::1::::PlayerActor<>Node<><>0<>0<><>::
+init_manager.gd::GDScript::3955273741892623340::1742562571::0::1::::<>Node<><>0<>0<><>::
+player_actor.gd::GDScript::2523784623004828784::1742563410::0::1::::PlayerActor<>Node<><>0<>0<><>::
 player_actor.tscn::PackedScene/PackedScene::2920173206111088702::1742479418::0::1::::<><><>0<>0<><>::uid://bb7smm2dpv00c::::res://player_actor.gd
 skew.tres::Shader/Shader::-1::1741608400::0::1::::<><><>0<>0<><>::
 ::res://addons/::1742408852
@@ -1025,9 +1025,9 @@ texture_10.png::CompressedTexture2D/CompressedTexture2D::5434134780175199182::17
 texture_11.png::CompressedTexture2D/CompressedTexture2D::1370021696176858703::1740747224::1740748924::1::::<><><>0<>0<>7cd09094b1976e295fedd1edeac15036<>res://.godot/imported/texture_11.png-d26604346fed135ed12c725ec97c70a0.ctex::
 texture_12.png::CompressedTexture2D/CompressedTexture2D::6047542439335718600::1740747224::1740748924::1::::<><><>0<>0<>19ca79330c8d23a0c515d4077ca3a75a<>res://.godot/imported/texture_12.png-1886e9571fed092330a55527f470e32b.ctex::
 texture_13.png::CompressedTexture2D/CompressedTexture2D::2495934140612614578::1740747224::1740748924::1::::<><><>0<>0<>72ff654ec005a224e91c2e9b6875baf3<>res://.godot/imported/texture_13.png-b129774d8e005c508492e1b60b74b09a.ctex::
-::res://character_resources/::1742476359
-test.tres::Resource/CharacterStats::7823937891773648511::1742405473::0::1::::<><><>0<>0<><>::uid://dl7kwv4d4usam::::res://character_stats.gd
-testenemy.tres::Resource/CharacterStats::4969342789584318967::1742476359::0::1::::<><><>0<>0<><>::uid://dl7kwv4d4usam::::res://character_stats.gd
+::res://character_resources/::1742564075
+testenemy1.tres::Resource/CharacterStats::1442186925499622480::1742563503::0::1::::<><><>0<>0<><>::uid://dl7kwv4d4usam::::res://character_stats.gd
+testenemy2.tres::Resource/CharacterStats::4598172992282272404::1742564075::0::1::::<><><>0<>0<><>::uid://dl7kwv4d4usam::::res://character_stats.gd
 ::res://old stuff/::1742405671
 enemy.gd::GDScript/GDScript::3350547142067224364::1741958117::0::1::::Enemy<>Node3D<><>0<>0<><>::
 enemy.tscn::PackedScene/PackedScene::8749983693268155714::1742300182::0::1::::<><><>0<>0<><>::uid://bn0ba0ldq4kho::::res://old stuff/enemy.gd<>uid://ffyxg5wsi3w5::::res://addons/tattomoosa.vision_cone_3d/src/VisionCone3D.gd

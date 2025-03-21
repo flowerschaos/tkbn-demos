@@ -42,7 +42,7 @@ func get_attack_damage():
 	if is_holding_weapon == false:
 		return stats.strength*2
 
-func change_health(amount:int):
+func take_damage(amount:int):
 	current_hp -= amount
 	_update_health_bar()
 	if current_hp <= 0:

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CharacterStats" load_steps=2 format=3 uid="uid://bwen33umx0a1w"]
+
+[ext_resource type="Script" uid="uid://dl7kwv4d4usam" path="res://character_stats.gd" id="1_j60lf"]
+
+[resource]
+script = ExtResource("1_j60lf")
+alignment = 0
+strength = 5
+endurance = 5
+agility = 5
+knowledge = 5
+insight = 5
+chatter = 5
+tech = 5
+power = 5
+metadata/_custom_type_script = "uid://dl7kwv4d4usam"

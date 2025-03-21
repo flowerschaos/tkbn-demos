@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://jyt6sodbakhs"]
+[gd_scene load_steps=15 format=3 uid="uid://jyt6sodbakhs"]
 
 [ext_resource type="Script" uid="uid://bxscqnjg5aff7" path="res://combat_manager.gd" id="1_kx3u1"]
 [ext_resource type="Script" uid="uid://bwl71so6br15q" path="res://init_manager.gd" id="1_raif2"]
@@ -6,7 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://bhus3c6sno45o" path="res://player_actor.tscn" id="4_u30h6"]
 [ext_resource type="Resource" uid="uid://usuuw2euo1o3" path="res://character_resources/testenemy1.tres" id="4_v7dqf"]
 [ext_resource type="Resource" uid="uid://b6rnicobk5g7m" path="res://character_resources/testenemy2.tres" id="5_syqip"]
-[ext_resource type="Script" uid="uid://dl7kwv4d4usam" path="res://character_stats.gd" id="6_ilamk"]
+[ext_resource type="Resource" uid="uid://dipode8xb01nw" path="res://character_resources/testenemy3.tres" id="6_px7ba"]
+[ext_resource type="Resource" uid="uid://bwen33umx0a1w" path="res://character_resources/testcharacter1.tres" id="8_tt5c4"]
+[ext_resource type="Resource" uid="uid://jotumnpvgj74" path="res://character_resources/testcharacter2.tres" id="9_5pdxm"]
+[ext_resource type="Resource" uid="uid://sgk0xauceayb" path="res://character_resources/testcharacter3.tres" id="10_mp23d"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_u30h6"]
 sky_horizon_color = Color(0.468098, 0.485348, 0.509348, 1)
@@ -20,19 +23,6 @@ sky_material = SubResource("ProceduralSkyMaterial_u30h6")
 background_mode = 2
 sky = SubResource("Sky_fvoc2")
 tonemap_mode = 2
-
-[sub_resource type="Resource" id="Resource_px7ba"]
-script = ExtResource("6_ilamk")
-alignment = 1
-strength = 4
-endurance = 9
-agility = 8
-knowledge = 4
-insight = 5
-chatter = 5
-tech = 5
-power = 1
-metadata/_custom_type_script = "uid://dl7kwv4d4usam"
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s0t75"]
 albedo_color = Color(1, 0, 0, 1)
@@ -63,19 +53,22 @@ stats = ExtResource("5_syqip")
 [node name="EnemyActor3" parent="InitManager" instance=ExtResource("3_ga4lu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.78082, 0.873587, -1.45125)
 character_name = "enemy3"
-stats = SubResource("Resource_px7ba")
+stats = ExtResource("6_px7ba")
 
 [node name="PlayerActor" parent="InitManager" instance=ExtResource("4_u30h6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.91795, 0.873587, 1.53801)
 character_name = "player1"
+stats = ExtResource("8_tt5c4")
 
 [node name="PlayerActor2" parent="InitManager" instance=ExtResource("4_u30h6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11864, 0.873587, 2.54686)
 character_name = "player2"
+stats = ExtResource("9_5pdxm")
 
 [node name="PlayerActor3" parent="InitManager" instance=ExtResource("4_u30h6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.87819, 0.873587, 0.250602)
 character_name = "player3"
+stats = ExtResource("10_mp23d")
 
 [node name="map" type="Node3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.252306, 0)
@@ -146,8 +139,11 @@ fov = 58.4471
 [node name="player ui" type="CanvasLayer" parent="."]
 
 [node name="player actions" type="HBoxContainer" parent="player ui"]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 511.0
+offset_top = 527.0
+offset_right = 650.0
+offset_bottom = 567.0
+metadata/_edit_group_ = true
 
 [node name="attack" type="Button" parent="player ui/player actions"]
 layout_mode = 2
@@ -158,11 +154,16 @@ layout_mode = 2
 text = "skip turn"
 
 [node name="battle_end" type="Panel" parent="player ui"]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 504.0
+offset_top = 461.0
+offset_right = 670.0
+offset_bottom = 501.0
+metadata/_edit_group_ = true
 
 [node name="battle_end_text" type="RichTextLabel" parent="player ui/battle_end"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-text = "battle done"
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
