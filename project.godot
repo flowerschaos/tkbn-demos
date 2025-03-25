@@ -38,7 +38,7 @@ buses/default_bus_layout=""
 PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 Dicecheck="*res://dicecheck.gd"
-InitManager="*res://init_manager.gd"
+InitiativeManager="*res://initiative_manager.gd"
 
 [dialogic]
 
@@ -52,12 +52,11 @@ version_control/autoload_on_startup=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/resources_spreadsheet_view/plugin.cfg", "res://addons/splash_screen_wizard/plugin.cfg", "res://addons/untrue/plugin.cfg", "res://addons/worldmap_builder/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/resources_spreadsheet_view/plugin.cfg", "res://addons/splash_screen_wizard/plugin.cfg", "res://addons/worldmap_builder/plugin.cfg")
 
 [global_group]
 
-player="playable characters"
-enemy="combatants"
+actor=""
 
 [input]
 
