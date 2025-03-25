@@ -3,7 +3,8 @@
 [ext_resource type="Script" uid="uid://cgcx6ag2hll5s" path="res://combat.gd" id="1_ga4lu"]
 [ext_resource type="PackedScene" uid="uid://csiw3oa2iccme" path="res://guy.tscn" id="1_raif2"]
 [ext_resource type="Script" uid="uid://c2nvnvk4ldkuw" path="res://initiative_manager.gd" id="2_s0t75"]
-[ext_resource type="Shader" path="res://skew.tres" id="3_kx3u1"]
+[ext_resource type="Script" uid="uid://bjnnq2f4bj6fv" path="res://initiative_visualizer.gd" id="3_u30h6"]
+[ext_resource type="Texture2D" uid="uid://dwpoc4aejbhy6" path="res://icon.svg" id="5_u30h6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_u30h6"]
 sky_horizon_color = Color(0.468098, 0.485348, 0.509348, 1)
@@ -20,10 +21,6 @@ tonemap_mode = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s0t75"]
 albedo_color = Color(1, 0, 0, 1)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ga4lu"]
-shader = ExtResource("3_kx3u1")
-shader_parameter/strength = -0.2
 
 [node name="Combat" type="Node3D"]
 script = ExtResource("1_ga4lu")
@@ -101,137 +98,19 @@ material = SubResource("StandardMaterial3D_s0t75")
 transform = Transform3D(0.328786, 0.245574, -0.911917, 0.0839404, 0.95418, 0.287219, 0.940667, -0.17098, 0.293107, -4.20524, 2.89113, 4.34067)
 fov = 58.4471
 
-[node name="initiative manager" type="Node" parent="."]
+[node name="InitiativeManager" type="Node" parent="."]
 script = ExtResource("2_s0t75")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="InitiativeVisualizer" type="HBoxContainer" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -414.0
+offset_top = 24.0
 offset_right = 414.0
-offset_bottom = 100.0
+offset_bottom = 124.0
 grow_horizontal = 2
-
-[node name="timeline panel" type="Panel" parent="HBoxContainer"]
-material = SubResource("ShaderMaterial_ga4lu")
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer/timeline panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-expand_mode = 1
-stretch_mode = 4
-
-[node name="timeline panel2" type="Panel" parent="HBoxContainer"]
-material = SubResource("ShaderMaterial_ga4lu")
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer/timeline panel2"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-expand_mode = 1
-stretch_mode = 4
-
-[node name="timeline panel3" type="Panel" parent="HBoxContainer"]
-material = SubResource("ShaderMaterial_ga4lu")
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer/timeline panel3"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-expand_mode = 1
-stretch_mode = 4
-
-[node name="timeline panel4" type="Panel" parent="HBoxContainer"]
-material = SubResource("ShaderMaterial_ga4lu")
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer/timeline panel4"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-expand_mode = 1
-stretch_mode = 4
-
-[node name="timeline panel5" type="Panel" parent="HBoxContainer"]
-material = SubResource("ShaderMaterial_ga4lu")
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer/timeline panel5"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-expand_mode = 1
-stretch_mode = 4
-
-[node name="timeline panel6" type="Panel" parent="HBoxContainer"]
-material = SubResource("ShaderMaterial_ga4lu")
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer/timeline panel6"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-expand_mode = 1
-stretch_mode = 4
-
-[node name="timeline panel7" type="Panel" parent="HBoxContainer"]
-material = SubResource("ShaderMaterial_ga4lu")
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer/timeline panel7"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-expand_mode = 1
-stretch_mode = 4
-
-[node name="timeline panel8" type="Panel" parent="HBoxContainer"]
-material = SubResource("ShaderMaterial_ga4lu")
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer/timeline panel8"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-expand_mode = 1
-stretch_mode = 4
+script = ExtResource("3_u30h6")
 
 [node name="turnswitch" type="Button" parent="."]
 offset_right = 8.0
@@ -239,15 +118,22 @@ offset_bottom = 8.0
 text = "next turn"
 
 [node name="guy" parent="." instance=ExtResource("1_raif2")]
+battle_icon = ExtResource("5_u30h6")
 
 [node name="guy2" parent="." instance=ExtResource("1_raif2")]
+battle_icon = ExtResource("5_u30h6")
 
 [node name="guy3" parent="." instance=ExtResource("1_raif2")]
+battle_icon = ExtResource("5_u30h6")
 
 [node name="guy4" parent="." instance=ExtResource("1_raif2")]
+battle_icon = ExtResource("5_u30h6")
 
 [node name="guy5" parent="." instance=ExtResource("1_raif2")]
+battle_icon = ExtResource("5_u30h6")
 
 [node name="guy6" parent="." instance=ExtResource("1_raif2")]
+battle_icon = ExtResource("5_u30h6")
 
+[connection signal="turn_switch" from="." to="InitiativeVisualizer" method="_on_combat_turn_switch"]
 [connection signal="pressed" from="turnswitch" to="." method="_on_turnswitch_pressed"]

@@ -39,6 +39,7 @@ PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_came
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 Dicecheck="*res://dicecheck.gd"
 InitiativeManager="*res://initiative_manager.gd"
+Combat="*res://combat.gd"
 
 [dialogic]
 
