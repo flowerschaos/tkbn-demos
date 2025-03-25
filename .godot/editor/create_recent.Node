@@ -1,3 +1,4 @@
+CanvasLayer
 TextureRect
 Panel
 Button
@@ -7,7 +8,6 @@ HBoxContainer
 Node
 MeshInstance3D
 RichTextLabel
-CanvasLayer
 Camera3D
 ProgressBar
 PhantomCamera3D

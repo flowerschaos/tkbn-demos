@@ -9,3 +9,4 @@ func _on_combat_turn_switch() -> void:
 		var actor_frame = timeline_panel.instantiate()
 		actor_frame.icon.texture = actor.battle_icon
 		add_child(actor_frame)
+	

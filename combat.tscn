@@ -1,10 +1,15 @@
-[gd_scene load_steps=10 format=3 uid="uid://jyt6sodbakhs"]
+[gd_scene load_steps=15 format=3 uid="uid://jyt6sodbakhs"]
 
 [ext_resource type="Script" uid="uid://cgcx6ag2hll5s" path="res://combat.gd" id="1_ga4lu"]
 [ext_resource type="PackedScene" uid="uid://csiw3oa2iccme" path="res://guy.tscn" id="1_raif2"]
 [ext_resource type="Script" uid="uid://c2nvnvk4ldkuw" path="res://initiative_manager.gd" id="2_s0t75"]
 [ext_resource type="Script" uid="uid://bjnnq2f4bj6fv" path="res://initiative_visualizer.gd" id="3_u30h6"]
-[ext_resource type="Texture2D" uid="uid://dwpoc4aejbhy6" path="res://icon.svg" id="5_u30h6"]
+[ext_resource type="Texture2D" uid="uid://ro8syfew4g5b" path="res://icons/red.png" id="4_px7ba"]
+[ext_resource type="Texture2D" uid="uid://ynaeb0eu7f5f" path="res://icons/orange.png" id="5_tt5c4"]
+[ext_resource type="Texture2D" uid="uid://cv8yhl7fpbtb6" path="res://icons/yellow.png" id="6_5pdxm"]
+[ext_resource type="Texture2D" uid="uid://yjfqjtmnwt0u" path="res://icons/green.png" id="7_mp23d"]
+[ext_resource type="Texture2D" uid="uid://dtl3sse7jjwgx" path="res://icons/blue.png" id="8_prnnl"]
+[ext_resource type="Texture2D" uid="uid://by5dn03va0gad" path="res://icons/purple.png" id="9_3jjqr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_u30h6"]
 sky_horizon_color = Color(0.468098, 0.485348, 0.509348, 1)
@@ -101,7 +106,27 @@ fov = 58.4471
 [node name="InitiativeManager" type="Node" parent="."]
 script = ExtResource("2_s0t75")
 
-[node name="InitiativeVisualizer" type="HBoxContainer" parent="."]
+[node name="guy" parent="." instance=ExtResource("1_raif2")]
+battle_icon = ExtResource("4_px7ba")
+
+[node name="guy2" parent="." instance=ExtResource("1_raif2")]
+battle_icon = ExtResource("5_tt5c4")
+
+[node name="guy3" parent="." instance=ExtResource("1_raif2")]
+battle_icon = ExtResource("6_5pdxm")
+
+[node name="guy4" parent="." instance=ExtResource("1_raif2")]
+battle_icon = ExtResource("7_mp23d")
+
+[node name="guy5" parent="." instance=ExtResource("1_raif2")]
+battle_icon = ExtResource("8_prnnl")
+
+[node name="guy6" parent="." instance=ExtResource("1_raif2")]
+battle_icon = ExtResource("9_3jjqr")
+
+[node name="ui" type="CanvasLayer" parent="."]
+
+[node name="InitiativeVisualizer" type="HBoxContainer" parent="ui"]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -112,28 +137,10 @@ offset_bottom = 124.0
 grow_horizontal = 2
 script = ExtResource("3_u30h6")
 
-[node name="turnswitch" type="Button" parent="."]
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="turnswitch" type="Button" parent="ui"]
+offset_right = 81.0
+offset_bottom = 31.0
 text = "next turn"
 
-[node name="guy" parent="." instance=ExtResource("1_raif2")]
-battle_icon = ExtResource("5_u30h6")
-
-[node name="guy2" parent="." instance=ExtResource("1_raif2")]
-battle_icon = ExtResource("5_u30h6")
-
-[node name="guy3" parent="." instance=ExtResource("1_raif2")]
-battle_icon = ExtResource("5_u30h6")
-
-[node name="guy4" parent="." instance=ExtResource("1_raif2")]
-battle_icon = ExtResource("5_u30h6")
-
-[node name="guy5" parent="." instance=ExtResource("1_raif2")]
-battle_icon = ExtResource("5_u30h6")
-
-[node name="guy6" parent="." instance=ExtResource("1_raif2")]
-battle_icon = ExtResource("5_u30h6")
-
-[connection signal="turn_switch" from="." to="InitiativeVisualizer" method="_on_combat_turn_switch"]
-[connection signal="pressed" from="turnswitch" to="." method="_on_turnswitch_pressed"]
+[connection signal="turn_switch" from="." to="ui/InitiativeVisualizer" method="_on_combat_turn_switch"]
+[connection signal="pressed" from="ui/turnswitch" to="." method="_on_turnswitch_pressed"]
