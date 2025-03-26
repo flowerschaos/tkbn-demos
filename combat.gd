@@ -3,12 +3,12 @@ extends Node3D
 @onready var curr_turn = InitiativeManager.actors[cti]
 var cti: int
 
-signal turn_switch
+signal combat_start
 
 func _ready() -> void:
 	cti = 0
 	print(curr_turn)
-	turn_switch.emit()
+	combat_start.emit()
 
 func _on_turnswitch_pressed() -> void:
 	if cti < (InitiativeManager.actors.size()-1):

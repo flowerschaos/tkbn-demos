@@ -142,5 +142,6 @@ offset_right = 81.0
 offset_bottom = 31.0
 text = "next turn"
 
-[connection signal="turn_switch" from="." to="ui/InitiativeVisualizer" method="_on_combat_turn_switch"]
+[connection signal="combat_start" from="." to="ui/InitiativeVisualizer" method="_on_combat_combat_start"]
 [connection signal="pressed" from="ui/turnswitch" to="." method="_on_turnswitch_pressed"]
+[connection signal="pressed" from="ui/turnswitch" to="ui/InitiativeVisualizer" method="_on_turnswitch_pressed"]
