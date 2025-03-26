@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://csiw3oa2iccme"]
 
-[ext_resource type="Script" uid="uid://bu5i35332c5oi" path="res://guy.gd" id="1_8h3iv"]
+[ext_resource type="Script" uid="uid://bu5i35332c5oi" path="res://combat/guy.gd" id="1_8h3iv"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_tj2cq"]
 

@@ -1,0 +1,66 @@
+[gd_scene load_steps=11 format=3 uid="uid://jyt6sodbakhs"]
+
+[ext_resource type="Script" uid="uid://cgcx6ag2hll5s" path="res://combat/combat.gd" id="1_ga4lu"]
+[ext_resource type="PackedScene" uid="uid://csiw3oa2iccme" path="res://combat/guy.tscn" id="1_raif2"]
+[ext_resource type="Script" uid="uid://bi7apemc5xlnd" path="res://combat/initiative_visualizer.gd" id="3_u30h6"]
+[ext_resource type="Texture2D" uid="uid://ro8syfew4g5b" path="res://icons/red.png" id="4_px7ba"]
+[ext_resource type="Texture2D" uid="uid://ynaeb0eu7f5f" path="res://icons/orange.png" id="5_tt5c4"]
+[ext_resource type="Texture2D" uid="uid://cv8yhl7fpbtb6" path="res://icons/yellow.png" id="6_5pdxm"]
+[ext_resource type="Texture2D" uid="uid://yjfqjtmnwt0u" path="res://icons/green.png" id="7_mp23d"]
+[ext_resource type="Texture2D" uid="uid://dtl3sse7jjwgx" path="res://icons/blue.png" id="8_prnnl"]
+[ext_resource type="Texture2D" uid="uid://by5dn03va0gad" path="res://icons/purple.png" id="9_3jjqr"]
+[ext_resource type="Script" uid="uid://8irmm56ce75h" path="res://combat/button.gd" id="11_q6cuf"]
+
+[node name="Combat" type="Node3D"]
+script = ExtResource("1_ga4lu")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.328786, 0.245574, -0.911917, 0.0839404, 0.95418, 0.287219, 0.940667, -0.17098, 0.293107, -4.20524, 2.89113, 4.34067)
+fov = 58.4471
+
+[node name="guy" parent="." instance=ExtResource("1_raif2")]
+battle_icon = ExtResource("4_px7ba")
+
+[node name="guy2" parent="." instance=ExtResource("1_raif2")]
+battle_icon = ExtResource("5_tt5c4")
+
+[node name="guy3" parent="." instance=ExtResource("1_raif2")]
+battle_icon = ExtResource("6_5pdxm")
+
+[node name="guy4" parent="." instance=ExtResource("1_raif2")]
+battle_icon = ExtResource("7_mp23d")
+
+[node name="guy5" parent="." instance=ExtResource("1_raif2")]
+battle_icon = ExtResource("8_prnnl")
+
+[node name="guy6" parent="." instance=ExtResource("1_raif2")]
+battle_icon = ExtResource("9_3jjqr")
+
+[node name="ui" type="CanvasLayer" parent="."]
+
+[node name="InitiativeVisualizer" type="HBoxContainer" parent="ui"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -414.0
+offset_top = 24.0
+offset_right = 414.0
+offset_bottom = 124.0
+grow_horizontal = 2
+script = ExtResource("3_u30h6")
+
+[node name="turnswitch" type="Button" parent="ui"]
+offset_right = 81.0
+offset_bottom = 31.0
+text = "next turn"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 86.0
+offset_right = 193.0
+offset_bottom = 31.0
+text = "to overworld"
+script = ExtResource("11_q6cuf")
+
+[connection signal="combat_start" from="." to="ui/InitiativeVisualizer" method="_on_combat_combat_start"]
+[connection signal="pressed" from="ui/turnswitch" to="." method="_on_turnswitch_pressed"]
+[connection signal="pressed" from="ui/turnswitch" to="ui/InitiativeVisualizer" method="_on_turnswitch_pressed"]

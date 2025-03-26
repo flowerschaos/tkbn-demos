@@ -23,7 +23,7 @@ resources_spreadsheet_view/resource_cell_label_mode=1
 [application]
 
 config/name="stereobleedingedge"
-run/main_scene="uid://jyt6sodbakhs"
+run/main_scene="uid://ddwejtj4gr5cc"
 config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/bg_color=Color(0.00820202, 0.00820203, 0.00820202, 1)
 boot_splash/show_image=false
@@ -37,9 +37,7 @@ buses/default_bus_layout=""
 
 PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
-Dicecheck="*res://dicecheck.gd"
-InitiativeManager="*res://initiative_manager.gd"
-Combat="*res://combat.gd"
+Dicecheck="*res://combat/dicecheck.gd"
 
 [dialogic]
 

@@ -1,5 +1,5 @@
 extends Node3D
-class_name guy
+class_name Actor
 
 @export_range(1,10) var endurance: int = 5
 @export_range(1,10) var agility: int = 5

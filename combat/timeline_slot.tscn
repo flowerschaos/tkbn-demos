@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://txjkilfd8uis"]
 
 [ext_resource type="Shader" path="res://skew.tres" id="1_pl8bn"]
-[ext_resource type="Script" uid="uid://cpdklvdxukb7e" path="res://timeline_slot.gd" id="2_nrrkn"]
+[ext_resource type="Script" uid="uid://cpdklvdxukb7e" path="res://combat/timeline_slot.gd" id="2_nrrkn"]
 [ext_resource type="Texture2D" uid="uid://dwpoc4aejbhy6" path="res://icon.svg" id="3_38qn7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ga4lu"]
