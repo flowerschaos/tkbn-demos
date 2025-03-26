@@ -38,6 +38,8 @@ buses/default_bus_layout=""
 PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 Dicecheck="*res://combat/dicecheck.gd"
+InitiativeManager="*res://initiative_manager.gd"
+Combat="*res://combat.gd"
 
 [dialogic]
 

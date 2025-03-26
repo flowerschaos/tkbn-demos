@@ -1,5 +1,4 @@
 extends Node3D
-class_name Combat
 
 @onready var actors: Array = get_tree().get_nodes_in_group("actor")
 @onready var curr_turn = actors[cti]
