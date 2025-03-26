@@ -1,10 +1,14 @@
 extends Node3D
+class_name Combat
 
 @onready var actors: Array = get_tree().get_nodes_in_group("actor")
 @onready var curr_turn = actors[cti]
 var cti: int
 
+static var current_combat
+
 signal combat_start
+signal combat_end
 
 func _ready() -> void:
 	cti = 0
