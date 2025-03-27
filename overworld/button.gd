@@ -1,4 +1,6 @@
 extends Button
 
+signal combat_grab
+
 func _pressed() -> void:
-	get_tree().change_scene_to_file("uid://jyt6sodbakhs")
+	combat_grab.emit()

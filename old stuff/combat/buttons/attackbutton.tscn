@@ -1,8 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://om8kbw8ov2qh"]
-
-[ext_resource type="PackedScene" uid="uid://dsbopawpow10" path="res://old stuff/combat/buttons/actionbutton.tscn" id="1_4pkjn"]
-[ext_resource type="Script" uid="uid://b56qsrwlbo788" path="res://old stuff/combat/buttons/attackbutton.gd" id="2_jc5o7"]
-
-[node name="attackbutton" instance=ExtResource("1_4pkjn")]
-text = "basic attack"
-script = ExtResource("2_jc5o7")
