@@ -44,6 +44,11 @@ Dicecheck="*res://combat/dicecheck.gd"
 directories/dch_directory={}
 directories/dtl_directory={}
 
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+
 [editor]
 
 version_control/plugin_name="GitPlugin"
