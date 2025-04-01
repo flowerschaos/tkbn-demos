@@ -1,9 +1,10 @@
+GridMap
+MeshInstance3D
 Node
 Button
 CheckButton
 Camera3D
 CollisionShape3D
-MeshInstance3D
 CharacterBody3D
 CanvasLayer
 TextureRect

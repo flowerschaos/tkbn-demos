@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://jyt6sodbakhs"]
+[gd_scene load_steps=14 format=3 uid="uid://jyt6sodbakhs"]
 
 [ext_resource type="Script" uid="uid://cgcx6ag2hll5s" path="res://combat/combat.gd" id="1_ga4lu"]
 [ext_resource type="PackedScene" uid="uid://csiw3oa2iccme" path="res://combat/guy.tscn" id="1_raif2"]
@@ -18,6 +18,18 @@ script/source = "extends Button
 func _pressed() -> void:
 	pass
 "
+
+[sub_resource type="BoxMesh" id="BoxMesh_iga5g"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="MeshLibrary" id="MeshLibrary_4h14y"]
+item/0/name = ""
+item/0/mesh = SubResource("BoxMesh_iga5g")
+item/0/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/0/mesh_cast_shadow = 1
+item/0/shapes = []
+item/0/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/0/navigation_layers = 1
 
 [node name="Combat" type="Node3D"]
 script = ExtResource("1_ga4lu")
@@ -77,6 +89,10 @@ script = SubResource("GDScript_6cnl0")
 
 [node name="CombatGridManager" type="Node" parent="."]
 script = ExtResource("9_iga5g")
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = SubResource("MeshLibrary_4h14y")
+metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [connection signal="combat_start" from="." to="." method="_on_combat_start"]
 [connection signal="combat_start" from="." to="ui/InitiativeVisualizer" method="_on_combat_combat_start"]
