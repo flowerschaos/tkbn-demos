@@ -1,5 +1,6 @@
-GridMap
 MeshInstance3D
+ShapeCast3D
+GridMap
 Node
 Button
 CheckButton
@@ -11,5 +12,3 @@ TextureRect
 Panel
 SubViewport
 SubViewportContainer
-HBoxContainer
-RichTextLabel

@@ -56,7 +56,7 @@ version_control/autoload_on_startup=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/indent_guidelines/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/splash_screen_wizard/plugin.cfg", "res://addons/worldmap_builder/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/splash_screen_wizard/plugin.cfg", "res://addons/worldmap_builder/plugin.cfg")
 
 [global_group]
 
