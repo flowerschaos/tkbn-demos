@@ -18,8 +18,19 @@ func obtain_points():
 
 func connect_points():
 	for cell in cells:
-		for adjacent in get_adjacent_points(cell):
-			astar.connect_points(astar.get_closest_point(cell), astar.get_closest_point(adjacent))
+		if is_edge(cell):
+			pass
+		else:
+			for adjacent in get_adjacent_points(cell):
+				astar.connect_points(astar.get_closest_point(cell), astar.get_closest_point(adjacent))
+
+func is_edge(cell):
+	if cell.x == 0 || cell.z == 0:
+		return true
+	elif cell.x == cells.size()-1 || cell.z == cells.size()-1:
+		return true
+	else:
+		return false
 
 func get_adjacent_points(point):
-	return [point + Vector3(1,0,0), point + Vector3(0,1,0), point + Vector3(0,0,1), point + Vector3(-1,0,0), point + Vector3(0,-1,0), point + Vector3(0,0,-1)]
+	return [point + Vector3i(1,0,0), point + Vector3i(0,1,0), point + Vector3i(0,0,1), point + Vector3i(-1,0,0), point + Vector3i(0,-1,0), point + Vector3i(0,0,-1)]
