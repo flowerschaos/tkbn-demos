@@ -1,17 +1,25 @@
 extends Node
 class_name CombatGridManager
 
-var astar = AStar3D.new()
+@onready var astar = AStar3D.new()
 @onready var combat_grid: GridMap = $CombatGrid
-
+@onready var id = 0
+@onready var cells = combat_grid.get_used_cells()
+@onready var index = cells[id]
 func _ready() -> void:
-	grid_setup()
+	obtain_points()
+	connect_points()
+	astar.get_id_path(1,3)
 
-func grid_setup():
-	var id = 0
-	var index = combat_grid.local_to_map(Vector3(0,0,0))
-	#for cell in combat_grid.get_used_cells():
-		#astar.add_point(id,index)
-		#astar.connect_points(id,id+1)
-		#id += 1
-		#print(astar.get_id_path(1,2))
+func obtain_points():
+	for cell in cells:
+		astar.add_point(id,index)
+		id += 1
+
+func connect_points():
+	for cell in cells:
+		for adjacent in get_adjacent_points(cell):
+			astar.connect_points(astar.get_closest_point(cell), astar.get_closest_point(adjacent))
+
+func get_adjacent_points(point):
+	return [point + Vector3(1,0,0), point + Vector3(0,1,0), point + Vector3(0,0,1), point + Vector3(-1,0,0), point + Vector3(0,-1,0), point + Vector3(0,0,-1)]
