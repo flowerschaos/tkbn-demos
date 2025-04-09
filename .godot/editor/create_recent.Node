@@ -1,3 +1,5 @@
+CollisionShape3D
+CharacterBody3D
 MeshInstance3D
 ShapeCast3D
 GridMap
@@ -5,8 +7,6 @@ Node
 Button
 CheckButton
 Camera3D
-CollisionShape3D
-CharacterBody3D
 CanvasLayer
 TextureRect
 Panel

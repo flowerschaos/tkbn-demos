@@ -1,11 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://csiw3oa2iccme"]
+[gd_scene load_steps=5 format=3 uid="uid://csiw3oa2iccme"]
 
 [ext_resource type="Script" uid="uid://bu5i35332c5oi" path="res://combat/guy.gd" id="1_8h3iv"]
+[ext_resource type="Script" uid="uid://dggb81ebj771s" path="res://combat/compass.gd" id="2_bopt1"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_tj2cq"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hfqwp"]
 
 [node name="guy" type="Node3D" groups=["actor"]]
 script = ExtResource("1_8h3iv")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_tj2cq")
+
+[node name="Compass" type="CharacterBody3D" parent="."]
+script = ExtResource("2_bopt1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Compass"]
+shape = SubResource("CapsuleShape3D_hfqwp")

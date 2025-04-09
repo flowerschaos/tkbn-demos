@@ -14,5 +14,5 @@ func _process(delta: float) -> void:
 func _on_button_combat_grab() -> void:
 	add_child(combat)
 	button.hide()
-	the_beast.hide()
+	the_beast.queue_free()
 	
