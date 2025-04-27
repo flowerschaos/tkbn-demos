@@ -1,9 +1,13 @@
 extends CharacterBody3D
-@export var guy = Node
+
+@export_range(1,10) var endurance: int = 5
+@export_range(1,10) var agility: int = 5
+@export var battle_icon: Texture
+var initiative = dicecheck.standard()+round(endurance/2)+round(agility/2)
 
 var path = []
 var path_ind = 0
-@onready var move_speed = guy.endurance
+@onready var move_speed = endurance
 @onready var astar = get_parent()
 func _ready():
 	add_to_group("units")

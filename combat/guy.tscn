@@ -1,21 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://csiw3oa2iccme"]
+[gd_scene load_steps=4 format=3 uid="uid://csiw3oa2iccme"]
 
-[ext_resource type="Script" uid="uid://bu5i35332c5oi" path="res://combat/guy.gd" id="1_8h3iv"]
-[ext_resource type="Script" uid="uid://dggb81ebj771s" path="res://combat/compass.gd" id="2_bopt1"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_tj2cq"]
+[ext_resource type="Script" uid="uid://dggb81ebj771s" path="res://combat/unit.gd" id="1_hfqwp"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hfqwp"]
 
-[node name="guy" type="Node3D" groups=["actor"]]
-script = ExtResource("1_8h3iv")
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_tj2cq"]
+
+[node name="guy" type="CharacterBody3D" groups=["actor"]]
+script = ExtResource("1_hfqwp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_hfqwp")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_tj2cq")
-
-[node name="Compass" type="CharacterBody3D" parent="." node_paths=PackedStringArray("guy")]
-script = ExtResource("2_bopt1")
-guy = NodePath("..")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Compass"]
-shape = SubResource("CapsuleShape3D_hfqwp")

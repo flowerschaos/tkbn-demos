@@ -1,6 +1,6 @@
+CharacterBody3D
 Camera3D
 CollisionShape3D
-CharacterBody3D
 MeshInstance3D
 ShapeCast3D
 GridMap
