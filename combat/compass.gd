@@ -1,12 +1,12 @@
 extends CharacterBody3D
-@onready var guy: Actor = $".."
+@export var guy = Node
 
 var path = []
 var path_ind = 0
-var move_speed = guy.endurance
+@onready var move_speed = guy.endurance
 @onready var astar = get_parent()
 func _ready():
-	add_to_group("current_selection")
+	add_to_group("units")
 
 func _physics_process(delta):
 	if path_ind < path.size():

@@ -13,8 +13,9 @@ script = ExtResource("1_8h3iv")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_tj2cq")
 
-[node name="Compass" type="CharacterBody3D" parent="."]
+[node name="Compass" type="CharacterBody3D" parent="." node_paths=PackedStringArray("guy")]
 script = ExtResource("2_bopt1")
+guy = NodePath("..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Compass"]
 shape = SubResource("CapsuleShape3D_hfqwp")
