@@ -7,10 +7,8 @@ var initiative = dicecheck.standard()+round(endurance/2)+round(agility/2)
 
 var path = []
 var path_ind = 0
-@onready var move_speed = endurance
-@onready var astar = get_parent()
-func _ready():
-	add_to_group("units")
+@onready var move_speed = endurance*2
+@onready var astar: CombatGridManager = $"../AStarMap"
 
 func _physics_process(delta):
 	if path_ind < path.size():

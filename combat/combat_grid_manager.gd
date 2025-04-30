@@ -2,7 +2,7 @@ extends Node
 class_name CombatGridManager
 
 @onready var astar = AStar3D.new()
-@onready var grid: GridMap = $CombatGrid
+@onready var grid: GridMap = $GridMap
 @onready var nodes = {}
 func _ready() -> void:
 	var cells = grid.get_used_cells()
@@ -21,7 +21,7 @@ func _ready() -> void:
 						var ind2 = nodes[v3_to_index(cell + v3)]
 						if !astar.are_points_connected(ind1, ind2):
 							astar.connect_points(ind1, ind2, true)
-	print(astar.get_id_path(1,23))
+
 func v3_to_index(v3):
 	return str(int(round(v3.x))) + "," + str(int(round(v3.y))) + "," + str(int(round(v3.z)))
 
