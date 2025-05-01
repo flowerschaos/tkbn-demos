@@ -61,8 +61,6 @@ enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/phan
 [global_group]
 
 actor=""
-current_selection=""
-units=""
 
 [input]
 

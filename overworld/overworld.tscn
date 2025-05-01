@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ddwejtj4gr5cc"]
+[gd_scene load_steps=8 format=3 uid="uid://ddwejtj4gr5cc"]
 
 [ext_resource type="Script" uid="uid://d2cl2h2m0mqu5" path="res://overworld/overworld.gd" id="1_criu7"]
 [ext_resource type="PackedScene" uid="uid://ffaqcddbbbpl" path="res://overworld/the_beast.tscn" id="1_jv32c"]
@@ -19,9 +19,6 @@ tonemap_mode = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_alffl"]
 albedo_color = Color(1, 0, 0, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_criu7"]
-size = Vector3(20, 0.5, 20)
 
 [node name="Overworld" type="Node3D"]
 script = ExtResource("1_criu7")
@@ -105,8 +102,5 @@ offset_right = 8.0
 offset_bottom = 8.0
 text = "to combat"
 script = ExtResource("2_w0qnv")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("BoxMesh_criu7")
 
 [connection signal="combat_grab" from="Button" to="." method="_on_button_combat_grab"]

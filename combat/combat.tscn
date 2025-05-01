@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://jyt6sodbakhs"]
+[gd_scene load_steps=9 format=3 uid="uid://jyt6sodbakhs"]
 
+[ext_resource type="Script" uid="uid://d36d4yv5swoy2" path="res://combat/combat.gd" id="1_6cnl0"]
 [ext_resource type="PackedScene" uid="uid://csiw3oa2iccme" path="res://combat/guy.tscn" id="1_raif2"]
 [ext_resource type="Texture2D" uid="uid://ynaeb0eu7f5f" path="res://icons/orange.png" id="4_lk7ft"]
 [ext_resource type="Texture2D" uid="uid://ro8syfew4g5b" path="res://icons/red.png" id="4_px7ba"]
@@ -8,55 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://dtl3sse7jjwgx" path="res://icons/blue.png" id="7_iga5g"]
 [ext_resource type="Texture2D" uid="uid://by5dn03va0gad" path="res://icons/purple.png" id="8_4h14y"]
 
-[sub_resource type="GDScript" id="GDScript_6vidd"]
-script/source = "extends Node3D
-class_name Combat
-
-var actors: Array = []
-var curr_turn
-var cti: int
-
-const timeline_panel = preload(\"uid://txjkilfd8uis\")
-@onready var initiative_visualizer: HBoxContainer = $ui/InitiativeVisualizer
-
-signal combat_start
-signal combat_end
-
-func _ready() -> void:
-	actors = get_tree().get_nodes_in_group(\"actor\")
-	curr_turn = actors[cti]
-	cti = 0
-	actors.sort_custom(_sort_init)
-	for actor in actors:
-		var actor_frame = timeline_panel.instantiate()
-		actor_frame.icon.texture = actor.battle_icon
-		initiative_visualizer.add_child(actor_frame)
-	actors[0].add_to_group(\"units\")
-
-func _on_turnswitch_pressed() -> void:
-	actors[0].remove_from_group(\"units\")
-	if cti < (actors.size()-1):
-		cti += 1
-		curr_turn = actors[cti]
-	else:
-		cti = 0
-		curr_turn = actors[0]
-	actors[0].add_to_group(\"units\")
-	initiative_visualizer.move_child(initiative_visualizer.get_child(0),actors.size())
-
-func _sort_init(a,b):
-	return a.initiative > b.initiative
-"
-
-[sub_resource type="GDScript" id="GDScript_6cnl0"]
-script/source = "extends Button
-
-func _pressed() -> void:
-	pass
-"
-
 [node name="Combat" type="Node3D"]
-script = SubResource("GDScript_6vidd")
+script = ExtResource("1_6cnl0")
 
 [node name="guy" parent="." instance=ExtResource("1_raif2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4406, 1, -3.49353)
@@ -98,13 +52,6 @@ grow_horizontal = 2
 offset_right = 81.0
 offset_bottom = 31.0
 text = "next turn"
-
-[node name="Button" type="Button" parent="."]
-offset_left = 86.0
-offset_right = 193.0
-offset_bottom = 31.0
-text = "to overworld"
-script = SubResource("GDScript_6cnl0")
 
 [connection signal="combat_start" from="." to="." method="_on_combat_start"]
 [connection signal="combat_start" from="." to="ui/InitiativeVisualizer" method="_on_combat_combat_start"]
