@@ -1,8 +1,10 @@
+Area3D
+CollisionShape3D
+CSGCylinder3D
 Camera3D
 GridMap
 Node
 CharacterBody3D
-CollisionShape3D
 MeshInstance3D
 ShapeCast3D
 Button
@@ -11,4 +13,3 @@ CanvasLayer
 TextureRect
 Panel
 SubViewport
-SubViewportContainer

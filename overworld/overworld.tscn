@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://ddwejtj4gr5cc"]
+[gd_scene load_steps=10 format=3 uid="uid://ddwejtj4gr5cc"]
 
 [ext_resource type="Script" uid="uid://d2cl2h2m0mqu5" path="res://overworld/overworld.gd" id="1_criu7"]
 [ext_resource type="PackedScene" uid="uid://ffaqcddbbbpl" path="res://overworld/the_beast.tscn" id="1_jv32c"]
 [ext_resource type="Script" uid="uid://dv8dwtrt0teml" path="res://overworld/button.gd" id="2_w0qnv"]
+[ext_resource type="PackedScene" uid="uid://bu8ixgjwdfb2n" path="res://components/interaction_component.tscn" id="4_uniiq"]
+[ext_resource type="Script" uid="uid://dicetyogtfwux" path="res://components/interaction_component.gd" id="5_a076f"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jv32c"]
 sky_horizon_color = Color(0.468098, 0.485348, 0.509348, 1)
@@ -102,5 +104,13 @@ offset_right = 8.0
 offset_bottom = 8.0
 text = "to combat"
 script = ExtResource("2_w0qnv")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.08652, 0.663086, 0)
+radius = 0.638184
+height = 3.32617
+
+[node name="InteractionComponent" parent="CSGCylinder3D" instance=ExtResource("4_uniiq")]
+script = ExtResource("5_a076f")
 
 [connection signal="combat_grab" from="Button" to="." method="_on_button_combat_grab"]
