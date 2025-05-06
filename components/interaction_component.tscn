@@ -1,11 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bu8ixgjwdfb2n"]
+[gd_scene load_steps=3 format=3 uid="uid://k14fg8iq1cp6"]
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_hit7m"]
-height = 3.14746
-radius = 1.00635
+[ext_resource type="Script" uid="uid://dyggfljj2n6lw" path="res://components/interaction_component.gd" id="1_ydfy1"]
 
-[node name="InteractionComponent" type="Area3D"]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_6y5mq"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.57373, 0)
-shape = SubResource("CylinderShape3D_hit7m")
+[node name="InteractionComponent" type="ShapeCast3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.16465, 0)
+shape = SubResource("CylinderShape3D_6y5mq")
+script = ExtResource("1_ydfy1")

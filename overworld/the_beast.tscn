@@ -1,12 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://ffaqcddbbbpl"]
+[gd_scene load_steps=5 format=3 uid="uid://ffaqcddbbbpl"]
 
 [ext_resource type="Script" uid="uid://denikvq8h2pf8" path="res://overworld/the_beast.gd" id="1_rs7ks"]
+[ext_resource type="PackedScene" uid="uid://k14fg8iq1cp6" path="res://components/interaction_component.tscn" id="2_ehiir"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_p874w"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rs7ks"]
-radius = 0.676549
-height = 2.3142
+radius = 0.517048
+height = 2.33479
 
 [node name="the beast" type="CharacterBody3D"]
 script = ExtResource("1_rs7ks")
@@ -15,4 +16,9 @@ script = ExtResource("1_rs7ks")
 mesh = SubResource("CapsuleMesh_p874w")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00349343, 0, 0)
 shape = SubResource("CapsuleShape3D_rs7ks")
+
+[node name="InteractionComponent" parent="." instance=ExtResource("2_ehiir")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 3, 0.0820563, 1.3154, 0)
+collide_with_areas = true
