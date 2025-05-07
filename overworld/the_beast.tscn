@@ -22,3 +22,6 @@ shape = SubResource("CapsuleShape3D_rs7ks")
 [node name="InteractionComponent" parent="." instance=ExtResource("2_ehiir")]
 transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 3, 0.0820563, 1.3154, 0)
 collide_with_areas = true
+
+[connection signal="ended_interaction" from="InteractionComponent" to="." method="_on_interaction_component_ended_interaction"]
+[connection signal="item_found" from="InteractionComponent" to="." method="_on_interaction_component_item_found"]

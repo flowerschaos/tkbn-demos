@@ -41,8 +41,21 @@ Dicecheck="*res://combat/dicecheck.gd"
 
 [dialogic]
 
-directories/dch_directory={}
-directories/dtl_directory={}
+directories/dch_directory={
+"felix": "res://dialogic characters/felix.dch",
+"jack": "res://dialogic characters/jack.dch",
+"persephone": "res://dialogic characters/persephone.dch",
+"steven": "res://dialogic characters/steven.dch",
+"wyatt": "res://dialogic characters/wyatt.dch",
+"you": "res://dialogic characters/you.dch"
+}
+directories/dtl_directory={
+"test": "res://dialogic timelines/test.dtl",
+"testbox": "res://dialogic timelines/testbox.dtl"
+}
+variables={}
+layout/style_list=["res://dialogic_test.tres"]
+layout/default_style="res://dialogic_test.tres"
 
 [display]
 

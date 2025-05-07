@@ -107,13 +107,13 @@ offset_bottom = 8.0
 text = "to combat"
 script = ExtResource("2_w0qnv")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." groups=["interactable"]]
+[node name="testbox" type="MeshInstance3D" parent="." groups=["interactable"]]
 transform = Transform3D(1, 0, 0, 0, 1.8192, 0, 0, 0, 1, 3.79198, 0.890167, 1.14488)
 mesh = SubResource("BoxMesh_criu7")
 
-[node name="Area3D" type="Area3D" parent="MeshInstance3D" groups=["interactable"]]
+[node name="Area3D" type="Area3D" parent="testbox" groups=["interactable"]]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/Area3D" groups=["interactable"]]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="testbox/Area3D" groups=["interactable"]]
 shape = SubResource("BoxShape3D_criu7")
 
 [connection signal="combat_grab" from="Button" to="." method="_on_button_combat_grab"]
