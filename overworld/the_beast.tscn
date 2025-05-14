@@ -1,9 +1,24 @@
-[gd_scene load_steps=5 format=3 uid="uid://ffaqcddbbbpl"]
+[gd_scene load_steps=9 format=3 uid="uid://ffaqcddbbbpl"]
 
 [ext_resource type="Script" uid="uid://denikvq8h2pf8" path="res://overworld/the_beast.gd" id="1_rs7ks"]
 [ext_resource type="PackedScene" uid="uid://k14fg8iq1cp6" path="res://components/interaction_component.tscn" id="2_ehiir"]
+[ext_resource type="Shader" uid="uid://baqwaqjyeoqe6" path="res://overworld/test.gdshader" id="2_m4ebg"]
+[ext_resource type="Shader" uid="uid://dal0bwbqf01me" path="res://outline.gdshader" id="2_meari"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t70dt"]
+render_priority = 0
+shader = ExtResource("2_meari")
+shader_parameter/color = Color(1, 0, 0, 1)
+shader_parameter/size = 0.05
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_meari"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_t70dt")
+shader = ExtResource("2_m4ebg")
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_p874w"]
+lightmap_size_hint = Vector2i(17, 14)
+material = SubResource("ShaderMaterial_meari")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rs7ks"]
 radius = 0.517048

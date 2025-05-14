@@ -23,7 +23,8 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 
 func _on_interaction_component_item_found() -> void:
-	can_move = false
+	pass
+	#can_move = false
 
 func _on_interaction_component_ended_interaction() -> void:
 	can_move = true

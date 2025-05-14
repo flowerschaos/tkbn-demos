@@ -16,6 +16,7 @@ func _ready() -> void:
 	curr_turn = actors[cti]
 	cti = 0
 	actors.sort_custom(_sort_init)
+	
 	for actor in actors:
 		var actor_frame = timeline_panel.instantiate()
 		actor_frame.icon.texture = actor.battle_icon

@@ -13,15 +13,15 @@
 script = ExtResource("1_6cnl0")
 
 [node name="guy" parent="." instance=ExtResource("1_raif2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4406, 1, -3.49353)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.12069, 1, -3.49353)
 battle_icon = ExtResource("4_px7ba")
 
 [node name="guy2" parent="." instance=ExtResource("1_raif2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4406, 1, -3.49353)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1678, 1, -3.49353)
 battle_icon = ExtResource("4_lk7ft")
 
 [node name="guy3" parent="." instance=ExtResource("1_raif2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4406, 1, -3.49353)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.368169, 1, -3.49353)
 battle_icon = ExtResource("5_c11yd")
 
 [node name="guy4" parent="." instance=ExtResource("1_raif2")]
@@ -29,11 +29,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4406, 1, -3.49353)
 battle_icon = ExtResource("6_6cnl0")
 
 [node name="guy5" parent="." instance=ExtResource("1_raif2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4406, 1, -3.49353)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.10604, 1, -3.49353)
 battle_icon = ExtResource("7_iga5g")
 
 [node name="guy6" parent="." instance=ExtResource("1_raif2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4406, 1, -3.49353)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.13554, 1, -3.49353)
 battle_icon = ExtResource("8_4h14y")
 
 [node name="ui" type="CanvasLayer" parent="."]
