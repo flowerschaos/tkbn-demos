@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://dgk2o55nr32mu"]
+
+[ext_resource type="Script" uid="uid://bkkk3m81hu7tv" path="res://overworld/enemy.gd" id="1_ecmh6"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1u3u5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ecmh6"]
+albedo_color = Color(1, 0.571068, 0.508893, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_otrt7"]
+material = SubResource("StandardMaterial3D_ecmh6")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1u3u5"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ecmh6"]
+material = SubResource("StandardMaterial3D_1u3u5")
+
+[node name="enemy" type="CharacterBody3D"]
+script = ExtResource("1_ecmh6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_1u3u5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_otrt7")
+
+[node name="LockOn" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.144757, 0, 0, 0, 1, 0, -1.09009, 0)
+mesh = SubResource("CylinderMesh_ecmh6")

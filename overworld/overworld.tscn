@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://ddwejtj4gr5cc"]
+[gd_scene load_steps=11 format=3 uid="uid://ddwejtj4gr5cc"]
 
 [ext_resource type="Script" uid="uid://d2cl2h2m0mqu5" path="res://overworld/overworld.gd" id="1_criu7"]
 [ext_resource type="PackedScene" uid="uid://ffaqcddbbbpl" path="res://overworld/the_beast.tscn" id="1_jv32c"]
 [ext_resource type="Script" uid="uid://dv8dwtrt0teml" path="res://overworld/button.gd" id="2_w0qnv"]
+[ext_resource type="PackedScene" uid="uid://dgk2o55nr32mu" path="res://overworld/enemy.tscn" id="4_nnj58"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jv32c"]
 sky_horizon_color = Color(0.468098, 0.485348, 0.509348, 1)
@@ -115,5 +116,17 @@ mesh = SubResource("BoxMesh_criu7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="testbox/Area3D" groups=["interactable"]]
 shape = SubResource("BoxShape3D_criu7")
+
+[node name="enemy" parent="." instance=ExtResource("4_nnj58")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.41311, 1.25459, -1.76961)
+
+[node name="enemy2" parent="." instance=ExtResource("4_nnj58")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.35939, 1.25459, 1.71766)
+
+[node name="enemy3" parent="." instance=ExtResource("4_nnj58")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.94651, 1.25459, -1.76961)
+
+[node name="enemy4" parent="." instance=ExtResource("4_nnj58")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.94651, 1.25459, 1.97788)
 
 [connection signal="combat_grab" from="Button" to="." method="_on_button_combat_grab"]

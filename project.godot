@@ -75,6 +75,7 @@ enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/phan
 
 actor=""
 interactable=""
+enemy=""
 
 [input]
 

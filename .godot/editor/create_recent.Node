@@ -1,12 +1,12 @@
-MeshInstance3D
-Area3D
 CollisionShape3D
+Area3D
+MeshInstance3D
+CharacterBody3D
 ShapeCast3D
 CSGCylinder3D
 Camera3D
 GridMap
 Node
-CharacterBody3D
 Button
 CheckButton
 CanvasLayer
