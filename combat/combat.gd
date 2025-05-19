@@ -7,6 +7,7 @@ var cti: int
 
 const timeline_panel = preload("uid://txjkilfd8uis")
 @onready var initiative_visualizer: HBoxContainer = $ui/InitiativeVisualizer
+@onready var actions: VBoxContainer = $ui/actions
 
 signal combat_start
 signal combat_end
@@ -16,11 +17,12 @@ func _ready() -> void:
 	curr_turn = actors[cti]
 	cti = 0
 	actors.sort_custom(_sort_init)
-	
 	for actor in actors:
 		var actor_frame = timeline_panel.instantiate()
 		actor_frame.icon.texture = actor.battle_icon
 		initiative_visualizer.add_child(actor_frame)
+	if curr_turn.is_in_group("enemy"):
+		actions.hide
 
 func _on_turnswitch_pressed() -> void:
 	if cti < (actors.size()-1):

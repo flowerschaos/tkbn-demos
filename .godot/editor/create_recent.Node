@@ -1,3 +1,5 @@
+Label
+VBoxContainer
 Camera3D
 CollisionShape3D
 Area3D
@@ -11,4 +13,3 @@ Button
 CheckButton
 CanvasLayer
 TextureRect
-Panel
