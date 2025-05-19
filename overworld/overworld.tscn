@@ -96,12 +96,6 @@ use_collision = true
 size = Vector3(26.7365, 10.8223, 1)
 material = SubResource("StandardMaterial3D_alffl")
 
-[node name="the beast" parent="." instance=ExtResource("1_jv32c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3345, 1.05018, 1.53686)
-
-[node name="Camera3D2" type="Camera3D" parent="the beast"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 4, 4.73205)
-
 [node name="Button" type="Button" parent="."]
 offset_right = 8.0
 offset_bottom = 8.0
@@ -119,6 +113,12 @@ shape = SubResource("BoxShape3D_criu7")
 
 [node name="enemy" parent="." instance=ExtResource("4_nnj58")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.41311, 1.25459, -1.76961)
+
+[node name="the beast" parent="." instance=ExtResource("1_jv32c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0626, 0)
+
+[node name="Camera3D" type="Camera3D" parent="the beast"]
+transform = Transform3D(1, 0, 0, 0, 0.938529, 0.3452, 0, -0.3452, 0.938529, 0, 2.47565, 5.17901)
 
 [node name="enemy2" parent="." instance=ExtResource("4_nnj58")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.35939, 1.25459, 1.71766)
