@@ -1,7 +1,7 @@
 extends Node3D
 class_name Combat
 
-var actors: Array = []
+var actors = []
 var curr_turn
 var cti: int
 
