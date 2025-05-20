@@ -1,10 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://csiw3oa2iccme"]
+[gd_scene load_steps=6 format=3 uid="uid://csiw3oa2iccme"]
 
 [ext_resource type="Script" uid="uid://dggb81ebj771s" path="res://combat/unit.gd" id="1_hfqwp"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hfqwp"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_tj2cq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1u3u5"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_hfqwp"]
+material = SubResource("StandardMaterial3D_1u3u5")
 
 [node name="guy" type="CharacterBody3D" groups=["actor"]]
 script = ExtResource("1_hfqwp")
@@ -14,3 +20,7 @@ shape = SubResource("CapsuleShape3D_hfqwp")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_tj2cq")
+
+[node name="LockOn" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.144757, 0, 0, 0, 1, 0, -1.09009, 0)
+mesh = SubResource("CylinderMesh_hfqwp")

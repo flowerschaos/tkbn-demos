@@ -21,8 +21,6 @@ func _ready() -> void:
 		var actor_frame = timeline_panel.instantiate()
 		actor_frame.icon.texture = actor.battle_icon
 		initiative_visualizer.add_child(actor_frame)
-	if curr_turn.is_in_group("enemy"):
-		actions.hide
 
 func _on_turnswitch_pressed() -> void:
 	if cti < (actors.size()-1):

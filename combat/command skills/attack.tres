@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=2 format=3 uid="uid://3plnat3d43qk"]
+
+[ext_resource type="Script" uid="uid://v5te86ijrcf8" path="res://combat/skillResource.gd" id="1_xksqq"]
+
+[resource]
+script = ExtResource("1_xksqq")
+name = "Attack"
+target = 0
+metadata/_custom_type_script = "uid://v5te86ijrcf8"

@@ -1,0 +1,73 @@
+[gd_scene load_steps=3 format=3 uid="uid://decl3yigortlh"]
+
+[ext_resource type="Script" uid="uid://dm5q7870l4b67" path="res://combat/commandmenu.gd" id="1_f1ee3"]
+[ext_resource type="PackedScene" uid="uid://c8dioh1qsu4xk" path="res://combat/commandbutton.tscn" id="2_dvisq"]
+
+[node name="commandmenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_f1ee3")
+
+[node name="actions" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = 509.0
+offset_right = 83.0
+offset_bottom = 680.0
+grow_vertical = 0
+
+[node name="attack" parent="actions" instance=ExtResource("2_dvisq")]
+layout_mode = 2
+
+[node name="defend" parent="actions" instance=ExtResource("2_dvisq")]
+layout_mode = 2
+text = "defend"
+
+[node name="skills" parent="actions" instance=ExtResource("2_dvisq")]
+layout_mode = 2
+text = "skills"
+
+[node name="inventory" parent="actions" instance=ExtResource("2_dvisq")]
+layout_mode = 2
+text = "inventory"
+
+[node name="tactics" parent="actions" instance=ExtResource("2_dvisq")]
+layout_mode = 2
+text = "tactics"
+
+[node name="skills" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = 640.0
+offset_right = 40.0
+offset_bottom = 680.0
+grow_vertical = 0
+
+[node name="tactics" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = 579.0
+offset_right = 109.0
+offset_bottom = 680.0
+grow_vertical = 0
+
+[node name="observations" parent="tactics" instance=ExtResource("2_dvisq")]
+layout_mode = 2
+text = "observations"
+
+[node name="positions" parent="tactics" instance=ExtResource("2_dvisq")]
+layout_mode = 2
+text = "positions"
+
+[node name="retreat" parent="tactics" instance=ExtResource("2_dvisq")]
+layout_mode = 2
+text = "retreat"
