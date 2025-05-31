@@ -15,7 +15,7 @@ const ATTACK = preload("res://combat/command skills/attack.tres")
 
 const COMMANDBUTTON = preload("uid://c8dioh1qsu4xk")
 
-var skillslist 
+var skillslist = []
 
 func _ready() -> void:
 	attack.pressed.connect(_on_command_pressed.bind(ATTACK))

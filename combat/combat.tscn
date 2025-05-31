@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://jyt6sodbakhs"]
+[gd_scene load_steps=9 format=3 uid="uid://jyt6sodbakhs"]
 
 [ext_resource type="Script" uid="uid://d36d4yv5swoy2" path="res://combat/combat.gd" id="1_6cnl0"]
 [ext_resource type="PackedScene" uid="uid://csiw3oa2iccme" path="res://combat/guy.tscn" id="1_raif2"]
@@ -8,11 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://yjfqjtmnwt0u" path="res://icons/green.png" id="6_6cnl0"]
 [ext_resource type="Texture2D" uid="uid://dtl3sse7jjwgx" path="res://icons/blue.png" id="7_iga5g"]
 [ext_resource type="Texture2D" uid="uid://by5dn03va0gad" path="res://icons/purple.png" id="8_4h14y"]
-[ext_resource type="PackedScene" uid="uid://decl3yigortlh" path="res://combat/commandmenu.tscn" id="9_iga5g"]
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_6cnl0"]
-height = 1.02539
-radius = 7.87988
 
 [node name="Combat" type="Node3D"]
 script = ExtResource("1_6cnl0")
@@ -57,15 +52,6 @@ grow_horizontal = 2
 offset_right = 81.0
 offset_bottom = 31.0
 text = "next turn"
-
-[node name="LockSystem" type="Area3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LockSystem"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.487305, 0)
-shape = SubResource("CylinderShape3D_6cnl0")
-debug_color = Color(0.7, 0, 0, 1)
-
-[node name="commandmenu" parent="." instance=ExtResource("9_iga5g")]
 
 [connection signal="combat_start" from="." to="." method="_on_combat_start"]
 [connection signal="combat_start" from="." to="ui/InitiativeVisualizer" method="_on_combat_combat_start"]
