@@ -43,3 +43,7 @@ func _sort_init(a,b):
 
 func turn_commence(actor: Actor):
 	print("it is " + actor.name + "'s turn.")
+	if actor.combat_alignment == actor.alignment.PLAYER:
+		print("this is an ally.")
+	if actor.combat_alignment == actor.alignment.ENEMY:
+		print("this is an enemy.")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://jyt6sodbakhs"]
+[gd_scene load_steps=10 format=3 uid="uid://jyt6sodbakhs"]
 
 [ext_resource type="Script" uid="uid://d36d4yv5swoy2" path="res://combat/combat.gd" id="1_6cnl0"]
 [ext_resource type="PackedScene" uid="uid://csiw3oa2iccme" path="res://combat/guy.tscn" id="1_raif2"]
@@ -8,20 +8,24 @@
 [ext_resource type="Texture2D" uid="uid://yjfqjtmnwt0u" path="res://icons/green.png" id="6_6cnl0"]
 [ext_resource type="Texture2D" uid="uid://dtl3sse7jjwgx" path="res://icons/blue.png" id="7_iga5g"]
 [ext_resource type="Texture2D" uid="uid://by5dn03va0gad" path="res://icons/purple.png" id="8_4h14y"]
+[ext_resource type="PackedScene" uid="uid://decl3yigortlh" path="res://combat/commandmenu.tscn" id="9_iga5g"]
 
 [node name="Combat" type="Node3D"]
 script = ExtResource("1_6cnl0")
 
 [node name="guy" parent="." instance=ExtResource("1_raif2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.12069, 1, -3.49353)
+combat_alignment = 1
 battle_icon = ExtResource("4_px7ba")
 
 [node name="guy2" parent="." instance=ExtResource("1_raif2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1678, 1, -3.49353)
+combat_alignment = 1
 battle_icon = ExtResource("4_lk7ft")
 
 [node name="guy3" parent="." instance=ExtResource("1_raif2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.368169, 1, -3.49353)
+combat_alignment = 1
 battle_icon = ExtResource("5_c11yd")
 
 [node name="guy4" parent="." instance=ExtResource("1_raif2")]
@@ -52,6 +56,8 @@ grow_horizontal = 2
 offset_right = 81.0
 offset_bottom = 31.0
 text = "next turn"
+
+[node name="commandmenu" parent="ui" instance=ExtResource("9_iga5g")]
 
 [connection signal="combat_start" from="." to="." method="_on_combat_start"]
 [connection signal="combat_start" from="." to="ui/InitiativeVisualizer" method="_on_combat_combat_start"]
