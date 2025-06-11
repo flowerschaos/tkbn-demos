@@ -11,7 +11,9 @@ var potential
 @export var battle_icon: Texture
 var initiative = dicecheck.standard()+round(endurance/2)+round(agility/2)
 enum alignment {ENEMY,PLAYER}
-var skillset = get_children()
+
+@export var programs: Array[ProgramSkill]
+@export var rad_skills: Array[RadioactiveSkill]
 
 func _ready() -> void:
 	set_selection(false)

@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://d0haf4p85f17o"]
+
+[node name="Skillbutton" type="Button"]
+text = "SkillName"

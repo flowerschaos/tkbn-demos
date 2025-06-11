@@ -1,4 +1,4 @@
-extends Node
+extends Resource
 class_name SkillBase
 
 @export var skill_name: String = "Skill Name"

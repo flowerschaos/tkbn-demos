@@ -1,2 +1,3 @@
+RadioactiveSkill
+ProgramSkill
 Resource
-Skill

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ProgramSkill" load_steps=2 format=3 uid="uid://b5q64uowtqx7e"]
+
+[ext_resource type="Script" uid="uid://cqk53fx8qnhqj" path="res://combat/skills/skill classes/ProgramSkill.gd" id="1_m3qn8"]
+
+[resource]
+script = ExtResource("1_m3qn8")
+ram_cost = 1
+target = 0
+program_type = 0
+skill_name = "test program 5"
+skill_desc = "The start of all things."
+does_damage = false
+damage_amount = 0
+is_passive = false
+metadata/_custom_type_script = "uid://cqk53fx8qnhqj"
