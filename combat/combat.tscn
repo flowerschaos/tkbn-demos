@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://jyt6sodbakhs"]
+[gd_scene load_steps=9 format=3 uid="uid://jyt6sodbakhs"]
 
 [ext_resource type="Script" uid="uid://d36d4yv5swoy2" path="res://combat/combat.gd" id="1_6cnl0"]
 [ext_resource type="PackedScene" uid="uid://csiw3oa2iccme" path="res://combat/guy.tscn" id="1_raif2"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://yjfqjtmnwt0u" path="res://icons/green.png" id="6_6cnl0"]
 [ext_resource type="Texture2D" uid="uid://dtl3sse7jjwgx" path="res://icons/blue.png" id="7_iga5g"]
 [ext_resource type="Texture2D" uid="uid://by5dn03va0gad" path="res://icons/purple.png" id="8_4h14y"]
-[ext_resource type="PackedScene" uid="uid://decl3yigortlh" path="res://combat/commandmenu.tscn" id="9_iga5g"]
 
 [node name="Combat" type="Node3D"]
 script = ExtResource("1_6cnl0")
@@ -57,7 +56,49 @@ offset_right = 81.0
 offset_bottom = 31.0
 text = "next turn"
 
-[node name="commandmenu" parent="ui" instance=ExtResource("9_iga5g")]
+[node name="command" type="VBoxContainer" parent="ui"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -100.0
+offset_right = 74.0
+grow_vertical = 0
+
+[node name="skill types" type="HBoxContainer" parent="ui/command"]
+layout_mode = 2
+
+[node name="rad" type="Button" parent="ui/command/skill types"]
+layout_mode = 2
+text = "radioactive"
+
+[node name="program" type="Button" parent="ui/command/skill types"]
+layout_mode = 2
+text = "programs"
+
+[node name="skills" type="VBoxContainer" parent="ui/command"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+
+[node name="s1" type="Label" parent="ui/command/skills"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "skill name"
+
+[node name="s2" type="Label" parent="ui/command/skills"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "skill name"
+
+[node name="s3" type="Label" parent="ui/command/skills"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "skill name"
+
+[node name="s4" type="Label" parent="ui/command/skills"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "skill name"
 
 [connection signal="combat_start" from="." to="." method="_on_combat_start"]
 [connection signal="combat_start" from="." to="ui/InitiativeVisualizer" method="_on_combat_combat_start"]

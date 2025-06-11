@@ -47,3 +47,6 @@ func turn_commence(actor: Actor):
 		print("this is an ally.")
 	if actor.combat_alignment == actor.alignment.ENEMY:
 		print("this is an enemy.")
+	for skill in actor.skillset:
+		pass
+	

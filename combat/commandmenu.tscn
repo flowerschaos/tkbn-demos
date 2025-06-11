@@ -20,16 +20,3 @@ offset_top = 509.0
 offset_right = 83.0
 offset_bottom = 680.0
 grow_vertical = 0
-
-[node name="NinePatchRect" type="NinePatchRect" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Label" type="Label" parent="MarginContainer"]
-layout_mode = 2
