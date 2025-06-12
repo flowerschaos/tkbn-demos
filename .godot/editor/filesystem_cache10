@@ -1,8 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1749683403
+::res://::1749697174
 dialogic_test.tres::Resource/DialogicStyle::8609294689624614378::1749676057::0::1::::<><><>0<>0<><>::uid://btmh6dyma42d1::::res://addons/dialogic/Resources/dialogic_style_layer.gd<>uid://c1k5m0w3r40xf::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn<>uid://cy1y14inwkplb::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Portraits/vn_portrait_layer.tscn<>uid://cn674foxwedqu::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn<>uid://bquja8jyk8kbr::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_layer.tscn<>uid://dsbwnp5hegnu3::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Glossary/glossary_popup_layer.tscn<>uid://dhk6j6eb6e3q::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn<>uid://cvgf4c6gg0tsy::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.tscn<>uid://lx24i8fl6uo::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn<>uid://dnkugoktunv4g::::res://addons/dialogic/Resources/dialogic_style.gd
 icon.svg::CompressedTexture2D/CompressedTexture2D::8735237410284423683::1740844588::1740844754::1::::<><><>0<>0<>027255e5fb41ad8af207ac108ddde425<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-outline.gdshader::Shader::7183491074780196316::1749683609::0::1::::<><><>0<>0<><>::
+outline.gdshader::Shader::7183491074780196316::1749683909::0::1::::<><><>0<>0<><>::
 skew.tres::Shader/Shader::-1::1740516152::0::1::::<><><>0<>0<><>::
 ::res://addons/::1747349027
 ::res://addons/dialogic/::1747349027
@@ -553,12 +553,12 @@ event_text.gd::GDScript/GDScript::1589114740920482241::1742519086::0::1::::Dialo
 icon.svg::CompressedTexture2D/CompressedTexture2D::9151163472776694991::1742519086::1742519104::1::::<><><>0<>0<>c3322103d45750d096f11ecd03411177<>res://.godot/imported/icon.svg-e2501ddcdef01c7f2c3538940f5abfc1.ctex::
 index.gd::GDScript/GDScript::4659901145455648712::1742519086::0::1::::<>DialogicIndexer<><>0<>1<><>::
 manual_advance.gd::GDScript/GDScript::2848210241854461787::1742519086::0::1::::DialogicManualAdvance<>RefCounted<><>0<>0<><>::
-node_dialog_text.gd::GDScript/GDScript::7377599712909714079::1742519086::0::1::::DialogicNode_DialogText<>RichTextLabel<><>0<>0<><>::
+node_dialog_text.gd::GDScript/GDScript::7377599712909714079::1742519086::0::1::::DialogicNode_DialogText<>RichTextLabel<>res://addons/dialogic/Modules/Text/node_dialog_text_icon.svg<>0<>0<><>::
 node_dialog_text_icon.svg::CompressedTexture2D/CompressedTexture2D::4044689466443943908::1742519086::1742519104::1::::<><><>0<>0<>497fe8cd6cb72aeedb7077c36069c336<>res://.godot/imported/node_dialog_text_icon.svg-3cf845e99d76137d8156865c09f39e3e.ctex::
 node_input.gd::GDScript/GDScript::1113861788456288725::1742519086::0::1::::DialogicNode_Input<>Control<><>0<>0<><>::
-node_name_label.gd::GDScript/GDScript::4909151333481769152::1742519086::0::1::::DialogicNode_NameLabel<>Label<><>0<>0<><>::
+node_name_label.gd::GDScript/GDScript::4909151333481769152::1742519086::0::1::::DialogicNode_NameLabel<>Label<>res://addons/dialogic/Modules/Text/node_name_label_icon.svg<>0<>0<><>::
 node_name_label_icon.svg::CompressedTexture2D/CompressedTexture2D::753910208124862534::1742519086::1742519104::1::::<><><>0<>0<>3bc6897be0d1bfc61b99594389e51bf2<>res://.godot/imported/node_name_label_icon.svg-d482939b74b41ec2da6edc97e41c8bf8.ctex::
-node_next_indicator.gd::GDScript/GDScript::836908800463541281::1742519086::0::1::::DialogicNode_NextIndicator<>Control<><>0<>0<><>::
+node_next_indicator.gd::GDScript/GDScript::836908800463541281::1742519086::0::1::::DialogicNode_NextIndicator<>Control<>res://addons/dialogic/Modules/Text/node_next_indicator_icon.svg<>0<>0<><>::
 node_next_indicator_icon.svg::CompressedTexture2D/CompressedTexture2D::302873534409359568::1742519086::1742519104::1::::<><><>0<>0<>d16cf5e370ce5bad31aa615e40bbdce1<>res://.godot/imported/node_next_indicator_icon.svg-06167a3b3e290941c1c34386ebd60af8.ctex::
 node_type_sound.gd::GDScript/GDScript::4158362366864589691::1742519086::0::1::::DialogicNode_TypeSounds<>AudioStreamPlayer<><>0<>1<><>::
 settings_text.gd::GDScript/GDScript::1773362931235617405::1742519088::0::1::::<>DialogicSettingsPage<><>0<>1<><>::
@@ -617,7 +617,7 @@ plugin.cfg::TextFile/TextFile::-1::1740844588::0::1::::<><><>0<>0<><>::
 THIRDPARTY.md::TextFile/TextFile::-1::1740844588::0::1::::<><><>0<>0<><>::
 ::res://addons/godot-git-plugin/linux/::1747349027
 ::res://addons/godot-git-plugin/macos/::1747349027
-::res://addons/godot-git-plugin/win64/::1749675970
+::res://addons/godot-git-plugin/win64/::1749697169
 ::res://addons/indent_guidelines/::1747349027
 plugin.cfg::TextFile/TextFile::-1::1741544822::0::1::::<><><>0<>0<><>::
 plugin.gd::GDScript/GDScript::2675996389264736752::1741544822::0::1::::<>EditorPlugin<><>0<>1<><>::
@@ -777,18 +777,18 @@ host_list.gd::GDScript/GDScript::7149103600825326170::1743348982::0::1::::<>VBox
 host_list_item.gd::GDScript/GDScript::3917921197689786008::1743348982::0::1::::<>Control<><>0<>1<><>::
 viewfinder.gd::GDScript/GDScript::8378571504893624466::1743348982::0::1::::<>Control<><>0<>1<><>::
 ::res://addons/phantom_camera/scripts/phantom_camera/::1747349027
-phantom_camera_2d.gd::GDScript/GDScript::2887439311475108372::1743348982::0::1::::PhantomCamera2D<>Node2D<><>0<>1<><>::
-phantom_camera_3d.gd::GDScript/GDScript::6054945862391138514::1743348982::0::1::::PhantomCamera3D<>Node3D<><>0<>1<><>::
+phantom_camera_2d.gd::GDScript/GDScript::2887439311475108372::1743348982::0::1::::PhantomCamera2D<>Node2D<>res://addons/phantom_camera/icons/phantom_camera_2d.svg<>0<>1<><>::
+phantom_camera_3d.gd::GDScript/GDScript::6054945862391138514::1743348982::0::1::::PhantomCamera3D<>Node3D<>res://addons/phantom_camera/icons/phantom_camera_3d.svg<>0<>1<><>::
 phantom_camera_constants.gd::GDScript/GDScript::239398692648731750::1743348982::0::1::::<>RefCounted<><>0<>1<><>::
-phantom_camera_noise_emitter_2d.gd::GDScript/GDScript::2885720794303832171::1743348982::0::1::::PhantomCameraNoiseEmitter2D<>Node2D<><>0<>1<><>::
-phantom_camera_noise_emitter_3d.gd::GDScript/GDScript::4938492633824945213::1743348982::0::1::::PhantomCameraNoiseEmitter3D<>Node3D<><>0<>1<><>::
+phantom_camera_noise_emitter_2d.gd::GDScript/GDScript::2885720794303832171::1743348982::0::1::::PhantomCameraNoiseEmitter2D<>Node2D<>res://addons/phantom_camera/icons/phantom_camera_noise_emitter_2d.svg<>0<>1<><>::
+phantom_camera_noise_emitter_3d.gd::GDScript/GDScript::4938492633824945213::1743348982::0::1::::PhantomCameraNoiseEmitter3D<>Node3D<>res://addons/phantom_camera/icons/phantom_camera_noise_emitter_3d.svg<>0<>1<><>::
 ::res://addons/phantom_camera/scripts/phantom_camera_host/::1747349027
-phantom_camera_host.gd::GDScript/GDScript::2650413043063145879::1743348982::0::1::::PhantomCameraHost<>Node<><>0<>1<><>::
+phantom_camera_host.gd::GDScript/GDScript::2650413043063145879::1743348982::0::1::::PhantomCameraHost<>Node<>res://addons/phantom_camera/icons/phantom_camera_host.svg<>0<>1<><>::
 ::res://addons/phantom_camera/scripts/resources/::1747349027
-camera_3d_resource.gd::GDScript/GDScript::4717552271394480598::1743348982::0::1::::Camera3DResource<>Resource<><>0<>1<><>::
-phantom_camera_noise_2d.gd::GDScript/GDScript::7746826514819894941::1743348982::0::1::::PhantomCameraNoise2D<>Resource<><>0<>1<><>::
-phantom_camera_noise_3d.gd::GDScript/GDScript::6187281538235516492::1743348982::0::1::::PhantomCameraNoise3D<>Resource<><>0<>1<><>::
-tween_resource.gd::GDScript/GDScript::2358266811638875852::1743348982::0::1::::PhantomCameraTween<>Resource<><>0<>0<><>::
+camera_3d_resource.gd::GDScript/GDScript::4717552271394480598::1743348982::0::1::::Camera3DResource<>Resource<>res://addons/phantom_camera/icons/phantom_camera_camera_3d_resource.svg<>0<>1<><>::
+phantom_camera_noise_2d.gd::GDScript/GDScript::7746826514819894941::1743348982::0::1::::PhantomCameraNoise2D<>Resource<>res://addons/phantom_camera/icons/phantom_camera_noise_resource.svg<>0<>1<><>::
+phantom_camera_noise_3d.gd::GDScript/GDScript::6187281538235516492::1743348982::0::1::::PhantomCameraNoise3D<>Resource<>res://addons/phantom_camera/icons/phantom_camera_noise_resource.svg<>0<>1<><>::
+tween_resource.gd::GDScript/GDScript::2358266811638875852::1743348982::0::1::::PhantomCameraTween<>Resource<>res://addons/phantom_camera/icons/phantom_camera_tween.svg<>0<>0<><>::
 ::res://addons/phantom_camera/themes/::1749676057
 button_focus.tres::StyleBoxFlat/StyleBoxFlat::1106322926052085743::1743348982::0::1::::<><><>0<>0<><>::
 button_hover.tres::StyleBoxFlat/StyleBoxFlat::2151354179275418664::1743348982::0::1::::<><><>0<>0<><>::
@@ -797,9 +797,9 @@ theme.tres::Theme::2909626652912860453::1749676057::0::1::::<><><>0<>0<><>::uid:
 ::res://addons/splash_screen_wizard/::1747349027
 editor_ui.gd::GDScript/GDScript::3103605875157595942::1740844588::0::1::::<>EditorInspectorPlugin<><>0<>0<><>::
 plugin.cfg::TextFile/TextFile::-1::1740844588::0::1::::<><><>0<>0<><>::
-slide_transition.gd::GDScript/GDScript::7993046456504758769::1740844588::0::1::::SlideTransition<>Resource<><>0<>0<><>::
-splash_screen.gd::GDScript/GDScript::4307342143223363671::1740844588::0::1::::SplashScreen<>Control<><>0<>0<><>::
-splash_screen_slide.gd::GDScript/GDScript::7386396717175854757::1740844588::0::1::::SplashScreenSlide<>Control<><>0<>0<><>::
+slide_transition.gd::GDScript/GDScript::7993046456504758769::1740844588::0::1::::SlideTransition<>Resource<>res://addons/splash_screen_wizard/icons/SlideTransition.svg<>0<>0<><>::
+splash_screen.gd::GDScript/GDScript::4307342143223363671::1740844588::0::1::::SplashScreen<>Control<>res://addons/splash_screen_wizard/icons/SplashScreen.svg<>0<>0<><>::
+splash_screen_slide.gd::GDScript/GDScript::7386396717175854757::1740844588::0::1::::SplashScreenSlide<>Control<>res://addons/splash_screen_wizard/icons/SplashScreenSlide.svg<>0<>0<><>::
 splash_screen_wizard.gd::GDScript/GDScript::889021712407173356::1740844588::0::1::::<>EditorPlugin<><>0<>1<><>::
 ::res://addons/splash_screen_wizard/icons/::1749603686
 IconAddSlide.svg::CompressedTexture2D/CompressedTexture2D::8522584886210958018::1740844588::1749603686::1::::<><><>0<>0<>d7e1c6e1b84345f79908ca5c30719d3c<>res://.godot/imported/IconAddSlide.svg-08d08033bed1e3ea38de2069fe075a48.ctex::
@@ -810,7 +810,7 @@ SlideTransitionFade.svg::CompressedTexture2D/CompressedTexture2D::11629992862869
 SplashScreen.svg::CompressedTexture2D/CompressedTexture2D::3552350115565663319::1740844588::1749603686::1::::<><><>0<>0<>f71077cd8ce30a386c209baa908a0f41<>res://.godot/imported/SplashScreen.svg-404d1dc458fe8570ffe08dcf4d04792b.ctex::
 SplashScreenSlide.svg::CompressedTexture2D/CompressedTexture2D::6132361251143529799::1740844588::1749603686::1::::<><><>0<>0<>369555456df64f8257d020dd091410a0<>res://.godot/imported/SplashScreenSlide.svg-19af43d86edb340dce29525d9d66e430.ctex::
 ::res://addons/splash_screen_wizard/transitions/::1747349027
-slide_transition_fade.gd::GDScript/GDScript::2687634520837663775::1740844588::0::1::::SlideTransitionFade<>SlideTransition<><>0<>0<><>::
+slide_transition_fade.gd::GDScript/GDScript::2687634520837663775::1740844588::0::1::::SlideTransitionFade<>SlideTransition<>res://addons/splash_screen_wizard/icons/SlideTransitionFade.svg<>0<>0<><>::
 ::res://addons/tattomoosa.vision_cone_3d/::1747349027
 LICENSE.txt::TextFile/TextFile::-1::1741302006::0::1::::<><><>0<>0<><>::
 plugin.cfg::TextFile/TextFile::-1::1741302006::0::1::::<><><>0<>0<><>::
@@ -832,7 +832,7 @@ GizmoVisionCone.svg::CompressedTexture2D/CompressedTexture2D::103724750047027421
 VisionCone3D.svg::CompressedTexture2D/CompressedTexture2D::1066181594544795674::1741302006::1741302006::1::::<><><>0<>0<>c0519c39857eacd2d2376c691e64e1c0<>res://.godot/imported/VisionCone3D.svg-2598d1ee3dd911c502082c26b2e835ec.ctex::
 ::res://addons/tattomoosa.vision_cone_3d/src/::1747349027
 ConeShape3D.gd::GDScript/GDScript::2571506453210813825::1741302006::0::1::::ConeShape3D<>ConvexPolygonShape3D<><>0<>1<><>::
-VisionCone3D.gd::GDScript/GDScript::4865115197279440219::1741302006::0::1::::VisionCone3D<>Area3D<><>0<>1<><>::
+VisionCone3D.gd::GDScript/GDScript::4865115197279440219::1741302006::0::1::::VisionCone3D<>Area3D<>res://addons/tattomoosa.vision_cone_3d/icons/VisionCone3D.svg<>0<>1<><>::
 ::res://addons/tattomoosa.vision_cone_3d/src/debug/::1747349027
 VisionConeDebugVisualizer3D.gd::GDScript/GDScript::8454505887027047381::1741302006::0::1::::<>Node3D<><>0<>0<><>::
 ::res://addons/tattomoosa.vision_cone_3d/src/editor/::1747349027
@@ -941,31 +941,37 @@ texture_10.png::CompressedTexture2D/CompressedTexture2D::5434134780175199182::17
 texture_11.png::CompressedTexture2D/CompressedTexture2D::1370021696176858703::1740844588::1740844754::1::::<><><>0<>0<>7cd09094b1976e295fedd1edeac15036<>res://.godot/imported/texture_11.png-d26604346fed135ed12c725ec97c70a0.ctex::
 texture_12.png::CompressedTexture2D/CompressedTexture2D::6047542439335718600::1740844588::1740844754::1::::<><><>0<>0<>19ca79330c8d23a0c515d4077ca3a75a<>res://.godot/imported/texture_12.png-1886e9571fed092330a55527f470e32b.ctex::
 texture_13.png::CompressedTexture2D/CompressedTexture2D::2495934140612614578::1740844588::1740844754::1::::<><><>0<>0<>72ff654ec005a224e91c2e9b6875baf3<>res://.godot/imported/texture_13.png-b129774d8e005c508492e1b60b74b09a.ctex::
-::res://combat/::1749683441
-combat.gd::GDScript::9188780616710899027::1749683576::0::1::::Combat<>Node3D<><>0<>0<><>::
-combat.tscn::PackedScene::682454608498559512::1749683608::0::1::::<><><>0<>0<><>::uid://d36d4yv5swoy2::::res://combat/combat.gd<>uid://csiw3oa2iccme::::res://combat/guy.tscn<>uid://cqk53fx8qnhqj::::res://combat/skills/skill classes/ProgramSkill.gd<>uid://ynaeb0eu7f5f::::res://icons/orange.png<>uid://ro8syfew4g5b::::res://icons/red.png<>uid://322cu8qpd3sl::::res://combat/skills/test_program.tres<>uid://cv8yhl7fpbtb6::::res://icons/yellow.png<>uid://yjfqjtmnwt0u::::res://icons/green.png<>uid://dtl3sse7jjwgx::::res://icons/blue.png<>uid://dkh15c45441cf::::res://combat/skills/test_program2.tres<>uid://by5dn03va0gad::::res://icons/purple.png<>uid://bum2p44a2800j::::res://combat/skills/test_program3.tres<>uid://cw13tlb4l1xmh::::res://combat/skills/test_program4.tres<>uid://b5q64uowtqx7e::::res://combat/skills/test_program5.tres<>uid://cebm7fn3e75fu::::res://combat/skills/test_program6.tres
+::res://combat/::1749683852
+combat.gd::GDScript::9188780616710899027::1749683849::0::1::::Combat<>Node3D<><>0<>0<><>::
+combat.tscn::PackedScene::682454608498559512::1749683851::0::1::::<><><>0<>0<><>::uid://d36d4yv5swoy2::::res://combat/combat.gd<>uid://csiw3oa2iccme::::res://combat/guy.tscn<>uid://cqk53fx8qnhqj::::res://combat/skills/skill classes/ProgramSkill.gd<>uid://ynaeb0eu7f5f::::res://icons/orange.png<>uid://ro8syfew4g5b::::res://icons/red.png<>uid://322cu8qpd3sl::::res://combat/skills/programs/test_program.tres<>uid://cv8yhl7fpbtb6::::res://icons/yellow.png<>uid://cvg48hrqq8yrt::::res://combat/skills/skill classes/RadioactiveSkill.gd<>uid://yjfqjtmnwt0u::::res://icons/green.png<>uid://dfqvum65f7imn::::res://combat/skills/radioactive/test_radskill.tres<>uid://dtl3sse7jjwgx::::res://icons/blue.png<>uid://dkh15c45441cf::::res://combat/skills/programs/test_program2.tres<>uid://by5dn03va0gad::::res://icons/purple.png<>uid://bum2p44a2800j::::res://combat/skills/programs/test_program3.tres<>uid://ci8hg3sei1nj7::::res://combat/skills/radioactive/test_radskill2.tres<>uid://cw13tlb4l1xmh::::res://combat/skills/programs/test_program4.tres<>uid://cgejp7w3kyp87::::res://combat/skills/radioactive/test_radskill3.tres<>uid://b5q64uowtqx7e::::res://combat/skills/programs/test_program5.tres<>uid://cebm7fn3e75fu::::res://combat/skills/programs/test_program6.tres<>uid://qw7cjlja18y4::::res://combat/skills/radioactive/test_radskill4.tres<>uid://bwk1a4eve5v66::::res://combat/skills/radioactive/test_radskill5.tres<>uid://bawyrr04fb84::::res://combat/skills/radioactive/test_radskill6.tres
 commandbutton.tscn::PackedScene/PackedScene::7095777486340457420::1747770904::0::1::::<><><>0<>0<><>::
 commandmenu.gd::GDScript/GDScript::8064489908502728570::1749087493::0::1::::CommandMenu<>Control<><>0<>0<><>::
 commandmenu.tscn::PackedScene/PackedScene::7444865343500170993::1749603707::0::1::::<><><>0<>0<><>::uid://dm5q7870l4b67::::res://combat/commandmenu.gd
 dicecheck.gd::GDScript/GDScript::2249422775823973074::1743022402::0::1::::dicecheck<>Node<><>0<>0<><>::
-guy.tscn::PackedScene::6054142087537893012::1749678290::0::1::::<><><>0<>0<><>::uid://dggb81ebj771s::::res://combat/unit.gd
-timeline_slot.gd::GDScript::5832495077576388728::1749668066::0::1::::<>Panel<><>0<>0<><>::
-timeline_slot.tscn::PackedScene::1381633465752093578::1749671669::0::1::::<><><>0<>0<><>::res://skew.tres<>uid://cpdklvdxukb7e::::res://combat/timeline_slot.gd<>uid://dwpoc4aejbhy6::::res://icon.svg
-unit.gd::GDScript::7592902399468563638::1749675853::0::1::::Actor<>CharacterBody3D<><>0<>0<><>::
-::res://combat/skills/::1749678284
-test_program6.tres::Resource/ProgramSkill::5056447152988583606::1749678284::0::1::::<><><>0<>0<><>::uid://cqk53fx8qnhqj::::res://combat/skills/skill classes/ProgramSkill.gd
-test_program5.tres::Resource/ProgramSkill::4527051124817922320::1749678284::0::1::::<><><>0<>0<><>::uid://cqk53fx8qnhqj::::res://combat/skills/skill classes/ProgramSkill.gd
-test_program4.tres::Resource/ProgramSkill::6372404335545154651::1749678284::0::1::::<><><>0<>0<><>::uid://cqk53fx8qnhqj::::res://combat/skills/skill classes/ProgramSkill.gd
-test_program3.tres::Resource/ProgramSkill::3816637803229624119::1749678284::0::1::::<><><>0<>0<><>::uid://cqk53fx8qnhqj::::res://combat/skills/skill classes/ProgramSkill.gd
+guy.tscn::PackedScene::6054142087537893012::1749683852::0::1::::<><><>0<>0<><>::uid://dggb81ebj771s::::res://combat/unit.gd
+timeline_slot.gd::GDScript/GDScript::5832495077576388728::1749668066::0::1::::<>Panel<><>0<>0<><>::
+timeline_slot.tscn::PackedScene/PackedScene::1381633465752093578::1749671669::0::1::::<><><>0<>0<><>::res://skew.tres<>uid://cpdklvdxukb7e::::res://combat/timeline_slot.gd<>uid://dwpoc4aejbhy6::::res://icon.svg
+unit.gd::GDScript/GDScript::7592902399468563638::1749675853::0::1::::Actor<>CharacterBody3D<><>0<>0<><>::
+::res://combat/skills/::1749683609
+::res://combat/skills/programs/::1749683609
 test_program2.tres::Resource/ProgramSkill::7877233498616135145::1749678283::0::1::::<><><>0<>0<><>::uid://cqk53fx8qnhqj::::res://combat/skills/skill classes/ProgramSkill.gd
+test_program3.tres::Resource/ProgramSkill::3816637803229624119::1749678284::0::1::::<><><>0<>0<><>::uid://cqk53fx8qnhqj::::res://combat/skills/skill classes/ProgramSkill.gd
+test_program4.tres::Resource/ProgramSkill::6372404335545154651::1749678284::0::1::::<><><>0<>0<><>::uid://cqk53fx8qnhqj::::res://combat/skills/skill classes/ProgramSkill.gd
+test_program5.tres::Resource/ProgramSkill::4527051124817922320::1749678284::0::1::::<><><>0<>0<><>::uid://cqk53fx8qnhqj::::res://combat/skills/skill classes/ProgramSkill.gd
+test_program6.tres::Resource/ProgramSkill::5056447152988583606::1749678284::0::1::::<><><>0<>0<><>::uid://cqk53fx8qnhqj::::res://combat/skills/skill classes/ProgramSkill.gd
 test_program.tres::Resource/ProgramSkill::2022669853809736359::1749678283::0::1::::<><><>0<>0<><>::uid://cqk53fx8qnhqj::::res://combat/skills/skill classes/ProgramSkill.gd
-::res://combat/skills/programs/::0
-::res://combat/skills/radioactive/::0
+::res://combat/skills/radioactive/::1749683776
+test_radskill2.tres::Resource/RadioactiveSkill::5402913814740981590::1749683776::0::1::::<><><>0<>0<><>::uid://cvg48hrqq8yrt::::res://combat/skills/skill classes/RadioactiveSkill.gd
+test_radskill3.tres::Resource/RadioactiveSkill::5202806896093525918::1749683776::0::1::::<><><>0<>0<><>::uid://cvg48hrqq8yrt::::res://combat/skills/skill classes/RadioactiveSkill.gd
+test_radskill4.tres::Resource/RadioactiveSkill::1170384814267149441::1749683776::0::1::::<><><>0<>0<><>::uid://cvg48hrqq8yrt::::res://combat/skills/skill classes/RadioactiveSkill.gd
+test_radskill5.tres::Resource/RadioactiveSkill::3952799193399404897::1749683776::0::1::::<><><>0<>0<><>::uid://cvg48hrqq8yrt::::res://combat/skills/skill classes/RadioactiveSkill.gd
+test_radskill6.tres::Resource/RadioactiveSkill::71568396866077787::1749683776::0::1::::<><><>0<>0<><>::uid://cvg48hrqq8yrt::::res://combat/skills/skill classes/RadioactiveSkill.gd
+test_radskill.tres::Resource/RadioactiveSkill::7544547765600765589::1749683776::0::1::::<><><>0<>0<><>::uid://cvg48hrqq8yrt::::res://combat/skills/skill classes/RadioactiveSkill.gd
 ::res://combat/skills/skill classes/::1749675820
-ProgramSkill.gd::GDScript::5918378454816171277::1749675820::0::1::::ProgramSkill<>SkillBase<><>0<>0<><>::
-RadioactiveSkill.gd::GDScript::6261013468973129469::1749675786::0::1::::RadioactiveSkill<>SkillBase<><>0<>0<><>::
-SkillBase.gd::GDScript::5477947688715841658::1749675808::0::1::::SkillBase<>Resource<><>0<>0<><>::
-skillbutton.tscn::PackedScene::8928444263166962846::1749675368::0::1::::<><><>0<>0<><>::
+ProgramSkill.gd::GDScript/GDScript::5918378454816171277::1749675820::0::1::::ProgramSkill<>SkillBase<><>0<>0<><>::
+RadioactiveSkill.gd::GDScript/GDScript::6261013468973129469::1749675786::0::1::::RadioactiveSkill<>SkillBase<><>0<>0<><>::
+SkillBase.gd::GDScript/GDScript::5477947688715841658::1749675808::0::1::::SkillBase<>Resource<><>0<>0<><>::
+skillbutton.tscn::PackedScene/PackedScene::8928444263166962846::1749675368::0::1::::<><><>0<>0<><>::
 ::res://components/::1747349028
 interaction_component.gd::GDScript/GDScript::8856554387948200704::1746655380::0::1::::<>ShapeCast3D<><>0<>0<><>::
 interaction_component.tscn::PackedScene/PackedScene::757332346250166069::1746231076::0::1::::<><><>0<>0<><>::uid://dyggfljj2n6lw::::res://components/interaction_component.gd
@@ -992,13 +998,13 @@ stevenplaceholder.png::CompressedTexture2D/CompressedTexture2D::2481201356798524
 wyattplaceholder.png::CompressedTexture2D/CompressedTexture2D::7769999741687747613::1746655380::1746655428::1::::<><><>0<>0<>42b8bc93968f0df64ba5fc721771badf<>res://.godot/imported/wyattplaceholder.png-637f3e49c7c0455e9009977ad4ef347d.ctex::
 yellow.png::CompressedTexture2D/CompressedTexture2D::6316401885490460581::1742937512::1742937844::1::::<><><>0<>0<>db97c4f28c2d879710a35a80ca7cf2a8<>res://.godot/imported/yellow.png-cac969c992b1fe7a4bfdec76e82bc402.ctex::
 youplaceholder.png::CompressedTexture2D/CompressedTexture2D::1036971213808864018::1746655380::1746655428::1::::<><><>0<>0<>748ac74a495b36abad765f82b023ebec<>res://.godot/imported/youplaceholder.png-32b4709af380c069c70f10bda719ce3a.ctex::
-::res://overworld/::1749683403
+::res://overworld/::1749683909
 button.gd::GDScript/GDScript::8701574696908924027::1743035292::0::1::::<>Button<><>0<>0<><>::
 enemy.gd::GDScript/GDScript::3109610752221270955::1747497797::0::1::::<>CharacterBody3D<><>0<>0<><>::
-enemy.tscn::PackedScene::7602704873026605480::1749678290::0::1::::<><><>0<>0<><>::uid://bkkk3m81hu7tv::::res://overworld/enemy.gd
+enemy.tscn::PackedScene::7602704873026605480::1749683852::0::1::::<><><>0<>0<><>::uid://bkkk3m81hu7tv::::res://overworld/enemy.gd
 overworld.gd::GDScript/GDScript::9059206098122454966::1744251604::0::1::::<>Node3D<><>0<>0<><>::
-overworld.tscn::PackedScene::7415504845872166022::1749678290::0::1::::<><><>0<>0<><>::uid://d2cl2h2m0mqu5::::res://overworld/overworld.gd<>uid://ffaqcddbbbpl::::res://overworld/the_beast.tscn<>uid://dv8dwtrt0teml::::res://overworld/button.gd<>uid://dgk2o55nr32mu::::res://overworld/enemy.tscn
-test.gdshader::Shader::2420787356972126167::1749683609::0::1::::<><><>0<>0<><>::
+overworld.tscn::PackedScene::7415504845872166022::1749683851::0::1::::<><><>0<>0<><>::uid://d2cl2h2m0mqu5::::res://overworld/overworld.gd<>uid://ffaqcddbbbpl::::res://overworld/the_beast.tscn<>uid://dv8dwtrt0teml::::res://overworld/button.gd<>uid://dgk2o55nr32mu::::res://overworld/enemy.tscn
+test.gdshader::Shader::2420787356972126167::1749683909::0::1::::<><><>0<>0<><>::
 the_beast.gd::GDScript/GDScript::7467359059532416239::1747497797::0::1::::<>CharacterBody3D<><>0<>0<><>::
 the_beast.gdshader::Shader/Shader::8173094439009976548::1746989120::0::1::::<><><>0<>0<><>::
-the_beast.tscn::PackedScene::361294789481736261::1749678290::0::1::::<><><>0<>0<><>::uid://denikvq8h2pf8::::res://overworld/the_beast.gd<>uid://k14fg8iq1cp6::::res://components/interaction_component.tscn<>uid://baqwaqjyeoqe6::::res://overworld/test.gdshader<>uid://dal0bwbqf01me::::res://outline.gdshader
+the_beast.tscn::PackedScene::361294789481736261::1749683851::0::1::::<><><>0<>0<><>::uid://denikvq8h2pf8::::res://overworld/the_beast.gd<>uid://k14fg8iq1cp6::::res://components/interaction_component.tscn<>uid://baqwaqjyeoqe6::::res://overworld/test.gdshader<>uid://dal0bwbqf01me::::res://outline.gdshader
