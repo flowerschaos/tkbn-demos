@@ -1,8 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1750097462
-dialogic_test.tres::Resource/DialogicStyle::8609294689624614378::1750088510::0::1::::<><><>0<>0<><>::uid://btmh6dyma42d1::::res://addons/dialogic/Resources/dialogic_style_layer.gd<>uid://c1k5m0w3r40xf::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn<>uid://cy1y14inwkplb::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Portraits/vn_portrait_layer.tscn<>uid://cn674foxwedqu::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn<>uid://bquja8jyk8kbr::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_layer.tscn<>uid://dsbwnp5hegnu3::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Glossary/glossary_popup_layer.tscn<>uid://dhk6j6eb6e3q::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn<>uid://cvgf4c6gg0tsy::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.tscn<>uid://lx24i8fl6uo::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn<>uid://dnkugoktunv4g::::res://addons/dialogic/Resources/dialogic_style.gd
+::res://::1750185355
+dialogic_test.tres::Resource/DialogicStyle::8609294689624614378::1750097860::0::1::::<><><>0<>0<><>::uid://btmh6dyma42d1::::res://addons/dialogic/Resources/dialogic_style_layer.gd<>uid://c1k5m0w3r40xf::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn<>uid://cy1y14inwkplb::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Portraits/vn_portrait_layer.tscn<>uid://cn674foxwedqu::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn<>uid://bquja8jyk8kbr::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_layer.tscn<>uid://dsbwnp5hegnu3::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Glossary/glossary_popup_layer.tscn<>uid://dhk6j6eb6e3q::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn<>uid://cvgf4c6gg0tsy::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.tscn<>uid://lx24i8fl6uo::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn<>uid://dnkugoktunv4g::::res://addons/dialogic/Resources/dialogic_style.gd
 icon.svg::CompressedTexture2D/CompressedTexture2D::8735237410284423683::1740844588::1740844754::1::::<><><>0<>0<>027255e5fb41ad8af207ac108ddde425<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-outline.gdshader::Shader::7183491074780196316::1750097438::0::1::::<><><>0<>0<><>::
+outline.gdshader::Shader::7183491074780196316::1750132604::0::1::::<><><>0<>0<><>::
 skew.tres::Shader/Shader::-1::1740516152::0::1::::<><><>0<>0<><>::
 ::res://addons/::1747349027
 ::res://addons/dialogic/::1747349027
@@ -617,7 +617,7 @@ plugin.cfg::TextFile/TextFile::-1::1740844588::0::1::::<><><>0<>0<><>::
 THIRDPARTY.md::TextFile/TextFile::-1::1740844588::0::1::::<><><>0<>0<><>::
 ::res://addons/godot-git-plugin/linux/::1747349027
 ::res://addons/godot-git-plugin/macos/::1747349027
-::res://addons/godot-git-plugin/win64/::1750097438
+::res://addons/godot-git-plugin/win64/::1750185346
 ::res://addons/indent_guidelines/::1747349027
 plugin.cfg::TextFile/TextFile::-1::1741544822::0::1::::<><><>0<>0<><>::
 plugin.gd::GDScript/GDScript::2675996389264736752::1741544822::0::1::::<>EditorPlugin<><>0<>1<><>::
@@ -789,11 +789,11 @@ camera_3d_resource.gd::GDScript/GDScript::4717552271394480598::1743348982::0::1:
 phantom_camera_noise_2d.gd::GDScript/GDScript::7746826514819894941::1743348982::0::1::::PhantomCameraNoise2D<>Resource<>res://addons/phantom_camera/icons/phantom_camera_noise_resource.svg<>0<>1<><>::
 phantom_camera_noise_3d.gd::GDScript/GDScript::6187281538235516492::1743348982::0::1::::PhantomCameraNoise3D<>Resource<>res://addons/phantom_camera/icons/phantom_camera_noise_resource.svg<>0<>1<><>::
 tween_resource.gd::GDScript/GDScript::2358266811638875852::1743348982::0::1::::PhantomCameraTween<>Resource<>res://addons/phantom_camera/icons/phantom_camera_tween.svg<>0<>0<><>::
-::res://addons/phantom_camera/themes/::1750088510
+::res://addons/phantom_camera/themes/::1750097860
 button_focus.tres::StyleBoxFlat/StyleBoxFlat::1106322926052085743::1743348982::0::1::::<><><>0<>0<><>::
 button_hover.tres::StyleBoxFlat/StyleBoxFlat::2151354179275418664::1743348982::0::1::::<><><>0<>0<><>::
 button_normal.tres::StyleBoxFlat/StyleBoxFlat::2549607310371774247::1743348982::0::1::::<><><>0<>0<><>::
-theme.tres::Theme::2909626652912860453::1750088510::0::1::::<><><>0<>0<><>::uid://dve7mgsjik4dg::::res://addons/phantom_camera/fonts/Nunito-Regular.ttf<>uid://5weqvkjsfso3::::res://addons/phantom_camera/themes/button_hover.tres<>uid://bclbwo3xrdat0::::res://addons/phantom_camera/themes/button_normal.tres
+theme.tres::Theme::2909626652912860453::1750097860::0::1::::<><><>0<>0<><>::uid://dve7mgsjik4dg::::res://addons/phantom_camera/fonts/Nunito-Regular.ttf<>uid://5weqvkjsfso3::::res://addons/phantom_camera/themes/button_hover.tres<>uid://bclbwo3xrdat0::::res://addons/phantom_camera/themes/button_normal.tres
 ::res://addons/splash_screen_wizard/::1747349027
 editor_ui.gd::GDScript/GDScript::3103605875157595942::1740844588::0::1::::<>EditorInspectorPlugin<><>0<>0<><>::
 plugin.cfg::TextFile/TextFile::-1::1740844588::0::1::::<><><>0<>0<><>::
@@ -941,24 +941,30 @@ texture_10.png::CompressedTexture2D/CompressedTexture2D::5434134780175199182::17
 texture_11.png::CompressedTexture2D/CompressedTexture2D::1370021696176858703::1740844588::1740844754::1::::<><><>0<>0<>7cd09094b1976e295fedd1edeac15036<>res://.godot/imported/texture_11.png-d26604346fed135ed12c725ec97c70a0.ctex::
 texture_12.png::CompressedTexture2D/CompressedTexture2D::6047542439335718600::1740844588::1740844754::1::::<><><>0<>0<>19ca79330c8d23a0c515d4077ca3a75a<>res://.godot/imported/texture_12.png-1886e9571fed092330a55527f470e32b.ctex::
 texture_13.png::CompressedTexture2D/CompressedTexture2D::2495934140612614578::1740844588::1740844754::1::::<><><>0<>0<>72ff654ec005a224e91c2e9b6875baf3<>res://.godot/imported/texture_13.png-b129774d8e005c508492e1b60b74b09a.ctex::
-::res://combat/::1750097437
-combat.gd::GDScript::9188780616710899027::1750097365::0::1::::Combat<>Node3D<><>0<>0<><>::
-combat.tscn::PackedScene::682454608498559512::1750097437::0::1::::<><><>0<>0<><>::uid://d36d4yv5swoy2::::res://combat/combat.gd<>uid://csiw3oa2iccme::::res://combat/guy.tscn<>uid://ynaeb0eu7f5f::::res://icons/orange.png<>uid://ro8syfew4g5b::::res://icons/red.png<>uid://cv8yhl7fpbtb6::::res://icons/yellow.png<>uid://yjfqjtmnwt0u::::res://icons/green.png<>uid://dtl3sse7jjwgx::::res://icons/blue.png<>uid://by5dn03va0gad::::res://icons/purple.png
+::res://combat/::1750132602
+combat.gd::GDScript::9188780616710899027::1750129629::0::1::::Combat<>Node3D<><>0<>0<><>::
+combat.tscn::PackedScene::682454608498559512::1750132602::0::1::::<><><>0<>0<><>::uid://d36d4yv5swoy2::::res://combat/combat.gd<>uid://csiw3oa2iccme::::res://combat/guy.tscn<>uid://b4etkft4idute::::res://combat/skills/skill/skill1.gd<>uid://ynaeb0eu7f5f::::res://icons/orange.png<>uid://ro8syfew4g5b::::res://icons/red.png<>uid://cv8yhl7fpbtb6::::res://icons/yellow.png<>uid://yjfqjtmnwt0u::::res://icons/green.png<>uid://ba37pcxf13ven::::res://combat/skills/skill/skill2.gd<>uid://dtl3sse7jjwgx::::res://icons/blue.png<>uid://by5dn03va0gad::::res://icons/purple.png<>uid://cnmekwdxv6ub::::res://combat/skills/skill/skill3.gd<>uid://c8kmhydxp20s0::::res://combat/skills/skill/skill4.gd<>uid://c20m7iaaplck5::::res://combat/skills/skill/skill5.gd<>uid://cgvyf3x4q4hwe::::res://combat/skills/skill/skill6.gd
 commandbutton.tscn::PackedScene/PackedScene::7095777486340457420::1747770904::0::1::::<><><>0<>0<><>::
 commandmenu.gd::GDScript/GDScript::8064489908502728570::1749087493::0::1::::CommandMenu<>Control<><>0<>0<><>::
 commandmenu.tscn::PackedScene/PackedScene::7444865343500170993::1749603707::0::1::::<><><>0<>0<><>::uid://dm5q7870l4b67::::res://combat/commandmenu.gd
 dicecheck.gd::GDScript/GDScript::2249422775823973074::1743022402::0::1::::dicecheck<>Node<><>0<>0<><>::
-guy.tscn::PackedScene::6054142087537893012::1750097437::0::1::::<><><>0<>0<><>::uid://dggb81ebj771s::::res://combat/unit.gd
+guy.tscn::PackedScene/PackedScene::6054142087537893012::1750097437::0::1::::<><><>0<>0<><>::uid://dggb81ebj771s::::res://combat/unit.gd
 timeline_slot.gd::GDScript/GDScript::5832495077576388728::1749668066::0::1::::<>Panel<><>0<>0<><>::
 timeline_slot.tscn::PackedScene/PackedScene::1381633465752093578::1749671669::0::1::::<><><>0<>0<><>::res://skew.tres<>uid://cpdklvdxukb7e::::res://combat/timeline_slot.gd<>uid://dwpoc4aejbhy6::::res://icon.svg
-unit.gd::GDScript::7592902399468563638::1750097366::0::1::::Actor<>CharacterBody3D<><>0<>0<><>::
-::res://combat/skills/::1749683609
+unit.gd::GDScript::7592902399468563638::1750110267::0::1::::Actor<>CharacterBody3D<><>0<>0<><>::
+::res://combat/skills/::1750111467
 ::res://combat/skills/programs/::1750096147
-::res://combat/skills/radioactive/::1750096143
-::res://combat/skills/skill classes/::1750097437
-SkillBase.gd::GDScript::5477947688715841658::1750097437::0::1::::Skill<>Resource<><>0<>0<><>::
-skillbutton.gd::GDScript::7760282907724405065::1750097366::0::1::::<>Button<><>0<>0<><>::
-skillbutton.tscn::PackedScene::8928444263166962846::1750093449::0::1::::<><><>0<>0<><>::uid://diteyw54kcqjh::::res://combat/skills/skill classes/skillbutton.gd
+::res://combat/skills/skill/::1750112038
+skill1.gd::GDScript::4431326434310385362::1750112012::0::1::::<>Skill<><>0<>0<><>::
+skill2.gd::GDScript::2446193132324123721::1750112019::0::1::::<>Skill<><>0<>0<><>::
+skill3.gd::GDScript::167950904554761501::1750112024::0::1::::<>Skill<><>0<>0<><>::
+skill4.gd::GDScript::7110459355713367625::1750112029::0::1::::<>Skill<><>0<>0<><>::
+skill5.gd::GDScript::6720335758990006338::1750112033::0::1::::<>Skill<><>0<>0<><>::
+skill6.gd::GDScript::5238794006370034260::1750112038::0::1::::<>Skill<><>0<>0<><>::
+::res://combat/skills/skill classes/::1750111371
+SkillBase.gd::GDScript::5477947688715841658::1750099660::0::1::::Skill<>Node<><>0<>0<><>::
+skillbutton.gd::GDScript::7760282907724405065::1750110267::0::1::::<>Button<><>0<>0<><>::
+skillbutton.tscn::PackedScene::8928444263166962846::1750111371::0::1::::<><><>0<>0<><>::uid://diteyw54kcqjh::::res://combat/skills/skill classes/skillbutton.gd
 ::res://components/::1747349028
 interaction_component.gd::GDScript/GDScript::8856554387948200704::1746655380::0::1::::<>ShapeCast3D<><>0<>0<><>::
 interaction_component.tscn::PackedScene/PackedScene::757332346250166069::1746231076::0::1::::<><><>0<>0<><>::uid://dyggfljj2n6lw::::res://components/interaction_component.gd
@@ -985,13 +991,13 @@ stevenplaceholder.png::CompressedTexture2D/CompressedTexture2D::2481201356798524
 wyattplaceholder.png::CompressedTexture2D/CompressedTexture2D::7769999741687747613::1746655380::1746655428::1::::<><><>0<>0<>42b8bc93968f0df64ba5fc721771badf<>res://.godot/imported/wyattplaceholder.png-637f3e49c7c0455e9009977ad4ef347d.ctex::
 yellow.png::CompressedTexture2D/CompressedTexture2D::6316401885490460581::1742937512::1742937844::1::::<><><>0<>0<>db97c4f28c2d879710a35a80ca7cf2a8<>res://.godot/imported/yellow.png-cac969c992b1fe7a4bfdec76e82bc402.ctex::
 youplaceholder.png::CompressedTexture2D/CompressedTexture2D::1036971213808864018::1746655380::1746655428::1::::<><><>0<>0<>748ac74a495b36abad765f82b023ebec<>res://.godot/imported/youplaceholder.png-32b4709af380c069c70f10bda719ce3a.ctex::
-::res://overworld/::1750097438
+::res://overworld/::1750132604
 button.gd::GDScript/GDScript::8701574696908924027::1743035292::0::1::::<>Button<><>0<>0<><>::
 enemy.gd::GDScript/GDScript::3109610752221270955::1747497797::0::1::::<>CharacterBody3D<><>0<>0<><>::
-enemy.tscn::PackedScene::7602704873026605480::1750097437::0::1::::<><><>0<>0<><>::uid://bkkk3m81hu7tv::::res://overworld/enemy.gd
+enemy.tscn::PackedScene/PackedScene::7602704873026605480::1750097437::0::1::::<><><>0<>0<><>::uid://bkkk3m81hu7tv::::res://overworld/enemy.gd
 overworld.gd::GDScript/GDScript::9059206098122454966::1744251604::0::1::::<>Node3D<><>0<>0<><>::
-overworld.tscn::PackedScene::7415504845872166022::1750097437::0::1::::<><><>0<>0<><>::uid://d2cl2h2m0mqu5::::res://overworld/overworld.gd<>uid://ffaqcddbbbpl::::res://overworld/the_beast.tscn<>uid://dv8dwtrt0teml::::res://overworld/button.gd<>uid://dgk2o55nr32mu::::res://overworld/enemy.tscn
-test.gdshader::Shader::2420787356972126167::1750097438::0::1::::<><><>0<>0<><>::
+overworld.tscn::PackedScene::7415504845872166022::1750129629::0::1::::<><><>0<>0<><>::uid://d2cl2h2m0mqu5::::res://overworld/overworld.gd<>uid://ffaqcddbbbpl::::res://overworld/the_beast.tscn<>uid://dv8dwtrt0teml::::res://overworld/button.gd<>uid://dgk2o55nr32mu::::res://overworld/enemy.tscn
+test.gdshader::Shader::2420787356972126167::1750132604::0::1::::<><><>0<>0<><>::
 the_beast.gd::GDScript/GDScript::7467359059532416239::1747497797::0::1::::<>CharacterBody3D<><>0<>0<><>::
 the_beast.gdshader::Shader/Shader::8173094439009976548::1746989120::0::1::::<><><>0<>0<><>::
-the_beast.tscn::PackedScene::361294789481736261::1750097437::0::1::::<><><>0<>0<><>::uid://denikvq8h2pf8::::res://overworld/the_beast.gd<>uid://k14fg8iq1cp6::::res://components/interaction_component.tscn<>uid://baqwaqjyeoqe6::::res://overworld/test.gdshader<>uid://dal0bwbqf01me::::res://outline.gdshader
+the_beast.tscn::PackedScene/PackedScene::361294789481736261::1750097437::0::1::::<><><>0<>0<><>::uid://denikvq8h2pf8::::res://overworld/the_beast.gd<>uid://k14fg8iq1cp6::::res://components/interaction_component.tscn<>uid://baqwaqjyeoqe6::::res://overworld/test.gdshader<>uid://dal0bwbqf01me::::res://outline.gdshader

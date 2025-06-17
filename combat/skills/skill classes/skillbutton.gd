@@ -1,6 +1,6 @@
 extends Button
 
-signal action_go(action: Skill)
-@export var action: Skill
+signal use_skill(used_skill: Skill)
+@export var used_skill: Skill
 func _on_pressed() -> void:
-	action_go.emit(action)
+	use_skill.emit(used_skill)

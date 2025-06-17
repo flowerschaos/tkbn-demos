@@ -65,7 +65,8 @@ func turn_commence(actor: Actor):
 		skills.add_child(skill_button)
 		loaded_skills.append(skill_button)
 		
-		skill_button.action_go.connect(skill_execute.bind)
+		skill_button.used_skill = skill
+		skill_button.use_skill.connect(skill_execute)
 
 func skill_execute(skill: Skill):
 	skill.execute(actors[cti])
