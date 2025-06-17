@@ -1,4 +1,9 @@
-[gd_scene format=3 uid="uid://d0haf4p85f17o"]
+[gd_scene load_steps=2 format=3 uid="uid://d0haf4p85f17o"]
+
+[ext_resource type="Script" uid="uid://diteyw54kcqjh" path="res://combat/skills/skill classes/skillbutton.gd" id="1_yqlbi"]
 
 [node name="Skillbutton" type="Button"]
 text = "SkillName"
+script = ExtResource("1_yqlbi")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

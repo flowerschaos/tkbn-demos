@@ -1,69 +1,85 @@
-[gd_scene load_steps=23 format=3 uid="uid://jyt6sodbakhs"]
+[gd_scene load_steps=15 format=3 uid="uid://jyt6sodbakhs"]
 
 [ext_resource type="Script" uid="uid://d36d4yv5swoy2" path="res://combat/combat.gd" id="1_6cnl0"]
 [ext_resource type="PackedScene" uid="uid://csiw3oa2iccme" path="res://combat/guy.tscn" id="1_raif2"]
-[ext_resource type="Script" uid="uid://cqk53fx8qnhqj" path="res://combat/skills/skill classes/ProgramSkill.gd" id="4_4h14y"]
+[ext_resource type="Script" uid="uid://b4etkft4idute" path="res://combat/skills/skill/skill1.gd" id="4_4h14y"]
 [ext_resource type="Texture2D" uid="uid://ynaeb0eu7f5f" path="res://icons/orange.png" id="4_lk7ft"]
 [ext_resource type="Texture2D" uid="uid://ro8syfew4g5b" path="res://icons/red.png" id="4_px7ba"]
-[ext_resource type="Resource" uid="uid://322cu8qpd3sl" path="res://combat/skills/programs/test_program.tres" id="5_4h14y"]
 [ext_resource type="Texture2D" uid="uid://cv8yhl7fpbtb6" path="res://icons/yellow.png" id="5_c11yd"]
-[ext_resource type="Script" uid="uid://cvg48hrqq8yrt" path="res://combat/skills/skill classes/RadioactiveSkill.gd" id="6_5d7oa"]
 [ext_resource type="Texture2D" uid="uid://yjfqjtmnwt0u" path="res://icons/green.png" id="6_6cnl0"]
-[ext_resource type="Resource" uid="uid://dfqvum65f7imn" path="res://combat/skills/radioactive/test_radskill.tres" id="7_8r78c"]
+[ext_resource type="Script" uid="uid://ba37pcxf13ven" path="res://combat/skills/skill/skill2.gd" id="6_tspto"]
 [ext_resource type="Texture2D" uid="uid://dtl3sse7jjwgx" path="res://icons/blue.png" id="7_iga5g"]
-[ext_resource type="Resource" uid="uid://dkh15c45441cf" path="res://combat/skills/programs/test_program2.tres" id="7_rhywr"]
 [ext_resource type="Texture2D" uid="uid://by5dn03va0gad" path="res://icons/purple.png" id="8_4h14y"]
-[ext_resource type="Resource" uid="uid://bum2p44a2800j" path="res://combat/skills/programs/test_program3.tres" id="9_juqtb"]
-[ext_resource type="Resource" uid="uid://ci8hg3sei1nj7" path="res://combat/skills/radioactive/test_radskill2.tres" id="10_coue5"]
-[ext_resource type="Resource" uid="uid://cw13tlb4l1xmh" path="res://combat/skills/programs/test_program4.tres" id="11_ixprf"]
-[ext_resource type="Resource" uid="uid://cgejp7w3kyp87" path="res://combat/skills/radioactive/test_radskill3.tres" id="13_4ybji"]
-[ext_resource type="Resource" uid="uid://b5q64uowtqx7e" path="res://combat/skills/programs/test_program5.tres" id="13_qjq5a"]
-[ext_resource type="Resource" uid="uid://cebm7fn3e75fu" path="res://combat/skills/programs/test_program6.tres" id="15_htrtx"]
-[ext_resource type="Resource" uid="uid://qw7cjlja18y4" path="res://combat/skills/radioactive/test_radskill4.tres" id="16_cohu4"]
-[ext_resource type="Resource" uid="uid://bwk1a4eve5v66" path="res://combat/skills/radioactive/test_radskill5.tres" id="19_yroaq"]
-[ext_resource type="Resource" uid="uid://bawyrr04fb84" path="res://combat/skills/radioactive/test_radskill6.tres" id="22_r6p74"]
+[ext_resource type="Script" uid="uid://cnmekwdxv6ub" path="res://combat/skills/skill/skill3.gd" id="8_rhywr"]
+[ext_resource type="Script" uid="uid://c8kmhydxp20s0" path="res://combat/skills/skill/skill4.gd" id="10_juqtb"]
+[ext_resource type="Script" uid="uid://c20m7iaaplck5" path="res://combat/skills/skill/skill5.gd" id="12_ixprf"]
+[ext_resource type="Script" uid="uid://cgvyf3x4q4hwe" path="res://combat/skills/skill/skill6.gd" id="14_qjq5a"]
 
 [node name="Combat" type="Node3D"]
 script = ExtResource("1_6cnl0")
 
-[node name="guy" parent="." instance=ExtResource("1_raif2")]
+[node name="guy" parent="." node_paths=PackedStringArray("skills") instance=ExtResource("1_raif2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.12069, 1, -3.49353)
 combat_alignment = 1
 battle_icon = ExtResource("4_px7ba")
-programs = Array[ExtResource("4_4h14y")]([ExtResource("5_4h14y")])
-rad_skills = Array[ExtResource("6_5d7oa")]([ExtResource("7_8r78c")])
+skills = [NodePath("Skill")]
 
-[node name="guy2" parent="." instance=ExtResource("1_raif2")]
+[node name="Skill" type="Node" parent="guy"]
+script = ExtResource("4_4h14y")
+skill_name = "skill 1"
+metadata/_custom_type_script = "uid://ckbs862eipcby"
+
+[node name="guy2" parent="." node_paths=PackedStringArray("skills") instance=ExtResource("1_raif2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1678, 1, -3.49353)
 combat_alignment = 1
 battle_icon = ExtResource("4_lk7ft")
-programs = Array[ExtResource("4_4h14y")]([ExtResource("7_rhywr")])
-rad_skills = Array[ExtResource("6_5d7oa")]([ExtResource("10_coue5")])
+skills = [NodePath("Skill2")]
 
-[node name="guy3" parent="." instance=ExtResource("1_raif2")]
+[node name="Skill2" type="Node" parent="guy2"]
+script = ExtResource("6_tspto")
+skill_name = "Skill 2"
+metadata/_custom_type_script = "uid://ckbs862eipcby"
+
+[node name="guy3" parent="." node_paths=PackedStringArray("skills") instance=ExtResource("1_raif2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.368169, 1, -3.49353)
 combat_alignment = 1
 battle_icon = ExtResource("5_c11yd")
-programs = Array[ExtResource("4_4h14y")]([ExtResource("9_juqtb")])
-rad_skills = Array[ExtResource("6_5d7oa")]([ExtResource("13_4ybji")])
+skills = [NodePath("Skill3")]
 
-[node name="guy4" parent="." instance=ExtResource("1_raif2")]
+[node name="Skill3" type="Node" parent="guy3"]
+script = ExtResource("8_rhywr")
+skill_name = "Skill 3"
+metadata/_custom_type_script = "uid://ckbs862eipcby"
+
+[node name="guy4" parent="." node_paths=PackedStringArray("skills") instance=ExtResource("1_raif2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4406, 1, -3.49353)
 battle_icon = ExtResource("6_6cnl0")
-programs = Array[ExtResource("4_4h14y")]([ExtResource("11_ixprf")])
-rad_skills = Array[ExtResource("6_5d7oa")]([ExtResource("16_cohu4")])
+skills = [NodePath("Skill4")]
 
-[node name="guy5" parent="." instance=ExtResource("1_raif2")]
+[node name="Skill4" type="Node" parent="guy4"]
+script = ExtResource("10_juqtb")
+skill_name = "Skill 4"
+metadata/_custom_type_script = "uid://ckbs862eipcby"
+
+[node name="guy5" parent="." node_paths=PackedStringArray("skills") instance=ExtResource("1_raif2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.10604, 1, -3.49353)
 battle_icon = ExtResource("7_iga5g")
-programs = Array[ExtResource("4_4h14y")]([ExtResource("13_qjq5a")])
-rad_skills = Array[ExtResource("6_5d7oa")]([ExtResource("19_yroaq")])
+skills = [NodePath("Skill5")]
 
-[node name="guy6" parent="." instance=ExtResource("1_raif2")]
+[node name="Skill5" type="Node" parent="guy5"]
+script = ExtResource("12_ixprf")
+skill_name = "Skill 5"
+metadata/_custom_type_script = "uid://ckbs862eipcby"
+
+[node name="guy6" parent="." node_paths=PackedStringArray("skills") instance=ExtResource("1_raif2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.13554, 1, -3.49353)
 battle_icon = ExtResource("8_4h14y")
-programs = Array[ExtResource("4_4h14y")]([ExtResource("15_htrtx")])
-rad_skills = Array[ExtResource("6_5d7oa")]([ExtResource("22_r6p74")])
+skills = [NodePath("Skill6")]
+
+[node name="Skill6" type="Node" parent="guy6"]
+script = ExtResource("14_qjq5a")
+skill_name = "Skill 6"
+metadata/_custom_type_script = "uid://ckbs862eipcby"
 
 [node name="ui" type="CanvasLayer" parent="."]
 
@@ -100,15 +116,6 @@ layout_mode = 2
 layout_mode = 2
 text = "radioactive"
 
-[node name="ProgramSkillButton" type="Button" parent="ui/PanelContainer/CommandMenu/SkillTypes"]
-layout_mode = 2
-text = "programs"
-
-[node name="ProgramSkills" type="VBoxContainer" parent="ui/PanelContainer/CommandMenu"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 3
-
 [node name="RadioactiveSkills" type="VBoxContainer" parent="ui/PanelContainer/CommandMenu"]
 layout_mode = 2
 size_flags_horizontal = 4
@@ -119,4 +126,3 @@ size_flags_vertical = 3
 [connection signal="pressed" from="ui/TurnSwitch" to="." method="_on_turnswitch_pressed"]
 [connection signal="pressed" from="ui/TurnSwitch" to="ui/InitiativeVisualizer" method="_on_turnswitch_pressed"]
 [connection signal="pressed" from="ui/PanelContainer/CommandMenu/SkillTypes/RadSkillButton" to="." method="_on_rad_skill_button_pressed"]
-[connection signal="pressed" from="ui/PanelContainer/CommandMenu/SkillTypes/ProgramSkillButton" to="." method="_on_program_skill_button_pressed"]

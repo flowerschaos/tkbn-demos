@@ -12,8 +12,7 @@ var potential
 var initiative = dicecheck.standard()+round(endurance/2)+round(agility/2)
 enum alignment {ENEMY,PLAYER}
 
-@export var programs: Array[ProgramSkill]
-@export var rad_skills: Array[RadioactiveSkill]
+@export var skills: Array[Skill]
 
 func _ready() -> void:
 	set_selection(false)
@@ -28,6 +27,3 @@ func _set_group():
 		add_to_group("player")
 	if combat_alignment == alignment.ENEMY:
 		add_to_group("enemy")
-
-func use_skill(skill: SkillBase, target: Array[Actor] = []):
-	await skill.execute_skill(self, target)

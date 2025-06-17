@@ -14,15 +14,13 @@ var _player_controlled: bool = false
 var actor = Actor
 @onready var actors = get_tree().get_nodes_in_group("actor")
 
-@onready var command_menu: VBoxContainer = $ui/PanelContainer/CommandMenu
+@onready var command_menu: PanelContainer = $ui/PanelContainer
 const timeline_panel = preload("uid://txjkilfd8uis")
 @onready var initiative_visualizer: HBoxContainer = $ui/InitiativeVisualizer
-@onready var program_skills: VBoxContainer = $ui/PanelContainer/CommandMenu/ProgramSkills
-@onready var radioactive_skills: VBoxContainer = $ui/PanelContainer/CommandMenu/RadioactiveSkills
+@onready var skills: VBoxContainer = $ui/PanelContainer/CommandMenu/RadioactiveSkills
 
 const skill_button = preload("uid://d0haf4p85f17o")
-var loaded_programs = []
-var loaded_radskills = []
+var loaded_skills = []
 
 func _ready() -> void:
 	curr_turn = actors[cti]
@@ -48,36 +46,26 @@ func _sort_init(a,b):
 	return a.initiative > b.initiative
 
 func turn_commence(actor: Actor):
-	for things in program_skills.get_children():
-		things.queue_free()
-	for things in radioactive_skills.get_children():
-		things.queue_free()
-	loaded_programs.clear()
-	loaded_radskills.clear()
+	for skill in skills.get_children():
+		skill.queue_free()
+	loaded_skills.clear()
+		
 	print("it is " + actor.name + "'s turn.")
+	
 	if actor.combat_alignment == actor.alignment.ENEMY:
 		command_menu.hide()
+		
 	if actor.combat_alignment == actor.alignment.PLAYER:
 		command_menu.show()
-	program_skills.hide()
-	radioactive_skills.hide()
-
-	for program in actor.programs:
-		var program_button = skill_button.instantiate()
-		program_button.text = program.skill_name
-		program_skills.add_child(program_button)
-		loaded_programs.append(program_button)
 		
-	for rad_skill in actor.rad_skills:
-		var rad_button = skill_button.instantiate()
-		rad_button.text = rad_skill.skill_name
-		radioactive_skills.add_child(rad_button)
-		loaded_radskills.append(rad_button)
+	for skill in actor.skills:
+		var skill_button = skill_button.instantiate()
+		skill_button.text = skill.skill_name
+		
+		skills.add_child(skill_button)
+		loaded_skills.append(skill_button)
+		
+		skill_button.action_go.connect(skill_execute.bind)
 
-func _on_rad_skill_button_pressed() -> void:
-	radioactive_skills.show()
-	program_skills.hide()
-
-func _on_program_skill_button_pressed() -> void:
-	radioactive_skills.hide()
-	program_skills.show()
+func skill_execute(skill: Skill):
+	skill.execute(actors[cti])

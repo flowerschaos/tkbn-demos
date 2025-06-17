@@ -1,11 +1,11 @@
-extends Resource
-class_name SkillBase
+extends Node
+class_name Skill
 
 @export var skill_name: String = "Skill Name"
-@export var skill_desc: String = "The start of all things."
-@export var does_damage: bool = false
-@export var damage_amount: int
-@export var is_passive: bool
+@export var skill_type: SKILL_TYPE
+@export var skill_cost: int
 
-func execute_skill(source: Actor, _target: Array[Actor] = []):
-	await source.get_tree().process_frame
+enum SKILL_TYPE {SKILL, PROGRAM, RAD}
+
+func execute(executor:Actor):
+	pass
